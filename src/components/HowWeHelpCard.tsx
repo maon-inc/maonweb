@@ -34,7 +34,7 @@ export function HowWeHelpCard({
           <span className={styles.title}>{title}</span>
           <span className={styles.summary}>{summary}</span>
           <span className={styles.chevron} aria-hidden="true">
-            {expanded ? '−' : '+'}
+            <span className={styles.chevronGlyph}>{expanded ? '−' : '⌄'}</span>
           </span>
         </span>
       </button>

@@ -52,7 +52,11 @@ exports[`HowWeHelpSection > matches the stable expanded snapshot 1`] = `
                 aria-hidden="true"
                 class="_chevron_5a814f"
               >
-                −
+                <span
+                  class="_chevronGlyph_5a814f"
+                >
+                  −
+                </span>
               </span>
             </span>
           </button>
@@ -116,7 +120,11 @@ exports[`HowWeHelpSection > matches the stable expanded snapshot 1`] = `
                 aria-hidden="true"
                 class="_chevron_5a814f"
               >
-                +
+                <span
+                  class="_chevronGlyph_5a814f"
+                >
+                  ⌄
+                </span>
               </span>
             </span>
           </button>
@@ -151,7 +159,11 @@ exports[`HowWeHelpSection > matches the stable expanded snapshot 1`] = `
                 aria-hidden="true"
                 class="_chevron_5a814f"
               >
-                +
+                <span
+                  class="_chevronGlyph_5a814f"
+                >
+                  ⌄
+                </span>
               </span>
             </span>
           </button>

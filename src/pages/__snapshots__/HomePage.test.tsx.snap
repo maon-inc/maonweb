@@ -362,35 +362,50 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
   </section>
   <section
     aria-labelledby="understand-title"
-    class="_section_9e478f"
+    class="_section_9e478f _sectionAnimated_9e478f"
+    data-animated="true"
+    data-testid="narrative-section"
+    style="--narrative-step-count: 4;"
   >
     <div
       class="homeContainer"
     >
       <div
-        class="_stack_9e478f"
+        class="_stickyViewport_9e478f"
       >
-        <p
-          class="_intro_9e478f"
-          id="understand-title"
+        <div
+          class="_stack_9e478f"
         >
-          we understand...
-        </p>
-        <p
-          class="_statement_9e478f"
-        >
-          small things build up until everything feels like too much
-        </p>
-        <p
-          class="_statement_9e478f _statementMuted_9e478f"
-        >
-          most support only shows up after you're already overwhelmed
-        </p>
-        <p
-          class="_statement_9e478f _statementSerifMuted_9e478f"
-        >
-          but maon notices the shift earlier because your body knows before you do
-        </p>
+          <p
+            class="_line_9e478f _intro_9e478f _lineActive_9e478f"
+            data-active="true"
+            data-line-index="0"
+            id="understand-title"
+          >
+            we understand...
+          </p>
+          <p
+            class="_line_9e478f _statement_9e478f _lineInactive_9e478f"
+            data-active="false"
+            data-line-index="1"
+          >
+            small things build up until everything feels like too much
+          </p>
+          <p
+            class="_line_9e478f _statement_9e478f _lineInactive_9e478f"
+            data-active="false"
+            data-line-index="2"
+          >
+            most support only shows up after you're already overwhelmed
+          </p>
+          <p
+            class="_line_9e478f _statementSerifMuted_9e478f _lineInactive_9e478f"
+            data-active="false"
+            data-line-index="3"
+          >
+            but maon notices the shift earlier because your body knows before you do
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -444,7 +459,11 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 aria-hidden="true"
                 class="_chevron_5a814f"
               >
-                +
+                <span
+                  class="_chevronGlyph_5a814f"
+                >
+                  ⌄
+                </span>
               </span>
             </span>
           </button>
@@ -479,7 +498,11 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 aria-hidden="true"
                 class="_chevron_5a814f"
               >
-                +
+                <span
+                  class="_chevronGlyph_5a814f"
+                >
+                  ⌄
+                </span>
               </span>
             </span>
           </button>
@@ -514,7 +537,11 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 aria-hidden="true"
                 class="_chevron_5a814f"
               >
-                +
+                <span
+                  class="_chevronGlyph_5a814f"
+                >
+                  ⌄
+                </span>
               </span>
             </span>
           </button>
