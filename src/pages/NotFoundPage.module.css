@@ -1,0 +1,32 @@
+.section {
+  display: grid;
+  place-items: center;
+  min-height: 60vh;
+  padding: 4rem 0;
+}
+
+.card {
+  max-width: 34rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow-soft);
+}
+
+.code {
+  margin: 0;
+  color: var(--accent-strong);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0.35rem 0 0;
+  color: var(--text-strong);
+}
+
+.body {
+  margin: 1rem 0 1.5rem;
+  color: var(--text-muted);
+}

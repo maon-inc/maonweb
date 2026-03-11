@@ -1,0 +1,23 @@
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.inner {
+  padding: 2rem 0 3rem;
+}
+
+.title,
+.copy {
+  margin: 0;
+}
+
+.title {
+  color: var(--text-strong);
+  font-weight: 600;
+}
+
+.copy {
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}

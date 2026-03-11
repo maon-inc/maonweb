@@ -1,0 +1,98 @@
+:root {
+  font-family:
+    "Space Grotesk",
+    "Avenir Next",
+    "Segoe UI",
+    sans-serif;
+  color: var(--text-base);
+  background:
+    radial-gradient(circle at top, rgba(217, 189, 138, 0.3), transparent 32%),
+    linear-gradient(180deg, #fff9ef 0%, #f3ebdd 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --page-max-width: 72rem;
+  --surface: rgba(255, 252, 246, 0.86);
+  --border: rgba(120, 92, 52, 0.14);
+  --text-strong: #1f1a14;
+  --text-base: #352b20;
+  --text-muted: #655646;
+  --accent: #b97b21;
+  --accent-strong: #8f5c16;
+  --shadow-soft: 0 18px 50px rgba(70, 46, 11, 0.09);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body,
+button,
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.container {
+  width: min(calc(100% - 2rem), var(--page-max-width));
+  margin: 0 auto;
+}
+
+.buttonPrimary,
+.buttonGhost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.buttonPrimary:hover,
+.buttonGhost:hover {
+  transform: translateY(-1px);
+}
+
+.buttonPrimary {
+  background: var(--text-strong);
+  color: #fff9ef;
+  border: 1px solid var(--text-strong);
+}
+
+.buttonGhost {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text-strong);
+}

@@ -1,0 +1,25 @@
+.section {
+  padding: 0 0 4rem;
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.title {
+  margin: 0;
+  color: var(--text-strong);
+}
+
+.body {
+  margin: 0.75rem 0 0;
+  color: var(--text-muted);
+}
