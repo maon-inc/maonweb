@@ -31,73 +31,117 @@
 
 .phone {
   width: 293px;
+  min-height: 566.4px;
   justify-self: center;
   border: 0.82px solid #1b1b1b;
-  border-radius: 25px;
-  background: rgba(255, 253, 252, 0);
+  border-radius: 25.3px;
+  background: #fffdfc;
   overflow: hidden;
   box-shadow: none;
 }
 
 .phoneHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 16px 9px;
-  background: rgba(246, 239, 255, 0.55);
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 75.085px;
+  padding: 15px 16px 10px;
+  background: rgba(244, 239, 255, 0.47);
 }
 
 .backButton {
+  position: absolute;
+  top: 24px;
+  left: 15.8px;
   border: 0;
   background: transparent;
-  color: #7f7f7f;
-  font-size: 1.5rem;
+  color: #6d87c8;
+  font-size: 1.3rem;
   line-height: 1;
   padding: 0;
+}
+
+.backGlyph {
+  display: block;
+  transform: scaleX(0.9);
 }
 
 .phoneBrandMark {
   display: grid;
   justify-items: center;
-  gap: 0.18rem;
-  margin-right: auto;
-  margin-left: auto;
+  gap: 1.8px;
   font-family: var(--font-ui);
-  font-size: 0.9rem;
+  font-size: 14.446px;
   font-weight: 500;
+  line-height: 1.334;
+  color: #111;
 }
 
-.phoneRing {
-  width: 1.86rem;
-  height: 1.86rem;
-  border: 1.65px solid #c6b6ff;
-  border-radius: 999px;
-  display: block;
+.phoneAvatar {
   position: relative;
+  width: 29.855px;
+  height: 29.855px;
+  border-radius: 999px;
+  background: #d8d2f6;
+  display: block;
 }
 
-.phoneRing::after {
-  content: '';
+.phoneAvatarEye {
   position: absolute;
-  inset: 0.31rem;
-  border: 1.65px solid #c6b6ff;
-  border-radius: inherit;
+  top: 10px;
+  width: 2.8px;
+  height: 2.8px;
+  border-radius: 999px;
+  background: #2f2a33;
+}
+
+.phoneAvatarEye:first-child {
+  left: 9px;
+}
+
+.phoneAvatarEye:nth-child(2) {
+  right: 9px;
+}
+
+.phoneAvatarSmile {
+  position: absolute;
+  left: 10.5px;
+  bottom: 8px;
+  width: 8px;
+  height: 4px;
+  border-bottom: 1.2px solid #2f2a33;
+  border-radius: 0 0 8px 8px;
+}
+
+.phoneBrandName {
+  display: block;
 }
 
 .thread {
   display: grid;
-  gap: 0.9rem;
-  padding: 26px 22px 28px;
+  justify-items: start;
+  gap: 14px;
+  padding: 27px 22px 27px;
 }
 
 .bubble {
-  max-width: 82%;
-  padding: 0.28rem 0.85rem 0.45rem;
-  border-radius: 1rem;
-  background: #ececec;
+  display: block;
+  padding: 2.4px 13.696px 4.6px;
+  border-radius: 15.307px;
   font-family: "SF Pro Text", var(--font-ui);
-  font-size: 1rem;
+  font-size: 16.113px;
   line-height: 1.334;
+  letter-spacing: 0;
+}
+
+.bubble em {
+  font-style: italic;
+}
+
+.bubbleIncoming {
+  justify-self: start;
+  color: #111;
+  background: #ececec;
 }
 
 .bubbleReply {
@@ -106,130 +150,348 @@
   color: white;
 }
 
-.bubbleLong {
-  border-radius: 1rem 1rem 1rem 0.5rem;
+.bubbleIncomingShort {
+  width: 194.158px;
+  min-height: 29.003px;
+  border-radius: 32.225px;
+}
+
+.bubbleIncomingTall {
+  width: 224.772px;
+  min-height: 80.564px;
+  padding-top: 5.64px;
+  padding-bottom: 6px;
+}
+
+.bubbleIncomingQuestion {
+  width: 224.772px;
+  min-height: 80.564px;
+  padding-top: 5.64px;
+  padding-bottom: 6px;
+  margin-top: 0.6px;
+}
+
+.bubbleOutgoingShort {
+  width: 115.206px;
+  min-height: 28.197px;
+  padding-top: 2.415px;
+  border-radius: 28.197px;
+}
+
+.bubbleOutgoingMedium {
+  width: 201px;
+  min-height: 28.834px;
+  padding: 2.417px 8.5px 4px;
+  border-radius: 28.197px;
+}
+
+.bubbleOutgoingLarge {
+  width: 217.522px;
+  min-height: 75.73px;
+  padding: 4.027px 10.473px 8px;
+}
+
+.typingIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: 42.171px;
+  min-height: 27.503px;
+  padding: 0 10px;
+  border-radius: 27.503px;
+  background: #e3e3e3;
+}
+
+.typingDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: #a3a3a3;
 }
 
 .historyCard {
   display: grid;
-  grid-template-columns: 18px minmax(0, 1fr);
-  gap: 8px;
+  gap: 1.8px;
   width: 336px;
   margin: 0 auto;
 }
 
-.historyTimeline {
-  width: 2px;
-  height: calc(100% - 28px);
-  margin-top: 16px;
-  background: linear-gradient(180deg, #201f1f 0%, rgba(32, 31, 31, 0.08) 100%);
-}
-
-.historyContent {
-  display: grid;
-  gap: 1.8px;
-}
-
 .historyItem {
+  position: relative;
   border: 1px solid #a3a3a3;
-  border-radius: 13.5px;
+  border-radius: 13.485px;
   background: #fffdfc;
-  padding: 14px 16px;
-  opacity: 0.56;
+  min-height: 65.627px;
+  padding: 14.384px 14.6px 12.2px 33.263px;
+  opacity: 0.54;
+  overflow: hidden;
 }
 
 .historyItemFeatured {
   opacity: 1;
   border-color: #1b1b1b;
-  padding-bottom: 16px;
+  min-height: 167.213px;
+  padding: 14.384px 14.4px 15.3px 33.263px;
+}
+
+.historyRail {
+  position: absolute;
+  left: 16.08px;
+  top: 11.69px;
+  width: 4.5px;
+  height: 43.152px;
+  border-radius: 999px;
+}
+
+.historyItemFeatured .historyRail {
+  top: 16.182px;
+  height: 139.345px;
+}
+
+.historyBody {
+  display: grid;
+}
+
+.historyDivider {
+  width: 280.487px;
+  height: 1px;
+  margin: 10.9px 0 21.2px 8.09px;
+  background: rgba(32, 31, 31, 0.18);
 }
 
 .historyTopline {
   display: flex;
   align-items: start;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .historyTitle,
 .historyDetail,
 .historyTimestamp,
-.featureCaption,
-.seeMore {
+.featureCaption {
   margin: 0;
 }
 
 .historyTitle {
   font-family: var(--font-ui);
-  font-size: 14.4px;
+  font-size: 14.384px;
   font-weight: 500;
+  line-height: 1.334;
+  color: #1b1b1b;
 }
 
 .historyDetail,
-.historyTimestamp,
-.featureCaption,
-.seeMore {
+.historyTimestamp {
   font-family: var(--font-ui);
-  font-size: 11.7px;
-  color: var(--home-muted-strong);
+  font-size: 11.687px;
+  font-weight: 300;
+  line-height: 1.334;
+}
+
+.historyDetail {
+  margin-top: 3.1px;
+  color: #6d6d6d;
+}
+
+.historyTimestamp {
+  padding-top: 1.4px;
+  color: rgba(0, 0, 0, 0.52);
+  white-space: nowrap;
 }
 
 .historyFeatureRow {
   display: flex;
   justify-content: space-between;
+  align-items: start;
   gap: 1rem;
-  margin-top: 0.95rem;
-  padding-top: 0.95rem;
-  border-top: 1px solid rgba(32, 31, 31, 0.1);
+  padding-left: 23.37px;
+  padding-right: 14px;
+}
+
+.featureBlock {
+  display: grid;
+  align-content: start;
 }
 
 .featureValue {
-  margin: 0.15rem 0 0;
+  margin: 3.71px 0 0;
   font-family: var(--font-ui);
-  font-size: 25px;
+  font-size: 25.082px;
   font-weight: 600;
-  color: #888;
+  line-height: 1.334;
+  color: #808080;
+}
+
+.featureCaption {
+  font-family: var(--font-display);
+  font-size: 11.687px;
+  font-weight: 400;
+  line-height: 1.334;
+  color: #1b1b1b;
 }
 
 .appIcons {
   display: flex;
-  gap: 0.45rem;
-  margin-top: 0.45rem;
+  align-items: center;
+  gap: 5.72px;
+  margin-top: 13.2px;
 }
 
 .appIcon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.62rem;
-  height: 1.62rem;
-  border-radius: 999px;
-  background: #1f1f1f;
-  color: white;
-  font-family: var(--font-ui);
-  font-size: 0.6rem;
-  font-weight: 700;
+  position: relative;
+  flex: none;
 }
 
-.seeMore {
-  text-align: center;
-  padding-top: 0.55rem;
+.appIconInstagram {
+  width: 26.01px;
+  height: 26.01px;
+  border-radius: 7px;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.appIconInstagramInner {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border: 1.7px solid #fff;
+  border-radius: 4.5px;
+}
+
+.appIconInstagramLens {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 5px;
+  height: 5px;
+  border: 1.6px solid #fff;
+  border-radius: 999px;
+}
+
+.appIconInstagramFlash {
+  position: absolute;
+  right: 1.7px;
+  top: 1.7px;
+  width: 2px;
+  height: 2px;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.appIconTiktok {
+  width: 28.611px;
+  height: 28.611px;
+  border-radius: 7px;
+  background: #000;
+}
+
+.appIconTiktokGlyph {
+  position: relative;
+  top: -0.7px;
+  font-family: "Arial Black", var(--font-ui);
+  font-size: 18px;
+  line-height: 1;
+  color: #fff;
+}
+
+.appIconTiktokGlyph::before,
+.appIconTiktokGlyph::after {
+  content: 'd';
+  position: absolute;
+  inset: 0;
+}
+
+.appIconTiktokGlyph::before {
+  color: #25f4ee;
+  transform: translate(-1.8px, 1.2px);
+  z-index: -1;
+}
+
+.appIconTiktokGlyph::after {
+  color: #fe2c55;
+  transform: translate(1.3px, -1px);
+  z-index: -2;
+}
+
+.appIconReddit {
+  width: 26.53px;
+  height: 26.53px;
+  border-radius: 999px;
+  background: #ff5b00;
+}
+
+.appIconRedditInner {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.appIconRedditEye {
+  position: absolute;
+  top: 6px;
+  width: 2px;
+  height: 2px;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.appIconRedditEye:first-child {
+  left: 4px;
+}
+
+.appIconRedditEye:nth-child(2) {
+  right: 4px;
+}
+
+.appIconRedditSmile {
+  position: absolute;
+  left: 4px;
+  bottom: 3px;
+  width: 8px;
+  height: 4px;
+  border-bottom: 1.5px solid #fff;
+  border-radius: 0 0 8px 8px;
+}
+
+.appIconRedditAntenna {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  width: 7px;
+  height: 7px;
+  border-top: 1.4px solid #fff;
+  border-right: 1.4px solid #fff;
+  transform: rotate(18deg);
+}
+
+.appIconRedditAntenna::after {
+  content: '';
+  position: absolute;
+  right: -1.9px;
+  top: -3.4px;
+  width: 3.2px;
+  height: 3.2px;
+  border-radius: 999px;
+  background: #fff;
 }
 
 .metrics {
   display: grid;
-  gap: 13px;
-  max-width: 185px;
+  gap: 13.216px;
+  width: 184.924px;
   margin: 0 auto;
 }
 
 .metricCard {
   position: relative;
-  padding: 16px 15px;
-  border-radius: 21.6px;
+  padding: 19.213px 15.61px 16px;
+  border-radius: 21.614px;
   overflow: hidden;
   color: white;
-  min-height: 184.9px;
+  min-height: 184.924px;
 }
 
 .metricPeach {
@@ -250,42 +512,61 @@
 
 .metricLabel {
   font-family: var(--font-ui);
-  font-size: 14.4px;
+  font-size: 14.41px;
   font-weight: 500;
+  line-height: 1.334;
+  letter-spacing: 0;
 }
 
 .metricValue {
-  margin-top: 0.2rem;
+  margin-top: 4.803px;
   font-family: var(--font-ui);
-  font-size: 38.4px;
-  font-weight: 700;
+  font-size: 38.426px;
+  font-weight: 500;
+  line-height: 1.334;
 }
 
 .metricDescription {
-  margin-top: 0.25rem;
+  margin-top: 4.803px;
   font-family: var(--font-ui);
-  font-size: 14.4px;
-  line-height: 1.35;
+  max-width: 153.703px;
+  font-size: 14.41px;
+  font-weight: 500;
+  line-height: 1.334;
 }
 
-.metricBadge {
+.metricCircle {
   position: absolute;
   top: -2px;
-  right: -14px;
+  right: -14.41px;
   width: 76.85px;
   height: 76.85px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.24);
 }
 
-.metricBadge span {
+.metricBadge {
   position: absolute;
-  left: 16px;
-  bottom: 10px;
-  width: 27.6px;
-  height: 27.6px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.16);
+  left: 15.61px;
+  bottom: 9.606px;
+  width: 27.618px;
+  height: 27.618px;
+  border-radius: 141.695px;
+  background: rgba(0, 0, 0, 0.14);
+  display: grid;
+  place-items: center;
+}
+
+.metricBadge span {
+  position: static;
+  width: auto;
+  height: auto;
+  background: transparent;
+  font-family: var(--font-ui);
+  font-size: 14.41px;
+  font-weight: 500;
+  line-height: 1.334;
+  color: white;
 }
 
 @media (max-width: 960px) {
@@ -297,6 +578,33 @@
   .phone,
   .historyCard {
     width: min(100%, 336px);
+  }
+
+  .phone {
+    min-height: auto;
+  }
+
+  .thread {
+    padding-inline: 18px;
+  }
+
+  .bubbleIncomingShort,
+  .bubbleIncomingTall,
+  .bubbleIncomingQuestion,
+  .bubbleOutgoingShort,
+  .bubbleOutgoingMedium,
+  .bubbleOutgoingLarge {
+    width: auto;
+    max-width: min(100%, 224.772px);
+  }
+
+  .historyCard {
+    width: min(100%, 336px);
+  }
+
+  .historyDivider {
+    width: 100%;
+    margin-left: 0;
   }
 
   .metrics {

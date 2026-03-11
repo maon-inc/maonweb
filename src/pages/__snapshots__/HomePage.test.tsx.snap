@@ -73,6 +73,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
               >
                 <span
                   aria-hidden="true"
+                  class="_backGlyph_bc5123"
                 >
                   ‹
                 </span>
@@ -82,9 +83,21 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
               >
                 <span
                   aria-hidden="true"
-                  class="_phoneRing_bc5123"
-                />
-                <span>
+                  class="_phoneAvatar_bc5123"
+                >
+                  <span
+                    class="_phoneAvatarEye_bc5123"
+                  />
+                  <span
+                    class="_phoneAvatarEye_bc5123"
+                  />
+                  <span
+                    class="_phoneAvatarSmile_bc5123"
+                  />
+                </span>
+                <span
+                  class="_phoneBrandName_bc5123"
+                >
                   maon
                 </span>
               </div>
@@ -93,34 +106,61 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
               class="_thread_bc5123"
             >
               <div
-                class="_bubble_bc5123"
+                class="_bubble_bc5123 _bubbleIncomingShort_bc5123 _bubbleIncoming_bc5123"
+                data-variant="incoming-short"
               >
                 what should i call you?
               </div>
               <div
-                class="_bubble_bc5123"
+                class="_bubble_bc5123 _bubbleOutgoingShort_bc5123 _bubbleReply_bc5123"
+                data-variant="outgoing-short"
               >
-                hi user, want to hear about me, or should we start with you?
+                hey im 
+                <em>
+                  user.
+                </em>
               </div>
               <div
-                class="_bubble_bc5123 _bubbleReply_bc5123"
+                class="_bubble_bc5123 _bubbleIncomingTall_bc5123 _bubbleIncoming_bc5123"
+                data-variant="incoming-tall"
               >
-                hey im user.
+                hi 
+                <em>
+                  user
+                </em>
+                , want to hear about me, or should we start with you?
               </div>
               <div
-                class="_bubble_bc5123"
-              >
-                when you start slipping do you notice it? or does it hit you later?
-              </div>
-              <div
-                class="_bubble_bc5123 _bubbleReply_bc5123"
+                class="_bubble_bc5123 _bubbleOutgoingMedium_bc5123 _bubbleReply_bc5123"
+                data-variant="outgoing-medium"
               >
                 ik you step in right away
               </div>
               <div
-                class="_bubble_bc5123 _bubbleReply_bc5123 _bubbleLong_bc5123"
+                class="_bubble_bc5123 _bubbleIncomingQuestion_bc5123 _bubbleIncoming_bc5123"
+                data-variant="incoming-question"
               >
-                i do not notice it until it gets really bad and then i start spiraling
+                when you start slipping do you notice it? or does it hit you later?
+              </div>
+              <div
+                class="_bubble_bc5123 _bubbleOutgoingLarge_bc5123 _bubbleReply_bc5123"
+                data-variant="outgoing-large"
+              >
+                i don’t notice it until it gets really bad and then i start spiraling
+              </div>
+              <div
+                aria-hidden="true"
+                class="_typingIndicator_bc5123"
+              >
+                <span
+                  class="_typingDot_bc5123"
+                />
+                <span
+                  class="_typingDot_bc5123"
+                />
+                <span
+                  class="_typingDot_bc5123"
+                />
               </div>
             </div>
           </article>
@@ -133,18 +173,19 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
           >
             interventions history
           </p>
-          <article
+          <div
             class="_historyCard_bc5123"
           >
-            <div
-              aria-hidden="true"
-              class="_historyTimeline_bc5123"
-            />
-            <div
-              class="_historyContent_bc5123"
+            <article
+              class="_historyItem_bc5123 _historyItemFeatured_bc5123"
             >
+              <span
+                aria-hidden="true"
+                class="_historyRail_bc5123"
+                style="background-color: rgb(200, 181, 255);"
+              />
               <div
-                class="_historyItem_bc5123 _historyItemFeatured_bc5123"
+                class="_historyBody_bc5123"
               >
                 <div
                   class="_historyTopline_bc5123"
@@ -168,9 +209,15 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                   </p>
                 </div>
                 <div
+                  aria-hidden="true"
+                  class="_historyDivider_bc5123"
+                />
+                <div
                   class="_historyFeatureRow_bc5123"
                 >
-                  <div>
+                  <div
+                    class="_featureBlock_bc5123"
+                  >
                     <p
                       class="_featureCaption_bc5123"
                     >
@@ -182,7 +229,9 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                       25 min
                     </p>
                   </div>
-                  <div>
+                  <div
+                    class="_featureBlock_bc5123"
+                  >
                     <p
                       class="_featureCaption_bc5123"
                     >
@@ -193,26 +242,63 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                       class="_appIcons_bc5123"
                     >
                       <span
-                        class="_appIcon_bc5123"
+                        class="_appIcon_bc5123 _appIconInstagram_bc5123"
                       >
-                        IG
+                        <span
+                          class="_appIconInstagramInner_bc5123"
+                        >
+                          <span
+                            class="_appIconInstagramLens_bc5123"
+                          />
+                          <span
+                            class="_appIconInstagramFlash_bc5123"
+                          />
+                        </span>
                       </span>
                       <span
-                        class="_appIcon_bc5123"
+                        class="_appIcon_bc5123 _appIconTiktok_bc5123"
                       >
-                        TT
+                        <span
+                          class="_appIconTiktokGlyph_bc5123"
+                        >
+                          d
+                        </span>
                       </span>
                       <span
-                        class="_appIcon_bc5123"
+                        class="_appIcon_bc5123 _appIconReddit_bc5123"
                       >
-                        R
+                        <span
+                          class="_appIconRedditInner_bc5123"
+                        >
+                          <span
+                            class="_appIconRedditEye_bc5123"
+                          />
+                          <span
+                            class="_appIconRedditEye_bc5123"
+                          />
+                          <span
+                            class="_appIconRedditSmile_bc5123"
+                          />
+                          <span
+                            class="_appIconRedditAntenna_bc5123"
+                          />
+                        </span>
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
+            </article>
+            <article
+              class="_historyItem_bc5123"
+            >
+              <span
+                aria-hidden="true"
+                class="_historyRail_bc5123"
+                style="background-color: rgb(199, 241, 240);"
+              />
               <div
-                class="_historyItem_bc5123"
+                class="_historyBody_bc5123"
               >
                 <div
                   class="_historyTopline_bc5123"
@@ -236,8 +322,17 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                   </p>
                 </div>
               </div>
+            </article>
+            <article
+              class="_historyItem_bc5123"
+            >
+              <span
+                aria-hidden="true"
+                class="_historyRail_bc5123"
+                style="background-color: rgb(245, 216, 199);"
+              />
               <div
-                class="_historyItem_bc5123"
+                class="_historyBody_bc5123"
               >
                 <div
                   class="_historyTopline_bc5123"
@@ -261,8 +356,17 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                   </p>
                 </div>
               </div>
+            </article>
+            <article
+              class="_historyItem_bc5123"
+            >
+              <span
+                aria-hidden="true"
+                class="_historyRail_bc5123"
+                style="background-color: rgb(239, 207, 211);"
+              />
               <div
-                class="_historyItem_bc5123"
+                class="_historyBody_bc5123"
               >
                 <div
                   class="_historyTopline_bc5123"
@@ -286,13 +390,8 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                   </p>
                 </div>
               </div>
-              <p
-                class="_seeMore_bc5123"
-              >
-                see more
-              </p>
-            </div>
-          </article>
+            </article>
+          </div>
         </div>
         <div
           class="_column_bc5123"
@@ -325,9 +424,15 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
               </p>
               <div
                 aria-hidden="true"
+                class="_metricCircle_bc5123"
+              />
+              <div
+                aria-hidden="true"
                 class="_metricBadge_bc5123"
               >
-                <span />
+                <span>
+                  3
+                </span>
               </div>
             </article>
             <article
@@ -350,9 +455,15 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
               </p>
               <div
                 aria-hidden="true"
+                class="_metricCircle_bc5123"
+              />
+              <div
+                aria-hidden="true"
                 class="_metricBadge_bc5123"
               >
-                <span />
+                <span>
+                  4
+                </span>
               </div>
             </article>
           </div>
@@ -362,49 +473,55 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
   </section>
   <section
     aria-labelledby="understand-title"
-    class="_section_9e478f _sectionAnimated_9e478f"
+    class="_section_9e478f"
     data-animated="true"
     data-testid="narrative-section"
-    style="--narrative-step-count: 4;"
   >
     <div
-      class="homeContainer"
+      class="_trackAnimated_9e478f"
+      data-testid="narrative-track"
+      style="--narrative-step-count: 4;"
     >
       <div
         class="_stickyViewport_9e478f"
+        data-testid="narrative-viewport"
       >
         <div
-          class="_stack_9e478f"
+          class="homeContainer _inner_9e478f"
         >
-          <p
-            class="_line_9e478f _intro_9e478f _lineActive_9e478f"
-            data-active="true"
-            data-line-index="0"
-            id="understand-title"
+          <div
+            class="_stack_9e478f"
           >
-            we understand...
-          </p>
-          <p
-            class="_line_9e478f _statement_9e478f _lineInactive_9e478f"
-            data-active="false"
-            data-line-index="1"
-          >
-            small things build up until everything feels like too much
-          </p>
-          <p
-            class="_line_9e478f _statement_9e478f _lineInactive_9e478f"
-            data-active="false"
-            data-line-index="2"
-          >
-            most support only shows up after you're already overwhelmed
-          </p>
-          <p
-            class="_line_9e478f _statementSerifMuted_9e478f _lineInactive_9e478f"
-            data-active="false"
-            data-line-index="3"
-          >
-            but maon notices the shift earlier because your body knows before you do
-          </p>
+            <p
+              class="_line_9e478f _intro_9e478f _lineActive_9e478f"
+              data-active="true"
+              data-line-index="0"
+              id="understand-title"
+            >
+              we understand...
+            </p>
+            <p
+              class="_line_9e478f _statement_9e478f _lineInactive_9e478f"
+              data-active="false"
+              data-line-index="1"
+            >
+              small things build up until everything feels like too much
+            </p>
+            <p
+              class="_line_9e478f _statement_9e478f _lineInactive_9e478f"
+              data-active="false"
+              data-line-index="2"
+            >
+              most support only shows up after you're already overwhelmed
+            </p>
+            <p
+              class="_line_9e478f _statementSerifMuted_9e478f _lineInactive_9e478f"
+              data-active="false"
+              data-line-index="3"
+            >
+              but maon notices the shift earlier because your body knows before you do
+            </p>
+          </div>
         </div>
       </div>
     </div>

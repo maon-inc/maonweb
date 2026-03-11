@@ -35,6 +35,7 @@ describe('NarrativeSection', () => {
   } as DOMRect;
 
   let sectionRect: DOMRect;
+  let trackRect: DOMRect;
 
   beforeEach(() => {
     vi.useFakeTimers();
@@ -50,6 +51,7 @@ describe('NarrativeSection', () => {
       height: 5000,
       toJSON: () => ({}),
     } as DOMRect;
+    trackRect = sectionRect;
 
     Object.defineProperty(window, 'innerWidth', {
       configurable: true,
@@ -76,6 +78,10 @@ describe('NarrativeSection', () => {
     vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockImplementation(function (
       this: HTMLElement,
     ) {
+      if (this.getAttribute('data-testid') === 'narrative-track') {
+        return trackRect;
+      }
+
       if (this.getAttribute('data-testid') === 'narrative-section') {
         return sectionRect;
       }
@@ -120,12 +126,16 @@ describe('NarrativeSection', () => {
     render(<NarrativeSection content={homePageContent.narrative} />);
 
     const section = screen.getByTestId('narrative-section');
+    const track = screen.getByTestId('narrative-track');
+    const viewport = screen.getByTestId('narrative-viewport');
     const firstMainLine = screen.getByText(
       /small things build up until everything feels like too much/i,
     );
     const introLine = screen.getByText(/we understand/i);
 
     expect(section).toHaveAttribute('data-animated', 'false');
+    expect(track).toBeInTheDocument();
+    expect(viewport).toBeInTheDocument();
     expect(firstMainLine).toHaveAttribute('data-active', 'true');
     expect(introLine).toHaveAttribute('data-active', 'false');
   });
@@ -140,6 +150,8 @@ describe('NarrativeSection', () => {
     render(<NarrativeSection content={homePageContent.narrative} />);
 
     const section = screen.getByTestId('narrative-section');
+    const track = screen.getByTestId('narrative-track');
+    const viewport = screen.getByTestId('narrative-viewport');
     const introLine = screen.getByText(/we understand/i);
     const firstMainLine = screen.getByText(
       /small things build up until everything feels like too much/i,
@@ -156,10 +168,12 @@ describe('NarrativeSection', () => {
     });
 
     expect(section).toHaveAttribute('data-animated', 'true');
+    expect(track).toContainElement(viewport);
+    expect(viewport.querySelector('.homeContainer')).toBeTruthy();
     expect(introLine).toHaveAttribute('data-active', 'true');
 
-    sectionRect = {
-      ...sectionRect,
+    trackRect = {
+      ...trackRect,
       top: -1200,
       y: -1200,
       bottom: 3800,
@@ -171,8 +185,8 @@ describe('NarrativeSection', () => {
 
     expect(firstMainLine).toHaveAttribute('data-active', 'true');
 
-    sectionRect = {
-      ...sectionRect,
+    trackRect = {
+      ...trackRect,
       top: -2300,
       y: -2300,
       bottom: 2700,
@@ -184,8 +198,8 @@ describe('NarrativeSection', () => {
 
     expect(secondLine).toHaveAttribute('data-active', 'true');
 
-    sectionRect = {
-      ...sectionRect,
+    trackRect = {
+      ...trackRect,
       top: -3300,
       y: -3300,
       bottom: 1700,
@@ -197,8 +211,8 @@ describe('NarrativeSection', () => {
 
     expect(finalLine).toHaveAttribute('data-active', 'true');
 
-    sectionRect = {
-      ...sectionRect,
+    trackRect = {
+      ...trackRect,
       top: -4600,
       y: -4600,
       bottom: 400,

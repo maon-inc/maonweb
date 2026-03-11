@@ -8,7 +8,7 @@ type NarrativeSectionProps = {
 };
 
 const DESKTOP_BREAKPOINT = 1024;
-const DESKTOP_STEP_HEIGHT_FACTOR = 1;
+const DESKTOP_STEP_COUNT = 4;
 const STATIC_ACTIVE_INDEX = 1;
 const ANIMATED_START_INDEX = 0;
 
@@ -38,7 +38,7 @@ export function shouldAnimateNarrative(viewportWidth: number, prefersReducedMoti
 }
 
 export function getNarrativeScrollOffset(
-  sectionTop: number,
+  trackTop: number,
   viewportHeight: number,
   totalLines: number,
 ) {
@@ -49,11 +49,11 @@ export function getNarrativeScrollOffset(
   const safeViewportHeight = Math.max(viewportHeight, 1);
   const maxOffset = safeViewportHeight * totalLines - 1;
 
-  return Math.min(Math.max(-sectionTop, 0), maxOffset);
+  return Math.min(Math.max(-trackTop, 0), maxOffset);
 }
 
 export function NarrativeSection({ content }: NarrativeSectionProps) {
-  const sectionRef = useRef<HTMLElement | null>(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
   const [activeIndex, setActiveIndex] = useState(STATIC_ACTIVE_INDEX);
   const [isAnimatedDesktop, setIsAnimatedDesktop] = useState(false);
 
@@ -103,7 +103,7 @@ export function NarrativeSection({ content }: NarrativeSectionProps) {
   }, []);
 
   useEffect(() => {
-    if (!isAnimatedDesktop || !sectionRef.current || typeof window === 'undefined') {
+    if (!isAnimatedDesktop || !trackRef.current || typeof window === 'undefined') {
       return;
     }
 
@@ -112,18 +112,18 @@ export function NarrativeSection({ content }: NarrativeSectionProps) {
     const updateStep = () => {
       frameId = 0;
 
-      const section = sectionRef.current;
+      const track = trackRef.current;
 
-      if (!section) {
+      if (!track) {
         return;
       }
 
-      const rect = section.getBoundingClientRect();
+      const rect = track.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
       const scrollOffset = getNarrativeScrollOffset(rect.top, viewportHeight, lines.length);
       const nextIndex = getNarrativeActiveIndex(
         scrollOffset,
-        viewportHeight * DESKTOP_STEP_HEIGHT_FACTOR,
+        viewportHeight,
         lines.length,
       );
 
@@ -158,38 +158,46 @@ export function NarrativeSection({ content }: NarrativeSectionProps) {
   return (
     <section
       aria-labelledby="understand-title"
-      className={isAnimatedDesktop ? `${styles.section} ${styles.sectionAnimated}` : styles.section}
+      className={styles.section}
       data-animated={isAnimatedDesktop ? 'true' : 'false'}
       data-testid="narrative-section"
-      ref={sectionRef}
-      style={
-        isAnimatedDesktop
-          ? ({ '--narrative-step-count': lines.length } as CSSProperties)
-          : undefined
-      }
     >
-      <div className="homeContainer">
-        <div className={isAnimatedDesktop ? styles.stickyViewport : undefined}>
-          <div className={styles.stack}>
-            {lines.map((line, index) => (
-              <p
-                className={
-                  line.variant === 'intro'
-                    ? `${styles.line} ${styles.intro} ${index === activeIndex ? styles.lineActive : styles.lineInactive}`
-                    : line.variant === 'default'
-                      ? `${styles.line} ${styles.statement} ${index === activeIndex ? styles.lineActive : styles.lineInactive}`
-                      : line.variant === 'muted'
+      <div
+        className={isAnimatedDesktop ? styles.trackAnimated : styles.trackStatic}
+        data-testid="narrative-track"
+        ref={trackRef}
+        style={
+          isAnimatedDesktop
+            ? ({ '--narrative-step-count': Math.max(lines.length, DESKTOP_STEP_COUNT) } as CSSProperties)
+            : undefined
+        }
+      >
+        <div
+          className={isAnimatedDesktop ? styles.stickyViewport : styles.staticViewport}
+          data-testid="narrative-viewport"
+        >
+          <div className={`homeContainer ${styles.inner}`}>
+            <div className={styles.stack}>
+              {lines.map((line, index) => (
+                <p
+                  className={
+                    line.variant === 'intro'
+                      ? `${styles.line} ${styles.intro} ${index === activeIndex ? styles.lineActive : styles.lineInactive}`
+                      : line.variant === 'default'
                         ? `${styles.line} ${styles.statement} ${index === activeIndex ? styles.lineActive : styles.lineInactive}`
-                        : `${styles.line} ${styles.statementSerifMuted} ${index === activeIndex ? styles.lineActive : styles.lineInactive}`
-                }
-                data-active={index === activeIndex ? 'true' : 'false'}
-                data-line-index={index}
-                id={index === 0 ? 'understand-title' : undefined}
-                key={line.key}
-              >
-                {line.text}
-              </p>
-            ))}
+                        : line.variant === 'muted'
+                          ? `${styles.line} ${styles.statement} ${index === activeIndex ? styles.lineActive : styles.lineInactive}`
+                          : `${styles.line} ${styles.statementSerifMuted} ${index === activeIndex ? styles.lineActive : styles.lineInactive}`
+                  }
+                  data-active={index === activeIndex ? 'true' : 'false'}
+                  data-line-index={index}
+                  id={index === 0 ? 'understand-title' : undefined}
+                  key={line.key}
+                >
+                  {line.text}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
       </div>

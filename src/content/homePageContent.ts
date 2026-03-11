@@ -15,18 +15,41 @@ export type ShowcaseMetric = {
   value: string;
   description: string;
   tone: 'peach' | 'green';
+  badge: string;
+};
+
+export type ShowcaseMessage = {
+  id: string;
+  text: string;
+  sender: 'maon' | 'user';
+  variant:
+    | 'incoming-short'
+    | 'incoming-tall'
+    | 'incoming-question'
+    | 'outgoing-short'
+    | 'outgoing-medium'
+    | 'outgoing-large';
+  italicWord?: string;
+};
+
+export type ShowcaseBlockedApp = 'instagram' | 'tiktok' | 'reddit';
+
+export type ShowcaseHistoryItem = {
+  title: string;
+  detail: string;
+  timestamp: string;
+  railColor: string;
+  variant: 'featured' | 'compact';
+  endsIn?: string;
+  blockedApps?: ShowcaseBlockedApp[];
 };
 
 export type ShowcaseContent = {
   messagesLabel: string;
   historyLabel: string;
   storiesLabel: string;
-  historyItems: Array<{
-    title: string;
-    detail: string;
-    timestamp: string;
-    emphasis?: boolean;
-  }>;
+  messages: ShowcaseMessage[];
+  historyItems: ShowcaseHistoryItem[];
   metrics: ShowcaseMetric[];
 };
 
@@ -78,27 +101,76 @@ export const homePageContent: HomePageContent = {
     messagesLabel: 'in your messages',
     historyLabel: 'interventions history',
     storiesLabel: 'stories',
+    messages: [
+      {
+        id: 'prompt-name',
+        text: 'what should i call you?',
+        sender: 'maon',
+        variant: 'incoming-short',
+      },
+      {
+        id: 'reply-name',
+        text: 'hey im user.',
+        sender: 'user',
+        variant: 'outgoing-short',
+        italicWord: 'user.',
+      },
+      {
+        id: 'prompt-intro',
+        text: 'hi user, want to hear about me, or should we start with you?',
+        sender: 'maon',
+        variant: 'incoming-tall',
+        italicWord: 'user',
+      },
+      {
+        id: 'reply-awareness',
+        text: 'ik you step in right away',
+        sender: 'user',
+        variant: 'outgoing-medium',
+      },
+      {
+        id: 'prompt-awareness',
+        text: 'when you start slipping do you notice it? or does it hit you later?',
+        sender: 'maon',
+        variant: 'incoming-question',
+      },
+      {
+        id: 'reply-spiral',
+        text: 'i don’t notice it until it gets really bad and then i start spiraling',
+        sender: 'user',
+        variant: 'outgoing-large',
+      },
+    ],
     historyItems: [
       {
         title: 'screen time',
         detail: '30 min limit on social media',
         timestamp: 'sat - 7:15 pm',
-        emphasis: true,
+        railColor: '#c8b5ff',
+        variant: 'featured',
+        endsIn: '25 min',
+        blockedApps: ['instagram', 'tiktok', 'reddit'],
       },
       {
         title: 'breathing exercise',
         detail: '7-8-4 second exercise',
         timestamp: 'sat - 7 pm',
+        railColor: '#c7f1f0',
+        variant: 'compact',
       },
       {
         title: 'workout @ 7 pm monday',
         detail: 'added workout to your apple calendar',
         timestamp: 'sat - 6:42 pm',
+        railColor: '#f5d8c7',
+        variant: 'compact',
       },
       {
         title: 'alarm @ 9:30 am sunday',
         detail: 'get back into a good sleep rhythm',
         timestamp: 'sat - 6:18 pm',
+        railColor: '#efcfd3',
+        variant: 'compact',
       },
     ],
     metrics: [
@@ -107,12 +179,14 @@ export const homePageContent: HomePageContent = {
         value: '2h',
         description: 'before a spiral, your body lets us know',
         tone: 'peach',
+        badge: '3',
       },
       {
         label: 'PROGRESS',
         value: '18%',
         description: 'less destress over the past week',
         tone: 'green',
+        badge: '4',
       },
     ],
   },
