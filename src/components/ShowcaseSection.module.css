@@ -15,8 +15,20 @@
   gap: 15px;
 }
 
+.columnMessages {
+  gap: 15.626px;
+}
+
 .columnWide {
   padding-top: 0.1rem;
+}
+
+.columnHistory {
+  gap: 15.555px;
+}
+
+.columnStories {
+  gap: 14.426px;
 }
 
 .label {
@@ -26,7 +38,21 @@
   font-weight: 600;
   line-height: 1.334;
   text-align: center;
-  color: var(--home-ink);
+  letter-spacing: 0;
+  color: #1b1b1b;
+  justify-self: center;
+}
+
+.labelMessages {
+  width: 140px;
+}
+
+.labelHistory {
+  width: 173px;
+}
+
+.labelStories {
+  width: 56px;
 }
 
 .phone {
@@ -70,10 +96,6 @@
   display: grid;
   justify-items: center;
   gap: 1.8px;
-  font-family: var(--font-ui);
-  font-size: 14.446px;
-  font-weight: 500;
-  line-height: 1.334;
   color: #111;
 }
 
@@ -115,6 +137,10 @@
 
 .phoneBrandName {
   display: block;
+  font-family: var(--font-ui);
+  font-size: 14.446px;
+  font-weight: 500;
+  line-height: 1.334;
 }
 
 .thread {
@@ -128,14 +154,30 @@
   display: block;
   padding: 2.4px 13.696px 4.6px;
   border-radius: 15.307px;
-  font-family: "SF Pro Text", var(--font-ui);
+  font-family:
+    "SF Pro Text",
+    "SF Pro",
+    "SF Pro Display",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
   font-size: 16.113px;
+  font-weight: 400;
   line-height: 1.334;
   letter-spacing: 0;
+  text-rendering: geometricPrecision;
 }
 
 .bubble em {
+  font-family:
+    "SF Pro Text",
+    "SF Pro",
+    "SF Pro Display",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
   font-style: italic;
+  font-weight: 400;
 }
 
 .bubbleIncoming {

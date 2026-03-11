@@ -80,13 +80,17 @@ a {
 }
 
 .buttonPrimaryCompact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 42.545px;
   min-width: 192px;
-  padding: 9.8px 16px;
-  border-radius: 4.1px;
+  padding: 9.818px 16px;
+  border-radius: 4.091px;
   font-family: var(--font-ui);
   font-size: 16.364px;
   font-weight: 500;
+  line-height: normal;
 }
 
 .homeContainer {
@@ -108,6 +112,13 @@ a {
     transform 180ms ease,
     background-color 180ms ease,
     border-color 180ms ease;
+}
+
+.buttonPrimaryCompact.buttonPrimary {
+  min-height: 42.545px;
+  min-width: 192px;
+  padding: 9.818px 16px;
+  border-radius: 4.091px;
 }
 
 .buttonPrimary:hover,

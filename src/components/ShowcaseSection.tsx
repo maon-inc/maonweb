@@ -121,8 +121,8 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
     <section className={styles.section} aria-label="Product preview">
       <div className="homeContainer">
         <div className={styles.grid}>
-          <div className={styles.column}>
-            <p className={styles.label}>{content.messagesLabel}</p>
+          <div className={`${styles.column} ${styles.columnMessages}`}>
+            <p className={`${styles.label} ${styles.labelMessages}`}>{content.messagesLabel}</p>
             <article className={styles.phone}>
               <div className={styles.phoneHeader}>
                 <button
@@ -166,15 +166,15 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
             </article>
           </div>
 
-          <div className={`${styles.column} ${styles.columnWide}`}>
-            <p className={styles.label}>{content.historyLabel}</p>
+          <div className={`${styles.column} ${styles.columnWide} ${styles.columnHistory}`}>
+            <p className={`${styles.label} ${styles.labelHistory}`}>{content.historyLabel}</p>
             <div className={styles.historyCard}>
               {content.historyItems.map((item) => renderHistoryCard(item))}
             </div>
           </div>
 
-          <div className={styles.column}>
-            <p className={styles.label}>{content.storiesLabel}</p>
+          <div className={`${styles.column} ${styles.columnStories}`}>
+            <p className={`${styles.label} ${styles.labelStories}`}>{content.storiesLabel}</p>
             <div className={styles.metrics}>
               {content.metrics.map((metric) => (
                 <article

@@ -53,10 +53,10 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
         class="_grid_bc5123"
       >
         <div
-          class="_column_bc5123"
+          class="_column_bc5123 _columnMessages_bc5123"
         >
           <p
-            class="_label_bc5123"
+            class="_label_bc5123 _labelMessages_bc5123"
           >
             in your messages
           </p>
@@ -166,10 +166,10 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
           </article>
         </div>
         <div
-          class="_column_bc5123 _columnWide_bc5123"
+          class="_column_bc5123 _columnWide_bc5123 _columnHistory_bc5123"
         >
           <p
-            class="_label_bc5123"
+            class="_label_bc5123 _labelHistory_bc5123"
           >
             interventions history
           </p>
@@ -394,10 +394,10 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
           </div>
         </div>
         <div
-          class="_column_bc5123"
+          class="_column_bc5123 _columnStories_bc5123"
         >
           <p
-            class="_label_bc5123"
+            class="_label_bc5123 _labelStories_bc5123"
           >
             stories
           </p>

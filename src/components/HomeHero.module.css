@@ -31,6 +31,7 @@
   line-height: 1.334;
   font-weight: 400;
   color: var(--home-ink);
+  letter-spacing: 0;
 }
 
 .emphasis {
@@ -39,10 +40,12 @@
 
 .supportingText {
   margin: 0;
-  font-family: var(--font-ui);
+  min-height: 51px;
+  font-family: "SF Pro Rounded", "Avenir Next Rounded", "Avenir Next", var(--font-ui);
   font-size: 20px;
   line-height: 1.334;
-  color: var(--home-ink);
+  font-weight: 400;
+  color: #000;
 }
 
 @media (max-width: 700px) {
@@ -59,5 +62,6 @@
 
   .supportingText {
     font-size: 1rem;
+    min-height: 0;
   }
 }
