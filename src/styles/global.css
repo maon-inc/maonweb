@@ -21,7 +21,7 @@
   --shadow-soft: 0 18px 50px rgba(70, 46, 11, 0.09);
   --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-ui: "Geist", "Avenir Next", "Segoe UI", sans-serif;
-  --home-page-max-width: 86rem;
+  --home-page-max-width: 1377px;
   --home-ink: #1b1b1b;
   --home-ink-soft: #2f2d2b;
   --home-muted: #c7c3c0;
@@ -80,11 +80,13 @@ a {
 }
 
 .buttonPrimaryCompact {
-  min-height: 2.65rem;
-  padding: 0.65rem 1rem;
-  border-radius: 0.35rem;
+  min-height: 42.545px;
+  min-width: 192px;
+  padding: 9.8px 16px;
+  border-radius: 4.1px;
   font-family: var(--font-ui);
-  font-size: 0.9rem;
+  font-size: 16.364px;
+  font-weight: 500;
 }
 
 .homeContainer {

@@ -1,12 +1,11 @@
 .section {
-  padding: 1.5rem 0 7rem;
+  padding: 55px 0 8rem;
 }
 
 .stack {
   display: grid;
   justify-items: center;
   text-align: center;
-  gap: 0.3rem;
 }
 
 .title,
@@ -19,5 +18,25 @@
 
 .title,
 .subtitle {
-  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-size: 40px;
+  line-height: 1.334;
+}
+
+.subtitle {
+  margin-top: 13px;
+}
+
+.stack :global(.buttonPrimaryCompact) {
+  margin-top: 37px;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding-top: 2rem;
+  }
+
+  .title,
+  .subtitle {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+  }
 }

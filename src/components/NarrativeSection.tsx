@@ -8,7 +8,7 @@ type NarrativeSectionProps = {
 export function NarrativeSection({ content }: NarrativeSectionProps) {
   return (
     <section className={styles.section} aria-labelledby="understand-title">
-      <div className="container">
+      <div className="homeContainer">
         <div className={styles.stack}>
           <p className={styles.intro} id="understand-title">
             {content.intro}

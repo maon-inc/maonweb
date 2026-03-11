@@ -33,7 +33,7 @@ export function HowWeHelpSection({
 
   return (
     <section className={styles.section} aria-labelledby="how-we-help-title">
-      <div className="container">
+      <div className="homeContainer">
         <div className={styles.headingBlock}>
           <h2 className={styles.heading} id="how-we-help-title">
             how we help

@@ -31,11 +31,13 @@ describe('app router', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /what if an ai agent's only job was to keep you balanced/i,
+        name: /an assistant that uses your biometrics to keep you balanced/i,
       }),
     ).toBeInTheDocument();
     expect(screen.getByText(/we understand/i)).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2, name: /how we help/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /try now/i })).toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'About' })).not.toBeInTheDocument();
     expect(
       screen.getByText(/shared layout, route-aware chrome, and a focused landing page/i),
     ).toBeInTheDocument();
@@ -44,10 +46,10 @@ describe('app router', () => {
   it('navigates between pages', async () => {
     const user = userEvent.setup();
 
-    renderWithRouter(['/']);
-    await user.click(screen.getByRole('link', { name: 'About' }));
+    renderWithRouter(['/about']);
+    await user.click(screen.getByRole('link', { name: 'Contact' }));
 
-    expect(await screen.findByRole('heading', { level: 1, name: /about this starter/i }))
+    expect(await screen.findByRole('heading', { level: 1, name: /contact/i }))
       .toBeInTheDocument();
   });
 

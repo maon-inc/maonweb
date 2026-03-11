@@ -28,7 +28,7 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
 
   return (
     <section className={styles.section} aria-label="Product preview">
-      <div className="container">
+      <div className="homeContainer">
         <div className={styles.grid}>
           <div className={styles.column}>
             <p className={styles.label}>{content.messagesLabel}</p>

@@ -10,7 +10,7 @@ type FinalCtaSectionProps = {
 export function FinalCtaSection({ content }: FinalCtaSectionProps) {
   return (
     <section className={styles.section}>
-      <div className="container">
+      <div className="homeContainer">
         <div className={styles.stack}>
           <h2 className={styles.title}>{content.title}</h2>
           <p className={styles.subtitle}>{content.subtitle}</p>

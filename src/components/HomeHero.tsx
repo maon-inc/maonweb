@@ -8,16 +8,15 @@ type HomeHeroProps = {
 };
 
 export function HomeHero({ content }: HomeHeroProps) {
-  const [leading, trailing] = content.title.split(' balanced?');
-
   return (
     <section className={styles.section}>
-      <div className="container">
+      <div className="homeContainer">
         <div className={styles.frame}>
           <p className={styles.eyebrow}>{content.eyebrow}</p>
           <h1 className={styles.title}>
-            {leading}
-            <span className={styles.emphasis}> balanced?</span>
+            {content.titlePrefix}{' '}
+            <span className={styles.emphasis}>{content.titleEmphasis}</span>{' '}
+            {content.titleSuffix}
           </h1>
           <p className={styles.supportingText}>{content.supportingText}</p>
           <Link className="buttonPrimary buttonPrimaryCompact" to={content.cta.to}>

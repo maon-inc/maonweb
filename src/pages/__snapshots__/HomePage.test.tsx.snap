@@ -6,7 +6,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
     class="_section_4a3a7e"
   >
     <div
-      class="container"
+      class="homeContainer"
     >
       <div
         class="_frame_4a3a7e"
@@ -19,24 +19,25 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
         <h1
           class="_title_4a3a7e"
         >
-          what if an AI agent's only job was to keep you
+          an assistant that uses your 
           <span
             class="_emphasis_4a3a7e"
           >
-             balanced?
+            biometrics
           </span>
+           to keep you balanced
         </h1>
         <p
           class="_supportingText_4a3a7e"
         >
-          All you need is an Apple Watch and an iPhone
+          with proactive interventions
         </p>
         <a
           class="buttonPrimary buttonPrimaryCompact"
           data-discover="true"
           href="/contact"
         >
-          save your spot
+          say hi to maon
         </a>
       </div>
     </div>
@@ -46,7 +47,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
     class="_section_bc5123"
   >
     <div
-      class="container"
+      class="homeContainer"
     >
       <div
         class="_grid_bc5123"
@@ -364,7 +365,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
     class="_section_9e478f"
   >
     <div
-      class="container"
+      class="homeContainer"
     >
       <div
         class="_stack_9e478f"
@@ -398,7 +399,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
     class="_section_90fb87"
   >
     <div
-      class="container"
+      class="homeContainer"
     >
       <div
         class="_headingBlock_90fb87"
@@ -525,7 +526,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
     class="_section_f1b934"
   >
     <div
-      class="container"
+      class="homeContainer"
     >
       <div
         class="_stack_f1b934"

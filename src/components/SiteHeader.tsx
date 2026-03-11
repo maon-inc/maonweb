@@ -14,31 +14,33 @@ export function SiteHeader() {
 
   return (
     <header className={isHome ? `${styles.header} ${styles.headerHome}` : styles.header}>
-      <div className="container">
+      <div className={isHome ? `${styles.containerHome} container` : 'container'}>
         <div className={styles.inner}>
           <NavLink aria-label="MAON" className={styles.brand} to="/">
             <span className={styles.brandText}>MA</span>
             <span className={styles.brandRing} aria-hidden="true" />
             <span className={styles.brandText}>N</span>
           </NavLink>
-          <nav aria-label="Primary">
-            <ul className={styles.navList}>
-              {navItems.map((item) => (
-                <li key={item.to}>
-                  <NavLink
-                    className={({ isActive }) =>
-                      isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
-                    }
-                    to={item.to}
-                  >
-                    {item.label}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          {isHome ? null : (
+            <nav aria-label="Primary">
+              <ul className={styles.navList}>
+                {navItems.map((item) => (
+                  <li key={item.to}>
+                    <NavLink
+                      className={({ isActive }) =>
+                        isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+                      }
+                      to={item.to}
+                    >
+                      {item.label}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
           <NavLink className={styles.headerCta} to="/contact">
-            save your spot
+            {isHome ? 'try now' : 'save your spot'}
           </NavLink>
         </div>
       </div>

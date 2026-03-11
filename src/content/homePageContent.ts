@@ -1,6 +1,8 @@
 export type HomeHeroContent = {
   eyebrow: string;
-  title: string;
+  titlePrefix: string;
+  titleEmphasis: string;
+  titleSuffix: string;
   supportingText: string;
   cta: {
     label: string;
@@ -63,10 +65,12 @@ export type HomePageContent = {
 export const homePageContent: HomePageContent = {
   hero: {
     eyebrow: 'MAON',
-    title: "what if an AI agent's only job was to keep you balanced?",
-    supportingText: 'All you need is an Apple Watch and an iPhone',
+    titlePrefix: 'an assistant that uses your',
+    titleEmphasis: 'biometrics',
+    titleSuffix: 'to keep you balanced',
+    supportingText: 'with proactive interventions',
     cta: {
-      label: 'save your spot',
+      label: 'say hi to maon',
       to: '/contact',
     },
   },
