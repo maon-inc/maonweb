@@ -1,0 +1,163 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HowWeHelpSection > matches the stable expanded snapshot 1`] = `
+<DocumentFragment>
+  <section
+    aria-labelledby="how-we-help-title"
+    class="_section_90fb87"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="_headingBlock_90fb87"
+      >
+        <h2
+          class="_heading_90fb87"
+          id="how-we-help-title"
+        >
+          how we help
+        </h2>
+      </div>
+      <div
+        class="_grid_90fb87"
+      >
+        <article
+          class="_card_5a814f _expanded_5a814f"
+        >
+          <button
+            aria-controls="proactive-interventions-details"
+            aria-expanded="true"
+            class="_trigger_5a814f"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="_rail_5a814f"
+            />
+            <span
+              class="_content_5a814f"
+            >
+              <span
+                class="_title_5a814f"
+              >
+                proactive interventions
+              </span>
+              <span
+                class="_summary_5a814f"
+              >
+                when something starts to drift, maon helps you reset in the moment with small actions
+              </span>
+              <span
+                aria-hidden="true"
+                class="_chevron_5a814f"
+              >
+                −
+              </span>
+            </span>
+          </button>
+          <div
+            class="_details_5a814f"
+            id="proactive-interventions-details"
+          >
+            <ul
+              class="_list_5a814f"
+            >
+              <li
+                class="_listItem_5a814f"
+              >
+                quick check-ins over text
+              </li>
+              <li
+                class="_listItem_5a814f"
+              >
+                short breathing resets when your stress rise
+              </li>
+              <li
+                class="_listItem_5a814f"
+              >
+                blocking distracting apps using screen time
+              </li>
+              <li
+                class="_listItem_5a814f"
+              >
+                suggest and schedule time for a hike
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article
+          class="_card_5a814f"
+        >
+          <button
+            aria-controls="personal-patterns-details"
+            aria-expanded="false"
+            class="_trigger_5a814f"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="_rail_5a814f"
+            />
+            <span
+              class="_content_5a814f"
+            >
+              <span
+                class="_title_5a814f"
+              >
+                personal patterns
+              </span>
+              <span
+                class="_summary_5a814f"
+              >
+                most people do not see what actually affects their energy or mood. maon connects the dots
+              </span>
+              <span
+                aria-hidden="true"
+                class="_chevron_5a814f"
+              >
+                +
+              </span>
+            </span>
+          </button>
+        </article>
+        <article
+          class="_card_5a814f"
+        >
+          <button
+            aria-controls="adaptive-over-time-details"
+            aria-expanded="false"
+            class="_trigger_5a814f"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="_rail_5a814f"
+            />
+            <span
+              class="_content_5a814f"
+            >
+              <span
+                class="_title_5a814f"
+              >
+                adaptive over time
+              </span>
+              <span
+                class="_summary_5a814f"
+              >
+                the more you use maon, the more it learns how you work
+              </span>
+              <span
+                aria-hidden="true"
+                class="_chevron_5a814f"
+              >
+                +
+              </span>
+            </span>
+          </button>
+        </article>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

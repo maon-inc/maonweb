@@ -3,6 +3,11 @@
   background: var(--surface);
 }
 
+.footerHome {
+  border-top-color: transparent;
+  background: transparent;
+}
+
 .inner {
   padding: 2rem 0 3rem;
 }

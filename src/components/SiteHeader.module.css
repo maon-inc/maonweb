@@ -7,6 +7,11 @@
   border-bottom: 1px solid var(--border);
 }
 
+.headerHome {
+  background: rgba(255, 253, 252, 0.75);
+  border-bottom-color: transparent;
+}
+
 .inner {
   display: flex;
   align-items: center;
@@ -16,12 +21,37 @@
 }
 
 .brand {
-  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
+  text-decoration: none;
+  color: var(--home-ink);
+  font-family: var(--font-ui);
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  text-decoration: none;
-  color: var(--text-strong);
+}
+
+.brandText {
+  display: inline-block;
+}
+
+.brandRing {
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-inline: 0.08rem;
+  border: 1.8px solid var(--home-ink);
+  border-radius: 999px;
+  position: relative;
+}
+
+.brandRing::after {
+  content: '';
+  position: absolute;
+  inset: 0.18rem;
+  border: 1.4px solid var(--home-ink);
+  border-radius: inherit;
 }
 
 .navList {
@@ -35,14 +65,29 @@
 
 .navLink {
   text-decoration: none;
-  color: var(--text-muted);
+  color: var(--home-muted-strong);
   font-weight: 500;
   transition: color 180ms ease;
 }
 
 .navLink:hover,
 .active {
-  color: var(--text-strong);
+  color: var(--home-ink);
+}
+
+.headerCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.45rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 0.4rem;
+  background: var(--home-ink);
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  font-weight: 600;
 }
 
 @media (max-width: 640px) {
@@ -50,5 +95,9 @@
     flex-direction: column;
     justify-content: center;
     padding: 1rem 0;
+  }
+
+  .headerCta {
+    width: 100%;
   }
 }

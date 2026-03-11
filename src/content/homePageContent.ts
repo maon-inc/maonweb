@@ -1,0 +1,175 @@
+export type HomeHeroContent = {
+  eyebrow: string;
+  title: string;
+  supportingText: string;
+  cta: {
+    label: string;
+    to: string;
+  };
+};
+
+export type ShowcaseMetric = {
+  label: string;
+  value: string;
+  description: string;
+  tone: 'peach' | 'green';
+};
+
+export type ShowcaseContent = {
+  messagesLabel: string;
+  historyLabel: string;
+  storiesLabel: string;
+  historyItems: Array<{
+    title: string;
+    detail: string;
+    timestamp: string;
+    emphasis?: boolean;
+  }>;
+  metrics: ShowcaseMetric[];
+};
+
+export type NarrativeContent = {
+  intro: string;
+  statements: Array<{
+    text: string;
+    tone: 'muted' | 'default' | 'serif-muted';
+  }>;
+};
+
+export type HowWeHelpItem = {
+  id: string;
+  title: string;
+  summary: string;
+  details: string[];
+};
+
+export type FinalCtaContent = {
+  title: string;
+  subtitle: string;
+  cta: {
+    label: string;
+    to: string;
+  };
+};
+
+export type HomePageContent = {
+  hero: HomeHeroContent;
+  showcase: ShowcaseContent;
+  narrative: NarrativeContent;
+  howWeHelp: HowWeHelpItem[];
+  finalCta: FinalCtaContent;
+};
+
+export const homePageContent: HomePageContent = {
+  hero: {
+    eyebrow: 'MAON',
+    title: "what if an AI agent's only job was to keep you balanced?",
+    supportingText: 'All you need is an Apple Watch and an iPhone',
+    cta: {
+      label: 'save your spot',
+      to: '/contact',
+    },
+  },
+  showcase: {
+    messagesLabel: 'in your messages',
+    historyLabel: 'interventions history',
+    storiesLabel: 'stories',
+    historyItems: [
+      {
+        title: 'screen time',
+        detail: '30 min limit on social media',
+        timestamp: 'sat - 7:15 pm',
+        emphasis: true,
+      },
+      {
+        title: 'breathing exercise',
+        detail: '7-8-4 second exercise',
+        timestamp: 'sat - 7 pm',
+      },
+      {
+        title: 'workout @ 7 pm monday',
+        detail: 'added workout to your apple calendar',
+        timestamp: 'sat - 6:42 pm',
+      },
+      {
+        title: 'alarm @ 9:30 am sunday',
+        detail: 'get back into a good sleep rhythm',
+        timestamp: 'sat - 6:18 pm',
+      },
+    ],
+    metrics: [
+      {
+        label: 'EARLY SPIRAL',
+        value: '2h',
+        description: 'before a spiral, your body lets us know',
+        tone: 'peach',
+      },
+      {
+        label: 'PROGRESS',
+        value: '18%',
+        description: 'less destress over the past week',
+        tone: 'green',
+      },
+    ],
+  },
+  narrative: {
+    intro: 'we understand...',
+    statements: [
+      {
+        text: 'small things build up until everything feels like too much',
+        tone: 'default',
+      },
+      {
+        text: "most support only shows up after you're already overwhelmed",
+        tone: 'muted',
+      },
+      {
+        text: 'but maon notices the shift earlier because your body knows before you do',
+        tone: 'serif-muted',
+      },
+    ],
+  },
+  howWeHelp: [
+    {
+      id: 'proactive-interventions',
+      title: 'proactive interventions',
+      summary: 'when something starts to drift, maon helps you reset in the moment with small actions',
+      details: [
+        'quick check-ins over text',
+        'short breathing resets when your stress rise',
+        'blocking distracting apps using screen time',
+        'suggest and schedule time for a hike',
+      ],
+    },
+    {
+      id: 'personal-patterns',
+      title: 'personal patterns',
+      summary: 'most people do not see what actually affects their energy or mood. maon connects the dots',
+      details: [
+        'help you understand what keeps you balanced',
+        'notice when night scrolling affects your next day',
+        'show when outdoor time improves your mood',
+        'highlight days where your focus or stress shifts',
+      ],
+    },
+    {
+      id: 'adaptive-over-time',
+      title: 'adaptive over time',
+      summary: 'the more you use maon, the more it learns how you work',
+      details: [
+        'learns what interventions work best for you',
+        'adjusts when to check in and when to stay quiet',
+        'recognizes your unique stress signals',
+        'gets better at catching shifts earlier',
+      ],
+    },
+  ],
+  finalCta: {
+    title: "balance doesn't happen by accident",
+    subtitle: 'maon helps you find it',
+    cta: {
+      label: 'say hi to maon',
+      to: '/contact',
+    },
+  },
+};

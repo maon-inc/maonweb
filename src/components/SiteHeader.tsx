@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 import styles from './SiteHeader.module.css';
 
@@ -9,12 +9,17 @@ const navItems = [
 ];
 
 export function SiteHeader() {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
   return (
-    <header className={styles.header}>
+    <header className={isHome ? `${styles.header} ${styles.headerHome}` : styles.header}>
       <div className="container">
         <div className={styles.inner}>
-          <NavLink className={styles.brand} to="/">
-            MAON
+          <NavLink aria-label="MAON" className={styles.brand} to="/">
+            <span className={styles.brandText}>MA</span>
+            <span className={styles.brandRing} aria-hidden="true" />
+            <span className={styles.brandText}>N</span>
           </NavLink>
           <nav aria-label="Primary">
             <ul className={styles.navList}>
@@ -32,6 +37,9 @@ export function SiteHeader() {
               ))}
             </ul>
           </nav>
+          <NavLink className={styles.headerCta} to="/contact">
+            save your spot
+          </NavLink>
         </div>
       </div>
     </header>

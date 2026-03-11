@@ -1,0 +1,30 @@
+.section {
+  padding: 1rem 0 var(--home-space-xxl);
+}
+
+.headingBlock {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 400;
+  color: var(--home-ink);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

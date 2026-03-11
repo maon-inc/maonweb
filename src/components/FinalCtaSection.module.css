@@ -1,0 +1,23 @@
+.section {
+  padding: 1.5rem 0 7rem;
+}
+
+.stack {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0.3rem;
+}
+
+.title,
+.subtitle {
+  margin: 0;
+  font-family: var(--font-display);
+  color: var(--home-ink);
+  font-weight: 400;
+}
+
+.title,
+.subtitle {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+}

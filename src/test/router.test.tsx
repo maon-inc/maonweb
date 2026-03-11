@@ -24,18 +24,20 @@ function renderWithRouter(initialEntries: string[]) {
 }
 
 describe('app router', () => {
-  it('renders the shared layout and home page', () => {
+  it('renders the shared layout and redesigned home page', () => {
     renderWithRouter(['/']);
 
     expect(screen.getByRole('link', { name: 'MAON' })).toBeInTheDocument();
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /build a polished site without overbuilding it/i,
+        name: /what if an ai agent's only job was to keep you balanced/i,
       }),
     ).toBeInTheDocument();
+    expect(screen.getByText(/we understand/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: /how we help/i })).toBeInTheDocument();
     expect(
-      screen.getByText(/shared layout, typed pages, and room to grow/i),
+      screen.getByText(/shared layout, route-aware chrome, and a focused landing page/i),
     ).toBeInTheDocument();
   });
 
