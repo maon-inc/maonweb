@@ -12,6 +12,7 @@ describe('HomePage', () => {
     );
 
     expect(screen.getByTestId('home-top-scene')).toBeInTheDocument();
+    expect(screen.getByTestId('home-top-scene-video')).toBeInTheDocument();
     expect(
       screen.getByRole('heading', {
         level: 1,

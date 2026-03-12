@@ -8,7 +8,23 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
     <div
       class="_topScene_733e29"
       data-testid="home-top-scene"
+      style="background-image: url("/src/assets/home-top-scene.svg");"
     >
+      <video
+        aria-hidden="true"
+        autoplay=""
+        class="_topSceneVideo_733e29"
+        data-testid="home-top-scene-video"
+        loop=""
+        playsinline=""
+        poster="/src/assets/home-top-scene.svg"
+        preload="auto"
+      >
+        <source
+          src="/src/assets/home-top-scene-loop.mp4"
+          type="video/mp4"
+        />
+      </video>
       <div
         class="_topSceneInner_733e29"
       >
