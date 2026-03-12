@@ -1,28 +1,13 @@
 .footer {
-  border-top: 1px solid var(--border);
-  background: var(--surface);
+  flex-shrink: 0;
+  width: 100%;
+  background: #292929;
 }
 
-.footerHome {
-  border-top-color: transparent;
-  background: transparent;
-}
-
-.inner {
-  padding: 2rem 0 3rem;
-}
-
-.title,
-.copy {
-  margin: 0;
-}
-
-.title {
-  color: var(--text-strong);
-  font-weight: 600;
-}
-
-.copy {
-  color: var(--text-muted);
-  margin-top: 0.35rem;
+.band {
+  width: 100%;
+  min-height: clamp(10rem, 27vw, 18.75rem);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0)),
+    #292929;
 }

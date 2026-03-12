@@ -55,9 +55,9 @@ export function HomePage() {
         )}
         <div className={styles.topSceneInner}>
           <HomeHero content={homePageContent.hero} />
+          <ShowcaseSection content={homePageContent.showcase} />
         </div>
       </div>
-      <ShowcaseSection content={homePageContent.showcase} />
       <NarrativeSection content={homePageContent.narrative} />
       <HowWeHelpSection items={homePageContent.howWeHelp} />
       <FinalCtaSection content={homePageContent.finalCta} />

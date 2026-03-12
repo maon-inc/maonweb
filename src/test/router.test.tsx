@@ -29,6 +29,7 @@ describe('app router', () => {
     renderWithRouter(['/']);
 
     expect(screen.getByRole('link', { name: 'MAON' })).toBeInTheDocument();
+    expect(screen.getByRole('contentinfo')).toBeInTheDocument();
     expect(
       screen.getByRole('heading', {
         level: 1,
@@ -53,10 +54,12 @@ describe('app router', () => {
     const user = userEvent.setup();
 
     renderWithRouter(['/about']);
+    expect(screen.getByRole('contentinfo')).toBeInTheDocument();
     await user.click(screen.getByRole('link', { name: 'Contact' }));
 
     expect(await screen.findByRole('heading', { level: 1, name: /contact/i }))
       .toBeInTheDocument();
+    expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });
 
   it('shows the not found page for unknown routes', () => {
