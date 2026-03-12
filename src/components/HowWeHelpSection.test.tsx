@@ -6,10 +6,14 @@ import { HowWeHelpSection } from './HowWeHelpSection';
 
 describe('HowWeHelpSection', () => {
   it('renders three compact cards initially', () => {
-    render(<HowWeHelpSection items={homePageContent.howWeHelp} />);
+    const { container } = render(<HowWeHelpSection items={homePageContent.howWeHelp} />);
 
     const buttons = screen.getAllByRole('button');
+    const articles = container.querySelectorAll('article');
     expect(buttons).toHaveLength(3);
+    expect(articles[0]).toHaveStyle('--how-we-help-accent: #c6b5f5');
+    expect(articles[1]).toHaveStyle('--how-we-help-accent: #7eaeea');
+    expect(articles[2]).toHaveStyle('--how-we-help-accent: #59c85b');
     expect(
       screen.queryByText(/quick check-ins over text/i),
     ).not.toBeInTheDocument();
@@ -91,6 +95,7 @@ describe('HowWeHelpSection', () => {
             id: 'empty',
             title: 'empty state',
             summary: 'still renders safely',
+            accentColor: '#cccccc',
             details: [],
           },
         ]}

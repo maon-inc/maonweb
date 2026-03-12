@@ -12,6 +12,7 @@ describe('HowWeHelpCard', () => {
   it('renders compact content with button semantics', () => {
     render(
       <HowWeHelpCard
+        accentColor="#c6b5f5"
         details={['detail one']}
         expanded={false}
         id="card"
@@ -22,14 +23,17 @@ describe('HowWeHelpCard', () => {
     );
 
     const button = screen.getByRole('button', { name: /card title/i });
+    const article = button.closest('article');
     expect(button).toHaveAttribute('aria-expanded', 'false');
     expect(button).toHaveAttribute('aria-controls', 'card-details');
+    expect(article).toHaveStyle('--how-we-help-accent: #c6b5f5');
     expect(screen.queryByRole('list')).not.toBeInTheDocument();
   });
 
   it('renders details only when expanded and details exist', () => {
     const { rerender } = render(
       <HowWeHelpCard
+        accentColor="#7eaeea"
         details={['detail one', 'detail two']}
         expanded
         id="card"
@@ -44,6 +48,7 @@ describe('HowWeHelpCard', () => {
 
     rerender(
       <HowWeHelpCard
+        accentColor="#7eaeea"
         details={[]}
         expanded
         id="card"

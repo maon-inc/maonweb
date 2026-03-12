@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import type { HomeHeroContent } from '../content/homePageContent';
 import styles from './HomeHero.module.css';
 
@@ -19,9 +17,9 @@ export function HomeHero({ content }: HomeHeroProps) {
             {content.titleSuffix}
           </h1>
           <p className={styles.supportingText}>{content.supportingText}</p>
-          <Link className="buttonPrimary buttonPrimaryCompact" to={content.cta.to}>
+          <a className="buttonPrimary buttonPrimaryCompact" href={content.cta.href}>
             {content.cta.label}
-          </Link>
+          </a>
         </div>
       </div>
     </section>

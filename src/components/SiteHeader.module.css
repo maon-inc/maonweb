@@ -8,7 +8,10 @@
 }
 
 .headerHome {
-  background: rgba(255, 253, 252, 0.92);
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  background: transparent;
   border-bottom-color: transparent;
   backdrop-filter: none;
 }
@@ -32,37 +35,27 @@
 
 .brand {
   display: inline-flex;
-  align-items: center;
-  gap: 0.02rem;
+  align-items: baseline;
+  gap: 0;
   text-decoration: none;
   color: var(--home-ink);
   font-family: var(--font-ui);
-  font-size: 1.5rem;
+  font-size: 1.56rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  line-height: 1;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
 .brandText {
   display: inline-block;
+  line-height: 1;
 }
 
-.brandRing {
-  width: 1.05rem;
-  height: 1.05rem;
-  margin-inline: 0.04rem 0.05rem;
-  border: 1.5px solid var(--home-ink);
-  border-radius: 999px;
-  position: relative;
-  top: 0.08rem;
-}
-
-.brandRing::after {
-  content: '';
-  position: absolute;
-  inset: 0.17rem;
-  border: 1.15px solid var(--home-ink);
-  border-radius: inherit;
+.brandMark {
+  --maon-mark-size: 24px;
+  margin-inline: 0.05rem 0.07rem;
+  align-self: center;
 }
 
 .navList {

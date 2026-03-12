@@ -1,5 +1,5 @@
 .section {
-  padding: 36px 0 131px;
+  padding: var(--hero-padding-top, 36px) 0 var(--hero-padding-bottom, 131px);
 }
 
 .frame {
@@ -30,8 +30,9 @@
   font-size: 64px;
   line-height: 1.334;
   font-weight: 400;
-  color: var(--home-ink);
+  color: var(--hero-title-color, var(--home-ink));
   letter-spacing: 0;
+  text-shadow: var(--hero-title-shadow, none);
 }
 
 .emphasis {
@@ -45,7 +46,8 @@
   font-size: 20px;
   line-height: 1.334;
   font-weight: 400;
-  color: #000;
+  color: var(--hero-supporting-color, #000);
+  text-shadow: var(--hero-supporting-shadow, none);
 }
 
 @media (max-width: 700px) {

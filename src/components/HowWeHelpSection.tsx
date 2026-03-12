@@ -43,6 +43,7 @@ export function HowWeHelpSection({
         <div className={styles.grid}>
           {items.map((item) => (
             <HowWeHelpCard
+              accentColor={item.accentColor}
               details={item.details}
               expanded={safeSelectedId === item.id}
               id={item.id}

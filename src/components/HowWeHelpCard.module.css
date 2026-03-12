@@ -1,21 +1,15 @@
 .card {
-  border: 1px solid #1b1b1b;
+  border: 1px solid #1c1b1b;
   border-radius: 13.485px;
   background: #fffdfc;
   box-shadow: none;
   overflow: hidden;
   width: 447px;
   position: relative;
-  min-height: 162px;
+  min-height: 188px;
   transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    border-color 180ms ease;
-}
-
-.card:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.04);
+    border-color 180ms ease,
+    background-color 180ms ease;
 }
 
 .expanded {
@@ -42,19 +36,19 @@
 
 .rail {
   align-self: start;
-  margin: 19px 0 0 17px;
-  width: 4px;
-  height: 124px;
+  margin: 20px 0 0 18px;
+  width: 5px;
+  height: 138px;
   border-radius: 999px;
-  background: #c9bdf7;
+  background: var(--how-we-help-accent, #c6b5f5);
 }
 
 .content {
   position: relative;
   display: grid;
-  gap: 4px;
-  padding: 19px 0 17px 27px;
-  min-height: 162px;
+  gap: 7px;
+  padding: 20px 18px 52px 30px;
+  min-height: 188px;
 }
 
 .title {
@@ -64,32 +58,32 @@
   color: var(--home-ink);
   line-height: 1.334;
   text-transform: lowercase;
-  max-width: 238px;
+  max-width: 292px;
 }
 
 .summary {
   font-family: var(--font-display);
   font-size: 17.905px;
   line-height: 1.334;
-  color: var(--home-ink-soft);
-  max-width: 403px;
-  padding-right: 20px;
+  color: #24211f;
+  max-width: 345px;
+  padding-right: 34px;
 }
 
 .chevron {
   position: absolute;
-  left: 27px;
-  top: 116px;
+  left: 30px;
+  bottom: 18px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   border-radius: 39px;
-  background: #828282;
+  background: #878787;
   color: white;
   font-family: var(--font-ui);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -97,13 +91,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(-1px);
-  font-size: 0.88rem;
+  transform: translateY(-0.5px);
+  font-size: 0.82rem;
   line-height: 1;
 }
 
 .details {
-  padding: 0 16px 18px 34px;
+  padding: 0 18px 20px 53px;
 }
 
 .list {

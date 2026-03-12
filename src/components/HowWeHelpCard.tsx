@@ -1,10 +1,12 @@
 import styles from './HowWeHelpCard.module.css';
+import type { CSSProperties } from 'react';
 
 type HowWeHelpCardProps = {
   id: string;
   title: string;
   summary: string;
   details: string[];
+  accentColor: string;
   expanded: boolean;
   onToggle: (id: string) => void;
 };
@@ -14,6 +16,7 @@ export function HowWeHelpCard({
   title,
   summary,
   details,
+  accentColor,
   expanded,
   onToggle,
 }: HowWeHelpCardProps) {
@@ -21,7 +24,10 @@ export function HowWeHelpCard({
   const canExpand = details.length > 0;
 
   return (
-    <article className={expanded ? `${styles.card} ${styles.expanded}` : styles.card}>
+    <article
+      className={expanded ? `${styles.card} ${styles.expanded}` : styles.card}
+      style={{ '--how-we-help-accent': accentColor } as CSSProperties}
+    >
       <button
         aria-controls={detailsId}
         aria-expanded={expanded}

@@ -4,6 +4,7 @@ import type {
   ShowcaseHistoryItem,
   ShowcaseMessage,
 } from '../content/homePageContent';
+import { MaonMark } from './MaonMark';
 import styles from './ShowcaseSection.module.css';
 
 type ShowcaseSectionProps = {
@@ -69,7 +70,7 @@ function renderHistoryCard(item: ShowcaseHistoryItem) {
       />
       <div className={styles.historyBody}>
         <div className={styles.historyTopline}>
-          <div>
+          <div className={styles.historyTextBlock}>
             <p className={styles.historyTitle}>{item.title}</p>
             <p className={styles.historyDetail}>{item.detail}</p>
           </div>
@@ -135,11 +136,7 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
                   </span>
                 </button>
                 <div className={styles.phoneBrandMark}>
-                  <span className={styles.phoneAvatar} aria-hidden="true">
-                    <span className={styles.phoneAvatarEye} />
-                    <span className={styles.phoneAvatarEye} />
-                    <span className={styles.phoneAvatarSmile} />
-                  </span>
+                  <MaonMark className={styles.phoneAvatar} />
                   <span className={styles.phoneBrandName}>maon</span>
                 </div>
               </div>

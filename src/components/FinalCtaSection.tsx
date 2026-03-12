@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import type { FinalCtaContent } from '../content/homePageContent';
 import styles from './FinalCtaSection.module.css';
 
@@ -14,9 +12,9 @@ export function FinalCtaSection({ content }: FinalCtaSectionProps) {
         <div className={styles.stack}>
           <h2 className={styles.title}>{content.title}</h2>
           <p className={styles.subtitle}>{content.subtitle}</p>
-          <Link className="buttonPrimary buttonPrimaryCompact" to={content.cta.to}>
+          <a className="buttonPrimary buttonPrimaryCompact" href={content.cta.href}>
             {content.cta.label}
-          </Link>
+          </a>
         </div>
       </div>
     </section>

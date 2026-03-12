@@ -1,0 +1,17 @@
+.mark {
+  --maon-mark-size: 29.855px;
+  width: var(--maon-mark-size);
+  height: var(--maon-mark-size);
+  display: inline-block;
+  flex: none;
+  object-fit: contain;
+}
+
+.nav {
+  --maon-mark-size: 20px;
+  transform: translateY(0.06em);
+}
+
+.phone {
+  --maon-mark-size: 29.855px;
+}

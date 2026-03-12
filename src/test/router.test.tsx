@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
 import { SiteLayout } from '../app/SiteLayout';
+import { MAON_CTA_HREF } from '../content/contactLinks';
 import { AboutPage } from '../pages/AboutPage';
 import { ContactPage } from '../pages/ContactPage';
 import { HomePage } from '../pages/HomePage';
@@ -37,10 +38,15 @@ describe('app router', () => {
     expect(screen.getByText(/we understand/i)).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2, name: /how we help/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /try now/i })).toBeInTheDocument();
-    expect(screen.queryByRole('link', { name: 'About' })).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /try now/i })).toHaveAttribute('href', MAON_CTA_HREF);
+    expect(screen.getAllByRole('link', { name: /say hi to maon/i })).toHaveLength(2);
     expect(
-      screen.getByText(/shared layout, route-aware chrome, and a focused landing page/i),
-    ).toBeInTheDocument();
+      screen
+        .getAllByRole('link', { name: /say hi to maon/i })
+        .every((link) => link.getAttribute('href') === MAON_CTA_HREF),
+    ).toBe(true);
+    expect(screen.getByLabelText(/product preview/i)).toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'About' })).not.toBeInTheDocument();
   });
 
   it('navigates between pages', async () => {

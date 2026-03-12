@@ -1,5 +1,7 @@
 import { NavLink, useLocation } from 'react-router-dom';
 
+import { MAON_CTA_HREF } from '../content/contactLinks';
+import { MaonMark } from './MaonMark';
 import styles from './SiteHeader.module.css';
 
 const navItems = [
@@ -18,7 +20,7 @@ export function SiteHeader() {
         <div className={styles.inner}>
           <NavLink aria-label="MAON" className={styles.brand} to="/">
             <span className={styles.brandText}>MA</span>
-            <span className={styles.brandRing} aria-hidden="true" />
+            <MaonMark className={styles.brandMark} />
             <span className={styles.brandText}>N</span>
           </NavLink>
           {isHome ? null : (
@@ -39,9 +41,9 @@ export function SiteHeader() {
               </ul>
             </nav>
           )}
-          <NavLink className={styles.headerCta} to="/contact">
+          <a className={styles.headerCta} href={MAON_CTA_HREF}>
             {isHome ? 'try now' : 'save your spot'}
-          </NavLink>
+          </a>
         </div>
       </div>
     </header>

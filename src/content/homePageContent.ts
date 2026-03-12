@@ -1,3 +1,5 @@
+import { MAON_CTA_HREF } from './contactLinks';
+
 export type HomeHeroContent = {
   eyebrow: string;
   titlePrefix: string;
@@ -6,7 +8,7 @@ export type HomeHeroContent = {
   supportingText: string;
   cta: {
     label: string;
-    to: string;
+    href: string;
   };
 };
 
@@ -66,6 +68,7 @@ export type HowWeHelpItem = {
   title: string;
   summary: string;
   details: string[];
+  accentColor: string;
 };
 
 export type FinalCtaContent = {
@@ -73,7 +76,7 @@ export type FinalCtaContent = {
   subtitle: string;
   cta: {
     label: string;
-    to: string;
+    href: string;
   };
 };
 
@@ -94,7 +97,7 @@ export const homePageContent: HomePageContent = {
     supportingText: 'with proactive interventions',
     cta: {
       label: 'say hi to maon',
-      to: '/contact',
+      href: MAON_CTA_HREF,
     },
   },
   showcase: {
@@ -212,6 +215,7 @@ export const homePageContent: HomePageContent = {
       id: 'proactive-interventions',
       title: 'proactive interventions',
       summary: 'when something starts to drift, maon helps you reset in the moment with small actions',
+      accentColor: '#c6b5f5',
       details: [
         'quick check-ins over text',
         'short breathing resets when your stress rise',
@@ -223,6 +227,7 @@ export const homePageContent: HomePageContent = {
       id: 'personal-patterns',
       title: 'personal patterns',
       summary: 'most people do not see what actually affects their energy or mood. maon connects the dots',
+      accentColor: '#7eaeea',
       details: [
         'help you understand what keeps you balanced',
         'notice when night scrolling affects your next day',
@@ -234,6 +239,7 @@ export const homePageContent: HomePageContent = {
       id: 'adaptive-over-time',
       title: 'adaptive over time',
       summary: 'the more you use maon, the more it learns how you work',
+      accentColor: '#59c85b',
       details: [
         'learns what interventions work best for you',
         'adjusts when to check in and when to stay quiet',
@@ -247,7 +253,7 @@ export const homePageContent: HomePageContent = {
     subtitle: 'maon helps you find it',
     cta: {
       label: 'say hi to maon',
-      to: '/contact',
+      href: MAON_CTA_HREF,
     },
   },
 };

@@ -2,698 +2,712 @@
 
 exports[`HomePage > matches the stable home page snapshot 1`] = `
 <DocumentFragment>
-  <section
-    class="_section_4a3a7e"
+  <div
+    class="_page_733e29"
   >
     <div
-      class="homeContainer"
+      class="_topScene_733e29"
+      data-testid="home-top-scene"
     >
       <div
-        class="_frame_4a3a7e"
+        class="_topSceneInner_733e29"
       >
-        <p
-          class="_eyebrow_4a3a7e"
+        <section
+          class="_section_4a3a7e"
         >
-          MAON
-        </p>
-        <h1
-          class="_title_4a3a7e"
-        >
-          an assistant that uses your 
-          <span
-            class="_emphasis_4a3a7e"
+          <div
+            class="homeContainer"
           >
-            biometrics
-          </span>
-           to keep you balanced
-        </h1>
-        <p
-          class="_supportingText_4a3a7e"
-        >
-          with proactive interventions
-        </p>
-        <a
-          class="buttonPrimary buttonPrimaryCompact"
-          data-discover="true"
-          href="/contact"
-        >
-          say hi to maon
-        </a>
+            <div
+              class="_frame_4a3a7e"
+            >
+              <p
+                class="_eyebrow_4a3a7e"
+              >
+                MAON
+              </p>
+              <h1
+                class="_title_4a3a7e"
+              >
+                an assistant that uses your 
+                <span
+                  class="_emphasis_4a3a7e"
+                >
+                  biometrics
+                </span>
+                 to keep you balanced
+              </h1>
+              <p
+                class="_supportingText_4a3a7e"
+              >
+                with proactive interventions
+              </p>
+              <a
+                class="buttonPrimary buttonPrimaryCompact"
+                href="sms:2792879109&body=hi%20maon!"
+              >
+                say hi to maon
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-  </section>
-  <section
-    aria-label="Product preview"
-    class="_section_bc5123"
-  >
-    <div
-      class="homeContainer"
+    <section
+      aria-label="Product preview"
+      class="_section_bc5123"
     >
       <div
-        class="_grid_bc5123"
+        class="homeContainer"
       >
         <div
-          class="_column_bc5123 _columnMessages_bc5123"
+          class="_grid_bc5123"
         >
-          <p
-            class="_label_bc5123 _labelMessages_bc5123"
-          >
-            in your messages
-          </p>
-          <article
-            class="_phone_bc5123"
-          >
-            <div
-              class="_phoneHeader_bc5123"
-            >
-              <button
-                aria-label="Go back"
-                class="_backButton_bc5123"
-                type="button"
-              >
-                <span
-                  aria-hidden="true"
-                  class="_backGlyph_bc5123"
-                >
-                  ‹
-                </span>
-              </button>
-              <div
-                class="_phoneBrandMark_bc5123"
-              >
-                <span
-                  aria-hidden="true"
-                  class="_phoneAvatar_bc5123"
-                >
-                  <span
-                    class="_phoneAvatarEye_bc5123"
-                  />
-                  <span
-                    class="_phoneAvatarEye_bc5123"
-                  />
-                  <span
-                    class="_phoneAvatarSmile_bc5123"
-                  />
-                </span>
-                <span
-                  class="_phoneBrandName_bc5123"
-                >
-                  maon
-                </span>
-              </div>
-            </div>
-            <div
-              class="_thread_bc5123"
-            >
-              <div
-                class="_bubble_bc5123 _bubbleIncomingShort_bc5123 _bubbleIncoming_bc5123"
-                data-variant="incoming-short"
-              >
-                what should i call you?
-              </div>
-              <div
-                class="_bubble_bc5123 _bubbleOutgoingShort_bc5123 _bubbleReply_bc5123"
-                data-variant="outgoing-short"
-              >
-                hey im 
-                <em>
-                  user.
-                </em>
-              </div>
-              <div
-                class="_bubble_bc5123 _bubbleIncomingTall_bc5123 _bubbleIncoming_bc5123"
-                data-variant="incoming-tall"
-              >
-                hi 
-                <em>
-                  user
-                </em>
-                , want to hear about me, or should we start with you?
-              </div>
-              <div
-                class="_bubble_bc5123 _bubbleOutgoingMedium_bc5123 _bubbleReply_bc5123"
-                data-variant="outgoing-medium"
-              >
-                ik you step in right away
-              </div>
-              <div
-                class="_bubble_bc5123 _bubbleIncomingQuestion_bc5123 _bubbleIncoming_bc5123"
-                data-variant="incoming-question"
-              >
-                when you start slipping do you notice it? or does it hit you later?
-              </div>
-              <div
-                class="_bubble_bc5123 _bubbleOutgoingLarge_bc5123 _bubbleReply_bc5123"
-                data-variant="outgoing-large"
-              >
-                i don’t notice it until it gets really bad and then i start spiraling
-              </div>
-              <div
-                aria-hidden="true"
-                class="_typingIndicator_bc5123"
-              >
-                <span
-                  class="_typingDot_bc5123"
-                />
-                <span
-                  class="_typingDot_bc5123"
-                />
-                <span
-                  class="_typingDot_bc5123"
-                />
-              </div>
-            </div>
-          </article>
-        </div>
-        <div
-          class="_column_bc5123 _columnWide_bc5123 _columnHistory_bc5123"
-        >
-          <p
-            class="_label_bc5123 _labelHistory_bc5123"
-          >
-            interventions history
-          </p>
           <div
-            class="_historyCard_bc5123"
+            class="_column_bc5123 _columnMessages_bc5123"
           >
-            <article
-              class="_historyItem_bc5123 _historyItemFeatured_bc5123"
+            <p
+              class="_label_bc5123 _labelMessages_bc5123"
             >
-              <span
-                aria-hidden="true"
-                class="_historyRail_bc5123"
-                style="background-color: rgb(200, 181, 255);"
-              />
+              in your messages
+            </p>
+            <article
+              class="_phone_bc5123"
+            >
               <div
-                class="_historyBody_bc5123"
+                class="_phoneHeader_bc5123"
+              >
+                <button
+                  aria-label="Go back"
+                  class="_backButton_bc5123"
+                  type="button"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="_backGlyph_bc5123"
+                  >
+                    ‹
+                  </span>
+                </button>
+                <div
+                  class="_phoneBrandMark_bc5123"
+                >
+                  <img
+                    alt=""
+                    aria-hidden="true"
+                    class="_mark_b3b8e3 _phoneAvatar_bc5123"
+                    src="data:image/svg+xml,%3csvg%20width='30'%20height='30'%20viewBox='0%200%2030%2030'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='14.9273'%20cy='14.9273'%20r='14.9273'%20fill='%23DFDCFF'/%3e%3crect%20x='23.2051'%20y='8.15489'%20width='4.22947'%20height='4.22947'%20rx='2.11473'%20fill='%231B1B1B'%20stroke='%231B1B1B'%20stroke-width='0.0646654'/%3e%3crect%20x='6.06908'%20y='8.15489'%20width='4.22947'%20height='4.22947'%20rx='2.11473'%20fill='%231B1B1B'%20stroke='%231B1B1B'%20stroke-width='0.0646654'/%3e%3cpath%20d='M14.667%2010.0288C15.2978%2011.7107%2017.6769%2011.7107%2018.3076%2010.0288'%20stroke='%231B1B1B'%20stroke-width='0.768316'/%3e%3c/svg%3e"
+                  />
+                  <span
+                    class="_phoneBrandName_bc5123"
+                  >
+                    maon
+                  </span>
+                </div>
+              </div>
+              <div
+                class="_thread_bc5123"
               >
                 <div
-                  class="_historyTopline_bc5123"
+                  class="_bubble_bc5123 _bubbleIncomingShort_bc5123 _bubbleIncoming_bc5123"
+                  data-variant="incoming-short"
                 >
-                  <div>
-                    <p
-                      class="_historyTitle_bc5123"
-                    >
-                      screen time
-                    </p>
-                    <p
-                      class="_historyDetail_bc5123"
-                    >
-                      30 min limit on social media
-                    </p>
-                  </div>
-                  <p
-                    class="_historyTimestamp_bc5123"
-                  >
-                    sat - 7:15 pm
-                  </p>
+                  what should i call you?
+                </div>
+                <div
+                  class="_bubble_bc5123 _bubbleOutgoingShort_bc5123 _bubbleReply_bc5123"
+                  data-variant="outgoing-short"
+                >
+                  hey im 
+                  <em>
+                    user.
+                  </em>
+                </div>
+                <div
+                  class="_bubble_bc5123 _bubbleIncomingTall_bc5123 _bubbleIncoming_bc5123"
+                  data-variant="incoming-tall"
+                >
+                  hi 
+                  <em>
+                    user
+                  </em>
+                  , want to hear about me, or should we start with you?
+                </div>
+                <div
+                  class="_bubble_bc5123 _bubbleOutgoingMedium_bc5123 _bubbleReply_bc5123"
+                  data-variant="outgoing-medium"
+                >
+                  ik you step in right away
+                </div>
+                <div
+                  class="_bubble_bc5123 _bubbleIncomingQuestion_bc5123 _bubbleIncoming_bc5123"
+                  data-variant="incoming-question"
+                >
+                  when you start slipping do you notice it? or does it hit you later?
+                </div>
+                <div
+                  class="_bubble_bc5123 _bubbleOutgoingLarge_bc5123 _bubbleReply_bc5123"
+                  data-variant="outgoing-large"
+                >
+                  i don’t notice it until it gets really bad and then i start spiraling
                 </div>
                 <div
                   aria-hidden="true"
-                  class="_historyDivider_bc5123"
+                  class="_typingIndicator_bc5123"
+                >
+                  <span
+                    class="_typingDot_bc5123"
+                  />
+                  <span
+                    class="_typingDot_bc5123"
+                  />
+                  <span
+                    class="_typingDot_bc5123"
+                  />
+                </div>
+              </div>
+            </article>
+          </div>
+          <div
+            class="_column_bc5123 _columnWide_bc5123 _columnHistory_bc5123"
+          >
+            <p
+              class="_label_bc5123 _labelHistory_bc5123"
+            >
+              interventions history
+            </p>
+            <div
+              class="_historyCard_bc5123"
+            >
+              <article
+                class="_historyItem_bc5123 _historyItemFeatured_bc5123"
+              >
+                <span
+                  aria-hidden="true"
+                  class="_historyRail_bc5123"
+                  style="background-color: rgb(200, 181, 255);"
                 />
                 <div
-                  class="_historyFeatureRow_bc5123"
+                  class="_historyBody_bc5123"
                 >
                   <div
-                    class="_featureBlock_bc5123"
+                    class="_historyTopline_bc5123"
                   >
-                    <p
-                      class="_featureCaption_bc5123"
+                    <div
+                      class="_historyTextBlock_bc5123"
                     >
-                      ends in:
-                    </p>
+                      <p
+                        class="_historyTitle_bc5123"
+                      >
+                        screen time
+                      </p>
+                      <p
+                        class="_historyDetail_bc5123"
+                      >
+                        30 min limit on social media
+                      </p>
+                    </div>
                     <p
-                      class="_featureValue_bc5123"
+                      class="_historyTimestamp_bc5123"
                     >
-                      25 min
+                      sat - 7:15 pm
                     </p>
                   </div>
                   <div
-                    class="_featureBlock_bc5123"
+                    aria-hidden="true"
+                    class="_historyDivider_bc5123"
+                  />
+                  <div
+                    class="_historyFeatureRow_bc5123"
                   >
-                    <p
-                      class="_featureCaption_bc5123"
-                    >
-                      apps blocked:
-                    </p>
                     <div
-                      aria-hidden="true"
-                      class="_appIcons_bc5123"
+                      class="_featureBlock_bc5123"
                     >
-                      <span
-                        class="_appIcon_bc5123 _appIconInstagram_bc5123"
+                      <p
+                        class="_featureCaption_bc5123"
+                      >
+                        ends in:
+                      </p>
+                      <p
+                        class="_featureValue_bc5123"
+                      >
+                        25 min
+                      </p>
+                    </div>
+                    <div
+                      class="_featureBlock_bc5123"
+                    >
+                      <p
+                        class="_featureCaption_bc5123"
+                      >
+                        apps blocked:
+                      </p>
+                      <div
+                        aria-hidden="true"
+                        class="_appIcons_bc5123"
                       >
                         <span
-                          class="_appIconInstagramInner_bc5123"
+                          class="_appIcon_bc5123 _appIconInstagram_bc5123"
                         >
                           <span
-                            class="_appIconInstagramLens_bc5123"
-                          />
-                          <span
-                            class="_appIconInstagramFlash_bc5123"
-                          />
+                            class="_appIconInstagramInner_bc5123"
+                          >
+                            <span
+                              class="_appIconInstagramLens_bc5123"
+                            />
+                            <span
+                              class="_appIconInstagramFlash_bc5123"
+                            />
+                          </span>
                         </span>
-                      </span>
-                      <span
-                        class="_appIcon_bc5123 _appIconTiktok_bc5123"
-                      >
                         <span
-                          class="_appIconTiktokGlyph_bc5123"
+                          class="_appIcon_bc5123 _appIconTiktok_bc5123"
                         >
-                          d
+                          <span
+                            class="_appIconTiktokGlyph_bc5123"
+                          >
+                            d
+                          </span>
                         </span>
-                      </span>
-                      <span
-                        class="_appIcon_bc5123 _appIconReddit_bc5123"
-                      >
                         <span
-                          class="_appIconRedditInner_bc5123"
+                          class="_appIcon_bc5123 _appIconReddit_bc5123"
                         >
                           <span
-                            class="_appIconRedditEye_bc5123"
-                          />
-                          <span
-                            class="_appIconRedditEye_bc5123"
-                          />
-                          <span
-                            class="_appIconRedditSmile_bc5123"
-                          />
-                          <span
-                            class="_appIconRedditAntenna_bc5123"
-                          />
+                            class="_appIconRedditInner_bc5123"
+                          >
+                            <span
+                              class="_appIconRedditEye_bc5123"
+                            />
+                            <span
+                              class="_appIconRedditEye_bc5123"
+                            />
+                            <span
+                              class="_appIconRedditSmile_bc5123"
+                            />
+                            <span
+                              class="_appIconRedditAntenna_bc5123"
+                            />
+                          </span>
                         </span>
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </article>
-            <article
-              class="_historyItem_bc5123"
-            >
-              <span
-                aria-hidden="true"
-                class="_historyRail_bc5123"
-                style="background-color: rgb(199, 241, 240);"
-              />
-              <div
-                class="_historyBody_bc5123"
+              </article>
+              <article
+                class="_historyItem_bc5123"
               >
+                <span
+                  aria-hidden="true"
+                  class="_historyRail_bc5123"
+                  style="background-color: rgb(199, 241, 240);"
+                />
                 <div
-                  class="_historyTopline_bc5123"
+                  class="_historyBody_bc5123"
                 >
-                  <div>
-                    <p
-                      class="_historyTitle_bc5123"
+                  <div
+                    class="_historyTopline_bc5123"
+                  >
+                    <div
+                      class="_historyTextBlock_bc5123"
                     >
-                      breathing exercise
-                    </p>
+                      <p
+                        class="_historyTitle_bc5123"
+                      >
+                        breathing exercise
+                      </p>
+                      <p
+                        class="_historyDetail_bc5123"
+                      >
+                        7-8-4 second exercise
+                      </p>
+                    </div>
                     <p
-                      class="_historyDetail_bc5123"
+                      class="_historyTimestamp_bc5123"
                     >
-                      7-8-4 second exercise
+                      sat - 7 pm
                     </p>
                   </div>
-                  <p
-                    class="_historyTimestamp_bc5123"
-                  >
-                    sat - 7 pm
-                  </p>
                 </div>
-              </div>
-            </article>
-            <article
-              class="_historyItem_bc5123"
-            >
-              <span
-                aria-hidden="true"
-                class="_historyRail_bc5123"
-                style="background-color: rgb(245, 216, 199);"
-              />
-              <div
-                class="_historyBody_bc5123"
+              </article>
+              <article
+                class="_historyItem_bc5123"
               >
+                <span
+                  aria-hidden="true"
+                  class="_historyRail_bc5123"
+                  style="background-color: rgb(245, 216, 199);"
+                />
                 <div
-                  class="_historyTopline_bc5123"
+                  class="_historyBody_bc5123"
                 >
-                  <div>
-                    <p
-                      class="_historyTitle_bc5123"
+                  <div
+                    class="_historyTopline_bc5123"
+                  >
+                    <div
+                      class="_historyTextBlock_bc5123"
                     >
-                      workout @ 7 pm monday
-                    </p>
+                      <p
+                        class="_historyTitle_bc5123"
+                      >
+                        workout @ 7 pm monday
+                      </p>
+                      <p
+                        class="_historyDetail_bc5123"
+                      >
+                        added workout to your apple calendar
+                      </p>
+                    </div>
                     <p
-                      class="_historyDetail_bc5123"
+                      class="_historyTimestamp_bc5123"
                     >
-                      added workout to your apple calendar
+                      sat - 6:42 pm
                     </p>
                   </div>
-                  <p
-                    class="_historyTimestamp_bc5123"
-                  >
-                    sat - 6:42 pm
-                  </p>
                 </div>
-              </div>
-            </article>
-            <article
-              class="_historyItem_bc5123"
-            >
-              <span
-                aria-hidden="true"
-                class="_historyRail_bc5123"
-                style="background-color: rgb(239, 207, 211);"
-              />
-              <div
-                class="_historyBody_bc5123"
+              </article>
+              <article
+                class="_historyItem_bc5123"
               >
+                <span
+                  aria-hidden="true"
+                  class="_historyRail_bc5123"
+                  style="background-color: rgb(239, 207, 211);"
+                />
                 <div
-                  class="_historyTopline_bc5123"
+                  class="_historyBody_bc5123"
                 >
-                  <div>
-                    <p
-                      class="_historyTitle_bc5123"
+                  <div
+                    class="_historyTopline_bc5123"
+                  >
+                    <div
+                      class="_historyTextBlock_bc5123"
                     >
-                      alarm @ 9:30 am sunday
-                    </p>
+                      <p
+                        class="_historyTitle_bc5123"
+                      >
+                        alarm @ 9:30 am sunday
+                      </p>
+                      <p
+                        class="_historyDetail_bc5123"
+                      >
+                        get back into a good sleep rhythm
+                      </p>
+                    </div>
                     <p
-                      class="_historyDetail_bc5123"
+                      class="_historyTimestamp_bc5123"
                     >
-                      get back into a good sleep rhythm
+                      sat - 6:18 pm
                     </p>
                   </div>
-                  <p
-                    class="_historyTimestamp_bc5123"
-                  >
-                    sat - 6:18 pm
-                  </p>
                 </div>
-              </div>
-            </article>
+              </article>
+            </div>
+          </div>
+          <div
+            class="_column_bc5123 _columnStories_bc5123"
+          >
+            <p
+              class="_label_bc5123 _labelStories_bc5123"
+            >
+              stories
+            </p>
+            <div
+              class="_metrics_bc5123"
+            >
+              <article
+                class="_metricCard_bc5123 _metricPeach_bc5123"
+              >
+                <p
+                  class="_metricLabel_bc5123"
+                >
+                  EARLY SPIRAL
+                </p>
+                <p
+                  class="_metricValue_bc5123"
+                >
+                  2h
+                </p>
+                <p
+                  class="_metricDescription_bc5123"
+                >
+                  before a spiral, your body lets us know
+                </p>
+                <div
+                  aria-hidden="true"
+                  class="_metricCircle_bc5123"
+                />
+                <div
+                  aria-hidden="true"
+                  class="_metricBadge_bc5123"
+                >
+                  <span>
+                    3
+                  </span>
+                </div>
+              </article>
+              <article
+                class="_metricCard_bc5123 _metricGreen_bc5123"
+              >
+                <p
+                  class="_metricLabel_bc5123"
+                >
+                  PROGRESS
+                </p>
+                <p
+                  class="_metricValue_bc5123"
+                >
+                  18%
+                </p>
+                <p
+                  class="_metricDescription_bc5123"
+                >
+                  less destress over the past week
+                </p>
+                <div
+                  aria-hidden="true"
+                  class="_metricCircle_bc5123"
+                />
+                <div
+                  aria-hidden="true"
+                  class="_metricBadge_bc5123"
+                >
+                  <span>
+                    4
+                  </span>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section
+      aria-labelledby="understand-title"
+      class="_section_9e478f"
+      data-animated="true"
+      data-testid="narrative-section"
+    >
+      <div
+        class="_trackAnimated_9e478f"
+        data-testid="narrative-track"
+        style="--narrative-step-count: 4;"
+      >
         <div
-          class="_column_bc5123 _columnStories_bc5123"
+          class="_stickyViewport_9e478f"
+          data-testid="narrative-viewport"
         >
+          <div
+            class="homeContainer _inner_9e478f"
+          >
+            <div
+              class="_stack_9e478f"
+            >
+              <p
+                class="_line_9e478f _intro_9e478f _lineActive_9e478f"
+                data-active="true"
+                data-line-index="0"
+                id="understand-title"
+              >
+                we understand...
+              </p>
+              <p
+                class="_line_9e478f _statement_9e478f _lineInactive_9e478f"
+                data-active="false"
+                data-line-index="1"
+              >
+                small things build up until everything feels like too much
+              </p>
+              <p
+                class="_line_9e478f _statement_9e478f _lineInactive_9e478f"
+                data-active="false"
+                data-line-index="2"
+              >
+                most support only shows up after you're already overwhelmed
+              </p>
+              <p
+                class="_line_9e478f _statementSerifMuted_9e478f _lineInactive_9e478f"
+                data-active="false"
+                data-line-index="3"
+              >
+                but maon notices the shift earlier because your body knows before you do
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      aria-labelledby="how-we-help-title"
+      class="_section_90fb87"
+    >
+      <div
+        class="homeContainer"
+      >
+        <div
+          class="_headingBlock_90fb87"
+        >
+          <h2
+            class="_heading_90fb87"
+            id="how-we-help-title"
+          >
+            how we help
+          </h2>
+        </div>
+        <div
+          class="_grid_90fb87"
+        >
+          <article
+            class="_card_5a814f"
+            style="--how-we-help-accent: #c6b5f5;"
+          >
+            <button
+              aria-controls="proactive-interventions-details"
+              aria-expanded="false"
+              class="_trigger_5a814f"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+                class="_rail_5a814f"
+              />
+              <span
+                class="_content_5a814f"
+              >
+                <span
+                  class="_title_5a814f"
+                >
+                  proactive interventions
+                </span>
+                <span
+                  class="_summary_5a814f"
+                >
+                  when something starts to drift, maon helps you reset in the moment with small actions
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="_chevron_5a814f"
+                >
+                  <span
+                    class="_chevronGlyph_5a814f"
+                  >
+                    ⌄
+                  </span>
+                </span>
+              </span>
+            </button>
+          </article>
+          <article
+            class="_card_5a814f"
+            style="--how-we-help-accent: #7eaeea;"
+          >
+            <button
+              aria-controls="personal-patterns-details"
+              aria-expanded="false"
+              class="_trigger_5a814f"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+                class="_rail_5a814f"
+              />
+              <span
+                class="_content_5a814f"
+              >
+                <span
+                  class="_title_5a814f"
+                >
+                  personal patterns
+                </span>
+                <span
+                  class="_summary_5a814f"
+                >
+                  most people do not see what actually affects their energy or mood. maon connects the dots
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="_chevron_5a814f"
+                >
+                  <span
+                    class="_chevronGlyph_5a814f"
+                  >
+                    ⌄
+                  </span>
+                </span>
+              </span>
+            </button>
+          </article>
+          <article
+            class="_card_5a814f"
+            style="--how-we-help-accent: #59c85b;"
+          >
+            <button
+              aria-controls="adaptive-over-time-details"
+              aria-expanded="false"
+              class="_trigger_5a814f"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+                class="_rail_5a814f"
+              />
+              <span
+                class="_content_5a814f"
+              >
+                <span
+                  class="_title_5a814f"
+                >
+                  adaptive over time
+                </span>
+                <span
+                  class="_summary_5a814f"
+                >
+                  the more you use maon, the more it learns how you work
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="_chevron_5a814f"
+                >
+                  <span
+                    class="_chevronGlyph_5a814f"
+                  >
+                    ⌄
+                  </span>
+                </span>
+              </span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section
+      class="_section_f1b934"
+    >
+      <div
+        class="homeContainer"
+      >
+        <div
+          class="_stack_f1b934"
+        >
+          <h2
+            class="_title_f1b934"
+          >
+            balance doesn't happen by accident
+          </h2>
           <p
-            class="_label_bc5123 _labelStories_bc5123"
+            class="_subtitle_f1b934"
           >
-            stories
+            maon helps you find it
           </p>
-          <div
-            class="_metrics_bc5123"
+          <a
+            class="buttonPrimary buttonPrimaryCompact"
+            href="sms:2792879109&body=hi%20maon!"
           >
-            <article
-              class="_metricCard_bc5123 _metricPeach_bc5123"
-            >
-              <p
-                class="_metricLabel_bc5123"
-              >
-                EARLY SPIRAL
-              </p>
-              <p
-                class="_metricValue_bc5123"
-              >
-                2h
-              </p>
-              <p
-                class="_metricDescription_bc5123"
-              >
-                before a spiral, your body lets us know
-              </p>
-              <div
-                aria-hidden="true"
-                class="_metricCircle_bc5123"
-              />
-              <div
-                aria-hidden="true"
-                class="_metricBadge_bc5123"
-              >
-                <span>
-                  3
-                </span>
-              </div>
-            </article>
-            <article
-              class="_metricCard_bc5123 _metricGreen_bc5123"
-            >
-              <p
-                class="_metricLabel_bc5123"
-              >
-                PROGRESS
-              </p>
-              <p
-                class="_metricValue_bc5123"
-              >
-                18%
-              </p>
-              <p
-                class="_metricDescription_bc5123"
-              >
-                less destress over the past week
-              </p>
-              <div
-                aria-hidden="true"
-                class="_metricCircle_bc5123"
-              />
-              <div
-                aria-hidden="true"
-                class="_metricBadge_bc5123"
-              >
-                <span>
-                  4
-                </span>
-              </div>
-            </article>
-          </div>
+            say hi to maon
+          </a>
         </div>
       </div>
-    </div>
-  </section>
-  <section
-    aria-labelledby="understand-title"
-    class="_section_9e478f"
-    data-animated="true"
-    data-testid="narrative-section"
-  >
-    <div
-      class="_trackAnimated_9e478f"
-      data-testid="narrative-track"
-      style="--narrative-step-count: 4;"
-    >
-      <div
-        class="_stickyViewport_9e478f"
-        data-testid="narrative-viewport"
-      >
-        <div
-          class="homeContainer _inner_9e478f"
-        >
-          <div
-            class="_stack_9e478f"
-          >
-            <p
-              class="_line_9e478f _intro_9e478f _lineActive_9e478f"
-              data-active="true"
-              data-line-index="0"
-              id="understand-title"
-            >
-              we understand...
-            </p>
-            <p
-              class="_line_9e478f _statement_9e478f _lineInactive_9e478f"
-              data-active="false"
-              data-line-index="1"
-            >
-              small things build up until everything feels like too much
-            </p>
-            <p
-              class="_line_9e478f _statement_9e478f _lineInactive_9e478f"
-              data-active="false"
-              data-line-index="2"
-            >
-              most support only shows up after you're already overwhelmed
-            </p>
-            <p
-              class="_line_9e478f _statementSerifMuted_9e478f _lineInactive_9e478f"
-              data-active="false"
-              data-line-index="3"
-            >
-              but maon notices the shift earlier because your body knows before you do
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section
-    aria-labelledby="how-we-help-title"
-    class="_section_90fb87"
-  >
-    <div
-      class="homeContainer"
-    >
-      <div
-        class="_headingBlock_90fb87"
-      >
-        <h2
-          class="_heading_90fb87"
-          id="how-we-help-title"
-        >
-          how we help
-        </h2>
-      </div>
-      <div
-        class="_grid_90fb87"
-      >
-        <article
-          class="_card_5a814f"
-        >
-          <button
-            aria-controls="proactive-interventions-details"
-            aria-expanded="false"
-            class="_trigger_5a814f"
-            type="button"
-          >
-            <span
-              aria-hidden="true"
-              class="_rail_5a814f"
-            />
-            <span
-              class="_content_5a814f"
-            >
-              <span
-                class="_title_5a814f"
-              >
-                proactive interventions
-              </span>
-              <span
-                class="_summary_5a814f"
-              >
-                when something starts to drift, maon helps you reset in the moment with small actions
-              </span>
-              <span
-                aria-hidden="true"
-                class="_chevron_5a814f"
-              >
-                <span
-                  class="_chevronGlyph_5a814f"
-                >
-                  ⌄
-                </span>
-              </span>
-            </span>
-          </button>
-        </article>
-        <article
-          class="_card_5a814f"
-        >
-          <button
-            aria-controls="personal-patterns-details"
-            aria-expanded="false"
-            class="_trigger_5a814f"
-            type="button"
-          >
-            <span
-              aria-hidden="true"
-              class="_rail_5a814f"
-            />
-            <span
-              class="_content_5a814f"
-            >
-              <span
-                class="_title_5a814f"
-              >
-                personal patterns
-              </span>
-              <span
-                class="_summary_5a814f"
-              >
-                most people do not see what actually affects their energy or mood. maon connects the dots
-              </span>
-              <span
-                aria-hidden="true"
-                class="_chevron_5a814f"
-              >
-                <span
-                  class="_chevronGlyph_5a814f"
-                >
-                  ⌄
-                </span>
-              </span>
-            </span>
-          </button>
-        </article>
-        <article
-          class="_card_5a814f"
-        >
-          <button
-            aria-controls="adaptive-over-time-details"
-            aria-expanded="false"
-            class="_trigger_5a814f"
-            type="button"
-          >
-            <span
-              aria-hidden="true"
-              class="_rail_5a814f"
-            />
-            <span
-              class="_content_5a814f"
-            >
-              <span
-                class="_title_5a814f"
-              >
-                adaptive over time
-              </span>
-              <span
-                class="_summary_5a814f"
-              >
-                the more you use maon, the more it learns how you work
-              </span>
-              <span
-                aria-hidden="true"
-                class="_chevron_5a814f"
-              >
-                <span
-                  class="_chevronGlyph_5a814f"
-                >
-                  ⌄
-                </span>
-              </span>
-            </span>
-          </button>
-        </article>
-      </div>
-    </div>
-  </section>
-  <section
-    class="_section_f1b934"
-  >
-    <div
-      class="homeContainer"
-    >
-      <div
-        class="_stack_f1b934"
-      >
-        <h2
-          class="_title_f1b934"
-        >
-          balance doesn't happen by accident
-        </h2>
-        <p
-          class="_subtitle_f1b934"
-        >
-          maon helps you find it
-        </p>
-        <a
-          class="buttonPrimary buttonPrimaryCompact"
-          data-discover="true"
-          href="/contact"
-        >
-          say hi to maon
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </DocumentFragment>
 `;
