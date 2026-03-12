@@ -8,23 +8,28 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
     <div
       class="_topScene_733e29"
       data-testid="home-top-scene"
-      style="background-image: url("/src/assets/home-top-scene.svg");"
     >
-      <video
-        aria-hidden="true"
-        autoplay=""
-        class="_topSceneVideo_733e29"
-        data-testid="home-top-scene-video"
-        loop=""
-        playsinline=""
-        poster="/src/assets/home-top-scene.svg"
-        preload="auto"
+      <div
+        class="_topSceneMedia_733e29"
+        data-testid="home-top-scene-media"
+        style="background-image: url("/src/assets/home-top-scene.svg");"
       >
-        <source
-          src="/src/assets/home-top-scene-loop.mp4"
-          type="video/mp4"
-        />
-      </video>
+        <video
+          aria-hidden="true"
+          autoplay=""
+          class="_topSceneVideo_733e29"
+          data-testid="home-top-scene-video"
+          loop=""
+          playsinline=""
+          poster="/src/assets/home-top-scene.svg"
+          preload="auto"
+        >
+          <source
+            src="/src/assets/home-top-scene-loop.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
       <div
         class="_topSceneInner_733e29"
       >
@@ -122,49 +127,6 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                   <div
                     class="_thread_bc5123"
                   >
-                    <div
-                      class="_bubble_bc5123 _bubbleIncomingShort_bc5123 _bubbleIncoming_bc5123"
-                      data-variant="incoming-short"
-                    >
-                      what should i call you?
-                    </div>
-                    <div
-                      class="_bubble_bc5123 _bubbleOutgoingShort_bc5123 _bubbleReply_bc5123"
-                      data-variant="outgoing-short"
-                    >
-                      hey im 
-                      <em>
-                        user.
-                      </em>
-                    </div>
-                    <div
-                      class="_bubble_bc5123 _bubbleIncomingTall_bc5123 _bubbleIncoming_bc5123"
-                      data-variant="incoming-tall"
-                    >
-                      hi 
-                      <em>
-                        user
-                      </em>
-                      , want to hear about me, or should we start with you?
-                    </div>
-                    <div
-                      class="_bubble_bc5123 _bubbleOutgoingMedium_bc5123 _bubbleReply_bc5123"
-                      data-variant="outgoing-medium"
-                    >
-                      ik you step in right away
-                    </div>
-                    <div
-                      class="_bubble_bc5123 _bubbleIncomingQuestion_bc5123 _bubbleIncoming_bc5123"
-                      data-variant="incoming-question"
-                    >
-                      when you start slipping do you notice it? or does it hit you later?
-                    </div>
-                    <div
-                      class="_bubble_bc5123 _bubbleOutgoingLarge_bc5123 _bubbleReply_bc5123"
-                      data-variant="outgoing-large"
-                    >
-                      i don’t notice it until it gets really bad and then i start spiraling
-                    </div>
                     <div
                       aria-hidden="true"
                       class="_typingIndicator_bc5123"

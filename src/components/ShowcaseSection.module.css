@@ -236,9 +236,9 @@
 
 .historyItem {
   position: relative;
-  border: 1px solid rgba(255, 253, 252, 0.4);
+  border: 1px solid rgba(255, 253, 252, 0.8);
   border-radius: 13.485px;
-  background: rgba(255, 253, 252, 0.24);
+  background: rgba(255, 254, 252, 0.95);
   min-height: 65.627px;
   padding: 14.384px 14.6px 12.2px 33.263px;
   opacity: 1;

@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react';
+
 import type {
   ShowcaseBlockedApp,
   ShowcaseContent,
@@ -10,6 +12,9 @@ import styles from './ShowcaseSection.module.css';
 type ShowcaseSectionProps = {
   content: ShowcaseContent;
 };
+
+const MESSAGE_TYPING_DELAY_MS = 700;
+const MESSAGE_PAUSE_DELAY_MS = 260;
 
 function renderMessageText(message: ShowcaseMessage) {
   if (!message.italicWord || !message.text.includes(message.italicWord)) {
@@ -118,13 +123,92 @@ function renderHistoryCard(item: ShowcaseHistoryItem) {
 }
 
 export function ShowcaseSection({ content }: ShowcaseSectionProps) {
+  const phoneRef = useRef<HTMLElement | null>(null);
+  const [isPhoneInView, setIsPhoneInView] = useState(false);
+  const [visibleMessageCount, setVisibleMessageCount] = useState(0);
+  const [messagePhase, setMessagePhase] = useState<'idle' | 'typing' | 'pause' | 'done'>('idle');
+
+  useEffect(() => {
+    const phoneElement = phoneRef.current;
+
+    if (!phoneElement || typeof IntersectionObserver === 'undefined') {
+      setIsPhoneInView(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        setIsPhoneInView(entry?.isIntersecting ?? false);
+      },
+      {
+        threshold: 0.35,
+      },
+    );
+
+    observer.observe(phoneElement);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isPhoneInView) {
+      setVisibleMessageCount(0);
+      setMessagePhase('idle');
+      return;
+    }
+
+    setMessagePhase((currentPhase) => (currentPhase === 'idle' ? 'typing' : currentPhase));
+  }, [isPhoneInView]);
+
+  useEffect(() => {
+    if (!isPhoneInView) {
+      return undefined;
+    }
+
+    if (visibleMessageCount >= content.messages.length) {
+      setMessagePhase('done');
+      return undefined;
+    }
+
+    if (messagePhase === 'typing') {
+      const revealTimer = window.setTimeout(() => {
+        setVisibleMessageCount((count) => count + 1);
+        setMessagePhase('pause');
+      }, MESSAGE_TYPING_DELAY_MS);
+
+      return () => {
+        window.clearTimeout(revealTimer);
+      };
+    }
+
+    if (messagePhase === 'pause') {
+      const nextMessageTimer = window.setTimeout(() => {
+        setMessagePhase('typing');
+      }, MESSAGE_PAUSE_DELAY_MS);
+
+      return () => {
+        window.clearTimeout(nextMessageTimer);
+      };
+    }
+
+    return undefined;
+  }, [content.messages.length, isPhoneInView, messagePhase, visibleMessageCount]);
+
+  const visibleMessages = content.messages.slice(0, visibleMessageCount);
+  const showTypingIndicator = isPhoneInView
+    && visibleMessageCount < content.messages.length
+    && messagePhase === 'typing';
+
   return (
     <section className={styles.section} aria-label="Product preview">
       <div className="homeContainer">
         <div className={styles.grid}>
           <div className={`${styles.column} ${styles.columnMessages}`}>
             <p className={`${styles.label} ${styles.labelMessages}`}>{content.messagesLabel}</p>
-            <article className={styles.phone}>
+            <article className={styles.phone} ref={phoneRef}>
               <div className={styles.phoneHeader}>
                 <button
                   type="button"
@@ -141,7 +225,7 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
                 </div>
               </div>
               <div className={styles.thread}>
-                {content.messages.map((message) => (
+                {visibleMessages.map((message) => (
                   <div
                     className={
                       message.sender === 'user'
@@ -154,11 +238,13 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
                     {renderMessageText(message)}
                   </div>
                 ))}
-                <div className={styles.typingIndicator} aria-hidden="true">
-                  <span className={styles.typingDot} />
-                  <span className={styles.typingDot} />
-                  <span className={styles.typingDot} />
-                </div>
+                {showTypingIndicator ? (
+                  <div className={styles.typingIndicator} aria-hidden="true">
+                    <span className={styles.typingDot} />
+                    <span className={styles.typingDot} />
+                    <span className={styles.typingDot} />
+                  </div>
+                ) : null}
               </div>
             </article>
           </div>

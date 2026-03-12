@@ -19,9 +19,7 @@ export function SiteHeader() {
       <div className={isHome ? `${styles.containerHome} container` : 'container'}>
         <div className={styles.inner}>
           <NavLink aria-label="MAON" className={styles.brand} to="/">
-            <span className={styles.brandText}>MA</span>
             <MaonMark className={styles.brandMark} />
-            <span className={styles.brandText}>N</span>
           </NavLink>
           {isHome ? null : (
             <nav aria-label="Primary">

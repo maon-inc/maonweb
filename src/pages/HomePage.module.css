@@ -7,9 +7,6 @@
   overflow: clip;
   isolation: isolate;
   padding-bottom: 96px;
-  background-position: center 36%;
-  background-repeat: no-repeat;
-  background-size: cover;
   --hero-title-color: #fffdfc;
   --hero-supporting-color: rgba(255, 253, 252, 0.94);
   --hero-title-shadow: 0 3px 16px rgba(31, 36, 33, 0.18);
@@ -18,7 +15,20 @@
   --hero-padding-bottom: 96px;
 }
 
-.topScene::before {
+.topSceneMedia {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 70vh;
+  min-height: 540px;
+  max-height: 760px;
+  overflow: clip;
+  z-index: 0;
+  background-position: center 36%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.topSceneMedia::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -32,18 +42,18 @@
   pointer-events: none;
 }
 
-.topScene::after {
+.topSceneMedia::after {
   content: "";
   position: absolute;
   inset-inline: 0;
   bottom: 0;
   z-index: 2;
-  height: 214px;
+  height: 180px;
   background: linear-gradient(
     180deg,
     rgba(255, 253, 252, 0) 0%,
-    rgba(255, 253, 252, 0.14) 30%,
-    rgba(255, 253, 252, 0.52) 62%,
+    rgba(255, 253, 252, 0.16) 34%,
+    rgba(255, 253, 252, 0.58) 68%,
     #fffdfc 100%
   );
   pointer-events: none;
@@ -66,18 +76,24 @@
 
 @media (max-width: 700px) {
   .topScene {
-    background-position: center 28%;
-    background-size: auto 480px;
     --hero-padding-top: 106px;
     --hero-padding-bottom: 72px;
     padding-bottom: 60px;
   }
 
-  .topScene::after {
-    height: 132px;
+  .topSceneMedia {
+    height: 70vh;
+    min-height: 420px;
+    max-height: 520px;
+    background-position: center 28%;
+    background-size: auto 480px;
   }
 
   .topSceneVideo {
     object-position: center 78%;
+  }
+
+  .topSceneMedia::after {
+    height: 124px;
   }
 }

@@ -1,21 +1,119 @@
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 
 import { homePageContent } from '../content/homePageContent';
 import { ShowcaseSection } from './ShowcaseSection';
 
+class MockIntersectionObserver {
+  static instances: MockIntersectionObserver[] = [];
+
+  callback: IntersectionObserverCallback;
+
+  observedElements = new Set<Element>();
+
+  constructor(callback: IntersectionObserverCallback) {
+    this.callback = callback;
+    MockIntersectionObserver.instances.push(this);
+  }
+
+  observe = (element: Element) => {
+    this.observedElements.add(element);
+  };
+
+  unobserve = (element: Element) => {
+    this.observedElements.delete(element);
+  };
+
+  disconnect = () => {
+    this.observedElements.clear();
+  };
+
+  trigger(isIntersecting: boolean) {
+    const entries = [...this.observedElements].map(
+      (target) =>
+        ({
+          isIntersecting,
+          target,
+          intersectionRatio: isIntersecting ? 1 : 0,
+        }) as IntersectionObserverEntry,
+    );
+
+    this.callback(entries, this as unknown as IntersectionObserver);
+  }
+}
+
+function getLatestObserver() {
+  const latestObserver = MockIntersectionObserver.instances.at(-1);
+
+  if (!latestObserver) {
+    throw new Error('Expected an IntersectionObserver instance to exist.');
+  }
+
+  return latestObserver;
+}
+
+function advanceToNextMessage() {
+  act(() => {
+    vi.advanceTimersByTime(700);
+  });
+}
+
+function advanceToNextTypingBeat() {
+  act(() => {
+    vi.advanceTimersByTime(260);
+  });
+}
+
 describe('ShowcaseSection', () => {
-  it('renders the figma phone thread in order with header and typing indicator', () => {
+  beforeEach(() => {
+    vi.useFakeTimers();
+    MockIntersectionObserver.instances = [];
+    vi.stubGlobal('IntersectionObserver', MockIntersectionObserver);
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+    vi.unstubAllGlobals();
+  });
+
+  it('animates the phone thread one bubble at a time while the phone is in view', () => {
     const { container } = render(<ShowcaseSection content={homePageContent.showcase} />);
 
     expect(screen.getByText(/in your messages/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /go back/i })).toBeInTheDocument();
     expect(screen.getByText(/^maon$/i)).toBeInTheDocument();
 
-    const messageElements = container.querySelectorAll('[data-variant]');
+    const observer = getLatestObserver();
 
-    expect(messageElements).toHaveLength(6);
+    expect(container.querySelectorAll('[data-variant]')).toHaveLength(0);
+    expect(container.querySelectorAll('[class*="typingDot"]')).toHaveLength(0);
+
+    act(() => {
+      observer.trigger(true);
+    });
+
+    expect(container.querySelectorAll('[class*="typingDot"]')).toHaveLength(3);
+
+    advanceToNextMessage();
+
+    let messageElements = container.querySelectorAll('[data-variant]');
+    expect(messageElements).toHaveLength(1);
     expect(messageElements[0]).toHaveTextContent('what should i call you?');
     expect(messageElements[0]).toHaveAttribute('data-variant', 'incoming-short');
+
+    advanceToNextTypingBeat();
+
+    expect(container.querySelectorAll('[class*="typingDot"]')).toHaveLength(3);
+
+    for (let index = 1; index < homePageContent.showcase.messages.length; index += 1) {
+      advanceToNextMessage();
+
+      if (index < homePageContent.showcase.messages.length - 1) {
+        advanceToNextTypingBeat();
+      }
+    }
+
+    messageElements = container.querySelectorAll('[data-variant]');
+    expect(messageElements).toHaveLength(6);
     expect(messageElements[1]).toHaveTextContent('hey im user.');
     expect(messageElements[1]).toHaveAttribute('data-variant', 'outgoing-short');
     expect(messageElements[2]).toHaveTextContent(
@@ -32,8 +130,42 @@ describe('ShowcaseSection', () => {
       'i don’t notice it until it gets really bad and then i start spiraling',
     );
     expect(messageElements[5]).toHaveAttribute('data-variant', 'outgoing-large');
+    expect(container.querySelectorAll('[class*="typingDot"]')).toHaveLength(0);
+  });
+
+  it('resets the phone thread when it leaves view and restarts on re-entry', () => {
+    const { container } = render(<ShowcaseSection content={homePageContent.showcase} />);
+
+    const observer = getLatestObserver();
+
+    act(() => {
+      observer.trigger(true);
+    });
+
+    advanceToNextMessage();
+    advanceToNextTypingBeat();
+    advanceToNextMessage();
+
+    expect(container.querySelectorAll('[data-variant]')).toHaveLength(2);
+
+    act(() => {
+      observer.trigger(false);
+    });
+
+    expect(container.querySelectorAll('[data-variant]')).toHaveLength(0);
+    expect(container.querySelectorAll('[class*="typingDot"]')).toHaveLength(0);
+
+    act(() => {
+      observer.trigger(true);
+    });
 
     expect(container.querySelectorAll('[class*="typingDot"]')).toHaveLength(3);
+
+    advanceToNextMessage();
+
+    const restartedMessages = container.querySelectorAll('[data-variant]');
+    expect(restartedMessages).toHaveLength(1);
+    expect(restartedMessages[0]).toHaveTextContent('what should i call you?');
   });
 
   it('renders the history stack with featured metadata and compact trailing cards', () => {

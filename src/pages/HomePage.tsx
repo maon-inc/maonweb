@@ -33,26 +33,28 @@ export function HomePage() {
 
   return (
     <div className={styles.page}>
-      <div
-        className={styles.topScene}
-        data-testid="home-top-scene"
-        style={{ backgroundImage: `url(${topScenePosterUrl})` }}
-      >
-        {prefersReducedMotion ? null : (
-          <video
-            aria-hidden="true"
-            autoPlay
-            className={styles.topSceneVideo}
-            data-testid="home-top-scene-video"
-            loop
-            muted
-            playsInline
-            poster={topScenePosterUrl}
-            preload="auto"
-          >
-            <source src={topSceneLoopUrl} type="video/mp4" />
-          </video>
-        )}
+      <div className={styles.topScene} data-testid="home-top-scene">
+        <div
+          className={styles.topSceneMedia}
+          data-testid="home-top-scene-media"
+          style={{ backgroundImage: `url(${topScenePosterUrl})` }}
+        >
+          {prefersReducedMotion ? null : (
+            <video
+              aria-hidden="true"
+              autoPlay
+              className={styles.topSceneVideo}
+              data-testid="home-top-scene-video"
+              loop
+              muted
+              playsInline
+              poster={topScenePosterUrl}
+              preload="auto"
+            >
+              <source src={topSceneLoopUrl} type="video/mp4" />
+            </video>
+          )}
+        </div>
         <div className={styles.topSceneInner}>
           <HomeHero content={homePageContent.hero} />
           <ShowcaseSection content={homePageContent.showcase} />

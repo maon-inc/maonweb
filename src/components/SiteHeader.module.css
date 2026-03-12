@@ -35,27 +35,13 @@
 
 .brand {
   display: inline-flex;
-  align-items: baseline;
-  gap: 0;
+  align-items: center;
   text-decoration: none;
   color: var(--home-ink);
-  font-family: var(--font-ui);
-  font-size: 1.56rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.brandText {
-  display: inline-block;
-  line-height: 1;
 }
 
 .brandMark {
-  --maon-mark-size: 24px;
-  margin-inline: 0.05rem 0.07rem;
-  align-self: center;
+  --maon-mark-size: 31px;
 }
 
 .navList {
