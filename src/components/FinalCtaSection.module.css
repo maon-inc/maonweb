@@ -40,3 +40,16 @@
     font-size: clamp(2rem, 6vw, 2.5rem);
   }
 }
+
+@media (max-width: 560px) {
+  .title,
+  .subtitle {
+    font-size: clamp(0.88rem, 4.4vw, 1.1rem);
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .subtitle {
+    margin-top: 0.35rem;
+  }
+}

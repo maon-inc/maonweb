@@ -16,7 +16,7 @@ describe('HomePage', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /an assistant that uses your biometrics to keep you balanced/i,
+        name: /what if an ai agent's only job was to keep you balanced\?/i,
       }),
     ).toBeInTheDocument();
   });

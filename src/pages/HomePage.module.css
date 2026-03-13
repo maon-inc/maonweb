@@ -66,15 +66,19 @@
 
 @media (max-width: 700px) {
   .topScene {
-    --hero-padding-top: 182px;
+    --hero-padding-top: calc(154px + env(safe-area-inset-top));
     --hero-padding-bottom: 72px;
     padding-bottom: 60px;
   }
 
   .topSceneMedia {
+    top: calc(-1 * env(safe-area-inset-top));
     height: 70vh;
+    height: calc(70vh + env(safe-area-inset-top));
     min-height: 420px;
+    min-height: calc(420px + env(safe-area-inset-top));
     max-height: 520px;
+    max-height: calc(520px + env(safe-area-inset-top));
     background-position: center 28%;
     background-size: auto 480px;
   }

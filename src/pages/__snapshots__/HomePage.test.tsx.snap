@@ -34,18 +34,18 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
               <h1
                 class="_title_4a3a7e"
               >
-                an assistant that uses your 
+                what if an AI agent's only job was to keep you 
                 <span
                   class="_emphasis_4a3a7e"
                 >
-                  biometrics
+                  balanced?
                 </span>
-                 to keep you balanced
+                 
               </h1>
               <p
                 class="_supportingText_4a3a7e"
               >
-                with proactive interventions
+                Maon does that with proactive interventions
               </p>
               <a
                 class="buttonPrimary buttonPrimaryCompact"
@@ -448,7 +448,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
       <div
         class="_trackAnimated_9e478f"
         data-testid="narrative-track"
-        style="--narrative-step-count: 4;"
+        style="--narrative-track-step-count: 5;"
       >
         <div
           class="_stickyViewport_9e478f"
@@ -523,16 +523,16 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
             data-card-id="proactive-interventions"
             style="--how-we-help-accent: #c6b5f5;"
           >
+            <span
+              aria-hidden="true"
+              class="_rail_5a814f"
+            />
             <button
               aria-controls="proactive-interventions-details"
               aria-expanded="false"
               class="_trigger_5a814f"
               type="button"
             >
-              <span
-                aria-hidden="true"
-                class="_rail_5a814f"
-              />
               <span
                 class="_content_5a814f"
               >
@@ -603,16 +603,16 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
             data-card-id="personal-patterns"
             style="--how-we-help-accent: #7eaeea;"
           >
+            <span
+              aria-hidden="true"
+              class="_rail_5a814f"
+            />
             <button
               aria-controls="personal-patterns-details"
               aria-expanded="false"
               class="_trigger_5a814f"
               type="button"
             >
-              <span
-                aria-hidden="true"
-                class="_rail_5a814f"
-              />
               <span
                 class="_content_5a814f"
               >
@@ -683,16 +683,16 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
             data-card-id="adaptive-over-time"
             style="--how-we-help-accent: #59c85b;"
           >
+            <span
+              aria-hidden="true"
+              class="_rail_5a814f"
+            />
             <button
               aria-controls="adaptive-over-time-details"
               aria-expanded="false"
               class="_trigger_5a814f"
               type="button"
             >
-              <span
-                aria-hidden="true"
-                class="_rail_5a814f"
-              />
               <span
                 class="_content_5a814f"
               >

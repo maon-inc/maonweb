@@ -5,6 +5,7 @@ import {
   getNarrativeActiveIndex,
   getNarrativeLineVisualState,
   getNarrativeScrollOffset,
+  getNarrativeTrackStepCount,
   NarrativeSection,
   shouldAnimateNarrative,
 } from './NarrativeSection';
@@ -157,6 +158,7 @@ describe('NarrativeSection', () => {
     render(<NarrativeSection content={homePageContent.narrative} />);
 
     const section = screen.getByTestId('narrative-section');
+    const track = screen.getByTestId('narrative-track');
     const introLine = screen.getByText(/we understand/i);
     const firstMainLine = screen.getByText(
       /small things build up until everything feels like too much/i,
@@ -170,6 +172,7 @@ describe('NarrativeSection', () => {
     });
 
     expect(section).toHaveAttribute('data-animated', 'true');
+    expect(track).toHaveStyle('--narrative-track-step-count: 4');
     expect(introLine).toHaveAttribute('data-visual-state', 'active');
     expect(firstMainLine).toHaveAttribute('data-visual-state', 'next');
 
@@ -297,6 +300,8 @@ describe('NarrativeSection', () => {
     expect(getNarrativeActiveIndex(1200, 1000, 4)).toBe(1);
     expect(getNarrativeActiveIndex(2800, 1000, 4)).toBe(2);
     expect(getNarrativeActiveIndex(3999, 1000, 4)).toBe(3);
+    expect(getNarrativeTrackStepCount(390, 4)).toBe(4);
+    expect(getNarrativeTrackStepCount(1400, 4)).toBe(5);
     expect(getNarrativeLineVisualState(0, 0)).toBe('active');
     expect(getNarrativeLineVisualState(1, 0)).toBe('next');
     expect(getNarrativeLineVisualState(0, 1)).toBe('previous');

@@ -8,6 +8,7 @@ type NarrativeSectionProps = {
 };
 
 const DESKTOP_STEP_COUNT = 4;
+const MOBILE_BREAKPOINT = 700;
 const STATIC_ACTIVE_INDEX = 1;
 const ANIMATED_START_INDEX = 0;
 
@@ -36,6 +37,16 @@ export function getNarrativeActiveIndex(
 
 export function shouldAnimateNarrative(viewportWidth: number, prefersReducedMotion: boolean) {
   return viewportWidth > 0 && !prefersReducedMotion;
+}
+
+export function getNarrativeTrackStepCount(viewportWidth: number, totalLines: number) {
+  if (totalLines <= 1) {
+    return 1;
+  }
+
+  return viewportWidth <= MOBILE_BREAKPOINT
+    ? totalLines
+    : Math.max(totalLines, DESKTOP_STEP_COUNT) + 1;
 }
 
 export function getNarrativeLineVisualState(
@@ -96,6 +107,7 @@ export function NarrativeSection({ content }: NarrativeSectionProps) {
   const trackRef = useRef<HTMLDivElement | null>(null);
   const [activeIndex, setActiveIndex] = useState(STATIC_ACTIVE_INDEX);
   const [isAnimated, setIsAnimated] = useState(false);
+  const [viewportWidth, setViewportWidth] = useState(0);
 
   const lines = useMemo<NarrativeLine[]>(
     () => [
@@ -120,11 +132,13 @@ export function NarrativeSection({ content }: NarrativeSectionProps) {
         : null;
 
     const updateMode = () => {
+      const nextViewportWidth = window.innerWidth;
       const nextAnimated = shouldAnimateNarrative(
-        window.innerWidth,
+        nextViewportWidth,
         mediaQuery?.matches ?? false,
       );
 
+      setViewportWidth(nextViewportWidth);
       setIsAnimated(nextAnimated);
       setActiveIndex(nextAnimated ? ANIMATED_START_INDEX : STATIC_ACTIVE_INDEX);
     };
@@ -208,7 +222,12 @@ export function NarrativeSection({ content }: NarrativeSectionProps) {
         ref={trackRef}
         style={
           isAnimated
-            ? ({ '--narrative-step-count': Math.max(lines.length, DESKTOP_STEP_COUNT) } as CSSProperties)
+            ? ({
+                '--narrative-track-step-count': getNarrativeTrackStepCount(
+                  viewportWidth,
+                  lines.length,
+                ),
+              } as CSSProperties)
             : undefined
         }
       >
