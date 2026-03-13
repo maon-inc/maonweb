@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 
 import instagramIcon from '../assets/instagram-icon.svg';
 import redditIcon from '../assets/reddit-icon.svg';
@@ -18,6 +18,9 @@ type ShowcaseSectionProps = {
 
 const MESSAGE_TYPING_DELAY_MS = 700;
 const MESSAGE_PAUSE_DELAY_MS = 260;
+const SHOWCASE_STAGE_WIDTH = 906;
+const SHOWCASE_STAGE_HEIGHT = 608;
+const SHOWCASE_STAGE_FALLBACK_GUTTER = 32;
 const BLOCKED_APP_ICONS: Record<ShowcaseBlockedApp, { src: string; alt: string }> = {
   instagram: { src: instagramIcon, alt: 'Instagram' },
   tiktok: { src: tiktokIcon, alt: 'TikTok' },
@@ -111,9 +114,34 @@ function renderHistoryCard(item: ShowcaseHistoryItem) {
 
 export function ShowcaseSection({ content }: ShowcaseSectionProps) {
   const phoneRef = useRef<HTMLElement | null>(null);
+  const stageViewportRef = useRef<HTMLDivElement | null>(null);
   const [isPhoneInView, setIsPhoneInView] = useState(false);
   const [visibleMessageCount, setVisibleMessageCount] = useState(0);
   const [messagePhase, setMessagePhase] = useState<'idle' | 'typing' | 'pause' | 'done'>('idle');
+  const [stageScale, setStageScale] = useState(1);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return undefined;
+    }
+
+    const updateStageScale = () => {
+      const measuredWidth = stageViewportRef.current?.getBoundingClientRect().width ?? 0;
+      const fallbackWidth = Math.max(window.innerWidth - SHOWCASE_STAGE_FALLBACK_GUTTER, 0);
+      const availableWidth = measuredWidth > 0 ? measuredWidth : fallbackWidth;
+      const nextScale = Math.min(1, availableWidth / SHOWCASE_STAGE_WIDTH);
+
+      setStageScale((currentScale) => (currentScale === nextScale ? currentScale : nextScale));
+    };
+
+    updateStageScale();
+
+    window.addEventListener('resize', updateStageScale);
+
+    return () => {
+      window.removeEventListener('resize', updateStageScale);
+    };
+  }, []);
 
   useEffect(() => {
     const phoneElement = phoneRef.current;
@@ -195,86 +223,99 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
   const typingDotClassName = pendingMessage?.sender === 'user'
     ? `${styles.typingDot} ${styles.typingDotOutgoing}`
     : `${styles.typingDot} ${styles.typingDotIncoming}`;
+  const stageStyle = {
+    '--showcase-scale': stageScale.toString(),
+    '--showcase-stage-width': `${SHOWCASE_STAGE_WIDTH}px`,
+    '--showcase-stage-height': `${SHOWCASE_STAGE_HEIGHT}px`,
+  } as CSSProperties;
 
   return (
     <section className={styles.section} aria-label="Product preview">
       <div className="homeContainer">
-        <div className={styles.grid}>
-          <div className={`${styles.column} ${styles.columnMessages}`}>
-            <p className={`${styles.label} ${styles.labelMessages}`}>{content.messagesLabel}</p>
-            <article className={styles.phone} ref={phoneRef}>
-              <div className={styles.phoneHeader}>
-                <button
-                  type="button"
-                  className={styles.backButton}
-                  aria-label="Go back"
-                >
-                  <span aria-hidden="true" className={styles.backGlyph}>
-                    ‹
-                  </span>
-                </button>
-                <div className={styles.phoneBrandMark}>
-                  <MaonMark className={styles.phoneAvatar} />
-                  <span className={styles.phoneBrandName}>maon</span>
-                </div>
-              </div>
-              <div className={styles.thread}>
-                {visibleMessages.map((message) => (
-                  <div
-                    className={
-                      message.sender === 'user'
-                        ? `${styles.bubble} ${getBubbleVariantClass(message.variant)} ${styles.bubbleReply}`
-                        : `${styles.bubble} ${getBubbleVariantClass(message.variant)} ${styles.bubbleIncoming}`
-                    }
-                    data-variant={message.variant}
-                    key={message.id}
-                  >
-                    {renderMessageText(message)}
+        <div
+          className={styles.stageViewport}
+          data-testid="showcase-stage-viewport"
+          ref={stageViewportRef}
+        >
+          <div className={styles.stageSizer} style={stageStyle}>
+            <div className={styles.grid} data-testid="showcase-stage">
+              <div className={`${styles.column} ${styles.columnMessages}`}>
+                <p className={`${styles.label} ${styles.labelMessages}`}>{content.messagesLabel}</p>
+                <article className={styles.phone} ref={phoneRef}>
+                  <div className={styles.phoneHeader}>
+                    <button
+                      type="button"
+                      className={styles.backButton}
+                      aria-label="Go back"
+                    >
+                      <span aria-hidden="true" className={styles.backGlyph}>
+                        ‹
+                      </span>
+                    </button>
+                    <div className={styles.phoneBrandMark}>
+                      <MaonMark className={styles.phoneAvatar} />
+                      <span className={styles.phoneBrandName}>maon</span>
+                    </div>
                   </div>
-                ))}
-                {showTypingIndicator ? (
-                  <div
-                    className={typingIndicatorClassName}
-                    data-sender={pendingMessage?.sender}
-                    aria-hidden="true"
-                  >
-                    <span className={typingDotClassName} />
-                    <span className={typingDotClassName} />
-                    <span className={typingDotClassName} />
-                  </div>
-                ) : null}
-              </div>
-            </article>
-          </div>
-
-          <div className={`${styles.column} ${styles.columnWide} ${styles.columnHistory}`}>
-            <p className={`${styles.label} ${styles.labelHistory}`}>{content.historyLabel}</p>
-            <div className={styles.historyCard}>
-              {content.historyItems.map((item) => renderHistoryCard(item))}
-            </div>
-          </div>
-
-          <div className={`${styles.column} ${styles.columnStories}`}>
-            <p className={`${styles.label} ${styles.labelStories}`}>{content.storiesLabel}</p>
-            <div className={styles.metrics}>
-              {content.metrics.map((metric) => (
-                <article
-                  className={
-                    metric.tone === 'peach'
-                      ? `${styles.metricCard} ${styles.metricPeach}`
-                      : `${styles.metricCard} ${styles.metricGreen}`
-                  }
-                  key={metric.label}
-                >
-                  <p className={styles.metricLabel}>{metric.label}</p>
-                  <p className={styles.metricValue}>{metric.value}</p>
-                  <p className={styles.metricDescription}>{metric.description}</p>
-                  <div className={styles.metricCircle} aria-hidden="true" />
-                  <div className={styles.metricBadge} aria-hidden="true">
-                    <span>{metric.badge}</span>
+                  <div className={styles.thread}>
+                    {visibleMessages.map((message) => (
+                      <div
+                        className={
+                          message.sender === 'user'
+                            ? `${styles.bubble} ${getBubbleVariantClass(message.variant)} ${styles.bubbleReply}`
+                            : `${styles.bubble} ${getBubbleVariantClass(message.variant)} ${styles.bubbleIncoming}`
+                        }
+                        data-variant={message.variant}
+                        key={message.id}
+                      >
+                        {renderMessageText(message)}
+                      </div>
+                    ))}
+                    {showTypingIndicator ? (
+                      <div
+                        className={typingIndicatorClassName}
+                        data-sender={pendingMessage?.sender}
+                        aria-hidden="true"
+                      >
+                        <span className={typingDotClassName} />
+                        <span className={typingDotClassName} />
+                        <span className={typingDotClassName} />
+                      </div>
+                    ) : null}
                   </div>
                 </article>
-              ))}
+              </div>
+
+              <div className={`${styles.column} ${styles.columnWide} ${styles.columnHistory}`}>
+                <p className={`${styles.label} ${styles.labelHistory}`}>{content.historyLabel}</p>
+                <div className={styles.historyCard}>
+                  {content.historyItems.map((item) => renderHistoryCard(item))}
+                </div>
+              </div>
+
+              <div className={`${styles.column} ${styles.columnStories}`}>
+                <p className={`${styles.label} ${styles.labelStories}`}>{content.storiesLabel}</p>
+                <div className={styles.metrics}>
+                  {content.metrics.map((metric) => (
+                    <article
+                      className={
+                        metric.tone === 'peach'
+                          ? `${styles.metricCard} ${styles.metricPeach}`
+                          : `${styles.metricCard} ${styles.metricGreen}`
+                      }
+                      key={metric.label}
+                    >
+                      <p className={styles.metricLabel}>{metric.label}</p>
+                      <p className={styles.metricValue}>{metric.value}</p>
+                      <p className={styles.metricDescription}>{metric.description}</p>
+                      <div className={styles.metricCircle} aria-hidden="true" />
+                      <div className={styles.metricBadge} aria-hidden="true">
+                        <span>{metric.badge}</span>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>

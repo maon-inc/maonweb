@@ -15,12 +15,11 @@
 
 .expanded {
   z-index: 5;
-  min-height: 540px;
 }
 
 .trigger {
   display: grid;
-  grid-template-columns: 17px minmax(0, 1fr);
+  grid-template-columns: 27px minmax(0, 1fr);
   width: 100%;
   gap: 0;
   padding: 0;
@@ -141,7 +140,7 @@
   visibility: visible;
   pointer-events: auto;
   transform: translateY(0);
-  max-height: 260px;
+  max-height: 420px;
   padding: 8px 24px 24px 53px;
 }
 
@@ -157,6 +156,12 @@
   font-size: 17px;
   line-height: 1.334;
   color: var(--home-ink-soft);
+}
+
+@media (max-width: 1280px) {
+  .detailsExpanded {
+    max-height: 520px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -184,13 +189,18 @@
     position: static;
     inset: auto;
     margin-top: 10px;
-    padding: 0 0 20px 53px;
+    padding: 0 0 0 53px;
     border: 0;
     border-radius: 0;
     box-shadow: none;
     transform: none;
+  }
+
+  .detailsExpanded {
+    padding: 0 0 20px 53px;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    max-height: 420px;
   }
 }

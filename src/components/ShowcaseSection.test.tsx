@@ -78,6 +78,8 @@ describe('ShowcaseSection', () => {
   it('animates the phone thread one bubble at a time while the phone is in view', () => {
     const { container } = render(<ShowcaseSection content={homePageContent.showcase} />);
 
+    expect(screen.getByTestId('showcase-stage-viewport')).toBeInTheDocument();
+    expect(screen.getByTestId('showcase-stage')).toBeInTheDocument();
     expect(screen.getByText(/in your messages/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /go back/i })).toBeInTheDocument();
     expect(screen.getByText(/^maon$/i)).toBeInTheDocument();

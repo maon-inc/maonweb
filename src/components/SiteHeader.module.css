@@ -93,4 +93,27 @@
   .headerCta {
     width: 100%;
   }
+
+  .headerHome {
+    --header-height: 4.25rem;
+  }
+
+  .headerHome .inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.875rem;
+    min-height: var(--header-height);
+    padding: 0.625rem 0;
+  }
+
+  .headerHome .brandMark {
+    --maon-mark-size: 28px;
+  }
+
+  .headerHome .headerCta {
+    width: auto;
+    min-width: 7.2rem;
+    padding: 0.8rem 1.1rem;
+  }
 }

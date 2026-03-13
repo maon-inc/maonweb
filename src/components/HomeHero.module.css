@@ -6,7 +6,7 @@
   display: grid;
   justify-items: center;
   gap: 5px;
-  width: min(100%, 956px);
+  width: min(calc(100% - 2rem), 956px);
   margin: 0 auto;
   text-align: center;
 }
@@ -50,10 +50,23 @@
   text-shadow: var(--hero-supporting-shadow, none);
 }
 
+@media (max-width: 1100px) {
+  .title {
+    width: 100%;
+    font-size: clamp(3.5rem, 7.4vw, 4rem);
+    line-height: 1.18;
+  }
+
+  .supportingText {
+    font-size: 1.125rem;
+    min-height: 0;
+  }
+}
+
 @media (max-width: 700px) {
   .section {
-    padding-top: 2rem;
-    padding-bottom: 4.5rem;
+    padding-top: var(--hero-padding-top, 2rem);
+    padding-bottom: var(--hero-padding-bottom, 4.5rem);
   }
 
   .title {

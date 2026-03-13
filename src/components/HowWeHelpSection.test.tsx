@@ -5,6 +5,15 @@ import { homePageContent } from '../content/homePageContent';
 import { HowWeHelpSection } from './HowWeHelpSection';
 
 describe('HowWeHelpSection', () => {
+  const setViewportWidth = (width: number) => {
+    Object.defineProperty(window, 'innerWidth', {
+      configurable: true,
+      value: width,
+      writable: true,
+    });
+    window.dispatchEvent(new Event('resize'));
+  };
+
   it('renders three compact cards initially', () => {
     const { container } = render(<HowWeHelpSection items={homePageContent.howWeHelp} />);
 
@@ -19,6 +28,30 @@ describe('HowWeHelpSection', () => {
     expect(screen.getByRole('img', { name: /personal patterns preview/i })).toBeInTheDocument();
     expect(screen.getByRole('img', { name: /adaptive over time preview/i })).toBeInTheDocument();
     expect(buttons.every((button) => button.getAttribute('aria-expanded') === 'false')).toBe(true);
+  });
+
+  it('keeps bullet points hidden on narrow screens until a card is expanded', async () => {
+    const previousWidth = window.innerWidth;
+    const user = userEvent.setup();
+    setViewportWidth(768);
+
+    render(<HowWeHelpSection items={homePageContent.howWeHelp} />);
+
+    const card = screen.getByRole('button', { name: /adaptive over time/i });
+    const detail = screen.getByText(/learns what interventions work best for you/i);
+
+    expect(detail).not.toBeVisible();
+    expect(card).toHaveAttribute('aria-expanded', 'false');
+
+    await user.click(card);
+    expect(detail).toBeVisible();
+    expect(card).toHaveAttribute('aria-expanded', 'true');
+
+    await user.click(card);
+    expect(detail).not.toBeVisible();
+    expect(card).toHaveAttribute('aria-expanded', 'false');
+
+    setViewportWidth(previousWidth);
   });
 
   it('expands a card and collapses the previously open card', async () => {

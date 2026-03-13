@@ -100,6 +100,10 @@ describe('NarrativeSection', () => {
   it('renders all four narrative lines', () => {
     render(<NarrativeSection content={homePageContent.narrative} />);
 
+    act(() => {
+      vi.runOnlyPendingTimers();
+    });
+
     expect(screen.getByText(/we understand/i)).toBeInTheDocument();
     expect(
       screen.getByText(/small things build up until everything feels like too much/i),
@@ -141,6 +145,49 @@ describe('NarrativeSection', () => {
     expect(introLine).toHaveAttribute('data-active', 'false');
     expect(firstMainLine).toHaveAttribute('data-visual-state', 'static');
     expect(introLine).toHaveAttribute('data-visual-state', 'static');
+  });
+
+  it('animates on phone widths and keeps the centered progression', () => {
+    Object.defineProperty(window, 'innerWidth', {
+      configurable: true,
+      writable: true,
+      value: 390,
+    });
+
+    render(<NarrativeSection content={homePageContent.narrative} />);
+
+    const section = screen.getByTestId('narrative-section');
+    const introLine = screen.getByText(/we understand/i);
+    const firstMainLine = screen.getByText(
+      /small things build up until everything feels like too much/i,
+    );
+    const secondLine = screen.getByText(
+      /most support only shows up after you're already overwhelmed/i,
+    );
+
+    act(() => {
+      vi.runOnlyPendingTimers();
+    });
+
+    expect(section).toHaveAttribute('data-animated', 'true');
+    expect(introLine).toHaveAttribute('data-visual-state', 'active');
+    expect(firstMainLine).toHaveAttribute('data-visual-state', 'next');
+
+    trackRect = {
+      ...trackRect,
+      top: -1200,
+      y: -1200,
+      bottom: 3800,
+    } as DOMRect;
+
+    act(() => {
+      window.dispatchEvent(new Event('scroll'));
+      vi.runOnlyPendingTimers();
+    });
+
+    expect(introLine).toHaveAttribute('data-visual-state', 'previous');
+    expect(firstMainLine).toHaveAttribute('data-visual-state', 'active');
+    expect(secondLine).toHaveAttribute('data-visual-state', 'next');
   });
 
   it('animates on desktop and advances active lines through sticky step bands', async () => {
@@ -255,7 +302,8 @@ describe('NarrativeSection', () => {
     expect(getNarrativeLineVisualState(0, 1)).toBe('previous');
     expect(getNarrativeLineVisualState(3, 1)).toBe('hidden-below');
     expect(shouldAnimateNarrative(1400, false)).toBe(true);
-    expect(shouldAnimateNarrative(900, false)).toBe(false);
+    expect(shouldAnimateNarrative(390, false)).toBe(true);
+    expect(shouldAnimateNarrative(900, false)).toBe(true);
     expect(shouldAnimateNarrative(1400, true)).toBe(false);
   });
 });

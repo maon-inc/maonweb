@@ -66,7 +66,7 @@
 
 @media (max-width: 700px) {
   .topScene {
-    --hero-padding-top: 106px;
+    --hero-padding-top: 182px;
     --hero-padding-bottom: 72px;
     padding-bottom: 60px;
   }
@@ -79,7 +79,25 @@
     background-size: auto 480px;
   }
 
+  .topSceneMedia::before {
+    background: linear-gradient(
+      180deg,
+      rgba(21, 31, 34, 0.26) 0%,
+      rgba(33, 48, 46, 0.18) 24%,
+      rgba(236, 241, 228, 0.02) 58%,
+      rgba(236, 241, 228, 0) 72%
+    );
+  }
+
   .topSceneMedia::after {
-    height: 124px;
+    height: 188px;
+    background: linear-gradient(
+      180deg,
+      rgba(236, 241, 228, 0) 0%,
+      rgba(236, 241, 228, 0.2) 22%,
+      rgba(236, 241, 228, 0.58) 48%,
+      rgba(236, 241, 228, 0.88) 74%,
+      var(--page-background) 100%
+    );
   }
 }

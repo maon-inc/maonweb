@@ -24,6 +24,12 @@
   align-items: start;
 }
 
+@media (max-width: 1380px) {
+  .grid {
+    grid-template-columns: repeat(2, 447px);
+  }
+}
+
 @media (max-width: 900px) {
   .section {
     padding-bottom: 7rem;
@@ -31,5 +37,7 @@
 
   .grid {
     grid-template-columns: 1fr;
+    max-width: 447px;
+    margin: 0 auto;
   }
 }

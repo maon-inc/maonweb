@@ -25,9 +25,11 @@ describe('HowWeHelpCard', () => {
 
     const button = screen.getByRole('button', { name: /card title/i });
     const article = button.closest('article');
+    const details = document.getElementById('card-details');
     expect(button).toHaveAttribute('aria-expanded', 'false');
     expect(button).toHaveAttribute('aria-controls', 'card-details');
     expect(article).toHaveStyle('--how-we-help-accent: #c6b5f5');
+    expect(details).toHaveAttribute('aria-hidden', 'true');
     expect(screen.getByRole('img', { name: /card title preview/i })).toBeInTheDocument();
     expect(screen.queryByRole('list')).not.toBeInTheDocument();
   });
@@ -49,6 +51,23 @@ describe('HowWeHelpCard', () => {
     expect(screen.getByRole('list')).toBeInTheDocument();
     expect(screen.getByText(/detail one/i)).toBeInTheDocument();
     expect(screen.getByRole('img', { name: /card title preview/i })).toBeInTheDocument();
+    expect(document.getElementById('card-details')).not.toHaveAttribute('aria-hidden');
+
+    rerender(
+      <HowWeHelpCard
+        accentColor="#7eaeea"
+        details={['detail one', 'detail two']}
+        expanded={false}
+        id="card"
+        onToggle={onToggle}
+        previewImage={{ alt: 'Card title preview', src: '/preview.svg' }}
+        summary="summary copy"
+        title="card title"
+      />,
+    );
+
+    expect(document.getElementById('card-details')).toHaveAttribute('aria-hidden', 'true');
+    expect(screen.queryByRole('list')).not.toBeInTheDocument();
 
     rerender(
       <HowWeHelpCard

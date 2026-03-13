@@ -3,12 +3,30 @@
   padding: 6px 0 34px;
 }
 
+.stageViewport {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.stageSizer {
+  position: relative;
+  width: calc(var(--showcase-stage-width, 906px) * var(--showcase-scale, 1));
+  height: calc(var(--showcase-stage-height, 608px) * var(--showcase-scale, 1));
+}
+
 .grid {
+  position: absolute;
+  top: 0;
+  left: 50%;
   display: grid;
   grid-template-columns: 293px 336px 185px;
   gap: 46px;
-  justify-content: center;
   align-items: start;
+  width: var(--showcase-stage-width, 906px);
+  transform: translateX(-50%) scale(var(--showcase-scale, 1));
+  transform-origin: top center;
+  will-change: transform;
 }
 
 .column {
@@ -491,52 +509,9 @@
   color: white;
 }
 
-@media (max-width: 960px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 2.25rem;
-  }
-
-  .phone,
-  .historyCard {
-    width: min(100%, 336px);
-  }
-
-  .phone {
-    min-height: auto;
-  }
-
-  .thread {
-    padding-inline: 18px;
-  }
-
-  .bubbleIncomingShort,
-  .bubbleIncomingTall,
-  .bubbleIncomingQuestion,
-  .bubbleOutgoingShort,
-  .bubbleOutgoingMedium,
-  .bubbleOutgoingLarge {
-    width: auto;
-    max-width: min(100%, 224.772px);
-  }
-
-  .historyCard {
-    width: min(100%, 336px);
-  }
-
-  .historyDivider {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .metrics {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    max-width: 24rem;
-  }
-}
-
-@media (max-width: 560px) {
-  .metrics {
-    grid-template-columns: 1fr;
+@media (max-width: 700px) {
+  .label {
+    color: var(--home-ink);
+    text-shadow: none;
   }
 }

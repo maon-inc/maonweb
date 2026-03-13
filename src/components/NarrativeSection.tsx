@@ -7,7 +7,6 @@ type NarrativeSectionProps = {
   content: NarrativeContent;
 };
 
-const DESKTOP_BREAKPOINT = 1024;
 const DESKTOP_STEP_COUNT = 4;
 const STATIC_ACTIVE_INDEX = 1;
 const ANIMATED_START_INDEX = 0;
@@ -36,7 +35,7 @@ export function getNarrativeActiveIndex(
 }
 
 export function shouldAnimateNarrative(viewportWidth: number, prefersReducedMotion: boolean) {
-  return viewportWidth >= DESKTOP_BREAKPOINT && !prefersReducedMotion;
+  return viewportWidth > 0 && !prefersReducedMotion;
 }
 
 export function getNarrativeLineVisualState(
@@ -96,7 +95,7 @@ export function getNarrativeScrollOffset(
 export function NarrativeSection({ content }: NarrativeSectionProps) {
   const trackRef = useRef<HTMLDivElement | null>(null);
   const [activeIndex, setActiveIndex] = useState(STATIC_ACTIVE_INDEX);
-  const [isAnimatedDesktop, setIsAnimatedDesktop] = useState(false);
+  const [isAnimated, setIsAnimated] = useState(false);
 
   const lines = useMemo<NarrativeLine[]>(
     () => [
@@ -126,7 +125,7 @@ export function NarrativeSection({ content }: NarrativeSectionProps) {
         mediaQuery?.matches ?? false,
       );
 
-      setIsAnimatedDesktop(nextAnimated);
+      setIsAnimated(nextAnimated);
       setActiveIndex(nextAnimated ? ANIMATED_START_INDEX : STATIC_ACTIVE_INDEX);
     };
 
@@ -144,7 +143,7 @@ export function NarrativeSection({ content }: NarrativeSectionProps) {
   }, []);
 
   useEffect(() => {
-    if (!isAnimatedDesktop || !trackRef.current || typeof window === 'undefined') {
+    if (!isAnimated || !trackRef.current || typeof window === 'undefined') {
       return;
     }
 
@@ -194,31 +193,31 @@ export function NarrativeSection({ content }: NarrativeSectionProps) {
         window.cancelAnimationFrame(frameId);
       }
     };
-  }, [isAnimatedDesktop, lines.length]);
+  }, [isAnimated, lines.length]);
 
   return (
     <section
       aria-labelledby="understand-title"
       className={styles.section}
-      data-animated={isAnimatedDesktop ? 'true' : 'false'}
+      data-animated={isAnimated ? 'true' : 'false'}
       data-testid="narrative-section"
     >
       <div
-        className={isAnimatedDesktop ? styles.trackAnimated : styles.trackStatic}
+        className={isAnimated ? styles.trackAnimated : styles.trackStatic}
         data-testid="narrative-track"
         ref={trackRef}
         style={
-          isAnimatedDesktop
+          isAnimated
             ? ({ '--narrative-step-count': Math.max(lines.length, DESKTOP_STEP_COUNT) } as CSSProperties)
             : undefined
         }
       >
         <div
-          className={isAnimatedDesktop ? styles.stickyViewport : styles.staticViewport}
+          className={isAnimated ? styles.stickyViewport : styles.staticViewport}
           data-testid="narrative-viewport"
         >
           <div className={`homeContainer ${styles.inner}`}>
-            <div className={isAnimatedDesktop ? styles.stage : styles.stack}>
+            <div className={isAnimated ? styles.stage : styles.stack}>
               {lines.map((line, index) => {
                 const visualState = getNarrativeLineVisualState(index, activeIndex);
                 const variantClassName =
@@ -232,10 +231,10 @@ export function NarrativeSection({ content }: NarrativeSectionProps) {
                   <p
                     className={`${styles.line} ${variantClassName} ${
                       index === activeIndex ? styles.lineActive : styles.lineInactive
-                    } ${isAnimatedDesktop ? getNarrativeLineVisualStateClass(visualState, styles) : ''}`}
+                    } ${isAnimated ? getNarrativeLineVisualStateClass(visualState, styles) : ''}`}
                     data-active={index === activeIndex ? 'true' : 'false'}
                     data-line-index={index}
-                    data-visual-state={isAnimatedDesktop ? visualState : 'static'}
+                    data-visual-state={isAnimated ? visualState : 'static'}
                     id={index === 0 ? 'understand-title' : undefined}
                     key={line.key}
                   >

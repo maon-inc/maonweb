@@ -64,363 +64,374 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
             class="homeContainer"
           >
             <div
-              class="_grid_bc5123"
+              class="_stageViewport_bc5123"
+              data-testid="showcase-stage-viewport"
             >
               <div
-                class="_column_bc5123 _columnMessages_bc5123"
+                class="_stageSizer_bc5123"
+                style="--showcase-scale: 1; --showcase-stage-width: 906px; --showcase-stage-height: 608px;"
               >
-                <p
-                  class="_label_bc5123 _labelMessages_bc5123"
-                >
-                  in your messages
-                </p>
-                <article
-                  class="_phone_bc5123"
-                >
-                  <div
-                    class="_phoneHeader_bc5123"
-                  >
-                    <button
-                      aria-label="Go back"
-                      class="_backButton_bc5123"
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                        class="_backGlyph_bc5123"
-                      >
-                        ‹
-                      </span>
-                    </button>
-                    <div
-                      class="_phoneBrandMark_bc5123"
-                    >
-                      <img
-                        alt=""
-                        aria-hidden="true"
-                        class="_mark_b3b8e3 _phoneAvatar_bc5123"
-                        src="data:image/svg+xml,%3csvg%20width='30'%20height='30'%20viewBox='0%200%2030%2030'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='14.9273'%20cy='14.9273'%20r='14.9273'%20fill='%23DFDCFF'/%3e%3crect%20x='23.2051'%20y='8.15489'%20width='4.22947'%20height='4.22947'%20rx='2.11473'%20fill='%231B1B1B'%20stroke='%231B1B1B'%20stroke-width='0.0646654'/%3e%3crect%20x='6.06908'%20y='8.15489'%20width='4.22947'%20height='4.22947'%20rx='2.11473'%20fill='%231B1B1B'%20stroke='%231B1B1B'%20stroke-width='0.0646654'/%3e%3cpath%20d='M14.667%2010.0288C15.2978%2011.7107%2017.6769%2011.7107%2018.3076%2010.0288'%20stroke='%231B1B1B'%20stroke-width='0.768316'/%3e%3c/svg%3e"
-                      />
-                      <span
-                        class="_phoneBrandName_bc5123"
-                      >
-                        maon
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    class="_thread_bc5123"
-                  >
-                    <div
-                      aria-hidden="true"
-                      class="_typingIndicator_bc5123 _typingIndicatorIncoming_bc5123"
-                      data-sender="maon"
-                    >
-                      <span
-                        class="_typingDot_bc5123 _typingDotIncoming_bc5123"
-                      />
-                      <span
-                        class="_typingDot_bc5123 _typingDotIncoming_bc5123"
-                      />
-                      <span
-                        class="_typingDot_bc5123 _typingDotIncoming_bc5123"
-                      />
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div
-                class="_column_bc5123 _columnWide_bc5123 _columnHistory_bc5123"
-              >
-                <p
-                  class="_label_bc5123 _labelHistory_bc5123"
-                >
-                  interventions history
-                </p>
                 <div
-                  class="_historyCard_bc5123"
+                  class="_grid_bc5123"
+                  data-testid="showcase-stage"
                 >
-                  <article
-                    class="_historyItem_bc5123 _historyItemFeatured_bc5123"
+                  <div
+                    class="_column_bc5123 _columnMessages_bc5123"
                   >
-                    <span
-                      aria-hidden="true"
-                      class="_historyRail_bc5123"
-                      style="background-color: rgb(200, 181, 255);"
-                    />
-                    <div
-                      class="_historyBody_bc5123"
+                    <p
+                      class="_label_bc5123 _labelMessages_bc5123"
+                    >
+                      in your messages
+                    </p>
+                    <article
+                      class="_phone_bc5123"
                     >
                       <div
-                        class="_historyTopline_bc5123"
+                        class="_phoneHeader_bc5123"
                       >
+                        <button
+                          aria-label="Go back"
+                          class="_backButton_bc5123"
+                          type="button"
+                        >
+                          <span
+                            aria-hidden="true"
+                            class="_backGlyph_bc5123"
+                          >
+                            ‹
+                          </span>
+                        </button>
                         <div
-                          class="_historyTextBlock_bc5123"
+                          class="_phoneBrandMark_bc5123"
                         >
-                          <p
-                            class="_historyTitle_bc5123"
+                          <img
+                            alt=""
+                            aria-hidden="true"
+                            class="_mark_b3b8e3 _phoneAvatar_bc5123"
+                            src="data:image/svg+xml,%3csvg%20width='30'%20height='30'%20viewBox='0%200%2030%2030'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='14.9273'%20cy='14.9273'%20r='14.9273'%20fill='%23DFDCFF'/%3e%3crect%20x='23.2051'%20y='8.15489'%20width='4.22947'%20height='4.22947'%20rx='2.11473'%20fill='%231B1B1B'%20stroke='%231B1B1B'%20stroke-width='0.0646654'/%3e%3crect%20x='6.06908'%20y='8.15489'%20width='4.22947'%20height='4.22947'%20rx='2.11473'%20fill='%231B1B1B'%20stroke='%231B1B1B'%20stroke-width='0.0646654'/%3e%3cpath%20d='M14.667%2010.0288C15.2978%2011.7107%2017.6769%2011.7107%2018.3076%2010.0288'%20stroke='%231B1B1B'%20stroke-width='0.768316'/%3e%3c/svg%3e"
+                          />
+                          <span
+                            class="_phoneBrandName_bc5123"
                           >
-                            screen time
-                          </p>
-                          <p
-                            class="_historyDetail_bc5123"
-                          >
-                            30 min limit on social media
-                          </p>
+                            maon
+                          </span>
                         </div>
-                        <p
-                          class="_historyTimestamp_bc5123"
-                        >
-                          sat - 7:15 pm
-                        </p>
                       </div>
                       <div
-                        aria-hidden="true"
-                        class="_historyDivider_bc5123"
-                      />
-                      <div
-                        class="_historyFeatureRow_bc5123"
+                        class="_thread_bc5123"
                       >
                         <div
-                          class="_featureBlock_bc5123"
+                          aria-hidden="true"
+                          class="_typingIndicator_bc5123 _typingIndicatorIncoming_bc5123"
+                          data-sender="maon"
                         >
-                          <p
-                            class="_featureCaption_bc5123"
-                          >
-                            ends in:
-                          </p>
-                          <p
-                            class="_featureValue_bc5123"
-                          >
-                            25 min
-                          </p>
+                          <span
+                            class="_typingDot_bc5123 _typingDotIncoming_bc5123"
+                          />
+                          <span
+                            class="_typingDot_bc5123 _typingDotIncoming_bc5123"
+                          />
+                          <span
+                            class="_typingDot_bc5123 _typingDotIncoming_bc5123"
+                          />
                         </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div
+                    class="_column_bc5123 _columnWide_bc5123 _columnHistory_bc5123"
+                  >
+                    <p
+                      class="_label_bc5123 _labelHistory_bc5123"
+                    >
+                      interventions history
+                    </p>
+                    <div
+                      class="_historyCard_bc5123"
+                    >
+                      <article
+                        class="_historyItem_bc5123 _historyItemFeatured_bc5123"
+                      >
+                        <span
+                          aria-hidden="true"
+                          class="_historyRail_bc5123"
+                          style="background-color: rgb(200, 181, 255);"
+                        />
                         <div
-                          class="_featureBlock_bc5123"
+                          class="_historyBody_bc5123"
                         >
-                          <p
-                            class="_featureCaption_bc5123"
-                          >
-                            apps blocked:
-                          </p>
                           <div
-                            class="_appIcons_bc5123"
+                            class="_historyTopline_bc5123"
                           >
-                            <span
-                              class="_appIcon_bc5123"
+                            <div
+                              class="_historyTextBlock_bc5123"
                             >
-                              <img
-                                alt="Instagram"
-                                class="_appIconImage_bc5123"
-                                src="/src/assets/instagram-icon.svg"
-                              />
-                            </span>
-                            <span
-                              class="_appIcon_bc5123"
+                              <p
+                                class="_historyTitle_bc5123"
+                              >
+                                screen time
+                              </p>
+                              <p
+                                class="_historyDetail_bc5123"
+                              >
+                                30 min limit on social media
+                              </p>
+                            </div>
+                            <p
+                              class="_historyTimestamp_bc5123"
                             >
-                              <img
-                                alt="TikTok"
-                                class="_appIconImage_bc5123"
-                                src="data:image/svg+xml,%3csvg%20width='29'%20height='29'%20viewBox='0%200%2029%2029'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5.96093%201.19189C4.69623%201.19189%203.48334%201.69429%202.58906%202.58857C1.69478%203.48285%201.19238%204.69575%201.19238%205.96044V22.6504C1.19238%2023.9151%201.69478%2025.128%202.58906%2026.0222C3.48334%2026.9165%204.69623%2027.4189%205.96093%2027.4189H22.6509C23.9156%2027.4189%2025.1285%2026.9165%2026.0227%2026.0222C26.917%2025.128%2027.4194%2023.9151%2027.4194%2022.6504V5.96044C27.4194%204.69575%2026.917%203.48285%2026.0227%202.58857C25.1285%201.69429%2023.9156%201.19189%2022.6509%201.19189H5.96093ZM14.7112%205.36438H17.5569C17.5569%207.2718%2019.1686%209.42957%2021.622%209.42957V12.274C19.9328%2012.1572%2018.4891%2011.8806%2017.5569%2011.0544V18.3694C17.5569%2020.402%2015.9499%2023.2464%2012.2745%2023.2464C7.7849%2023.2464%206.99094%2019.1813%206.99094%2017.9629C6.99094%2016.7445%207.70622%2012.6793%2012.6798%2012.6793V15.525C11.3792%2015.2496%209.83538%2016.3368%209.83538%2017.9629C9.83538%2019.9955%2011.0549%2020.402%2012.2745%2020.402C13.4941%2020.402%2014.7124%2019.1824%2014.7124%2017.9629L14.7112%205.36438Z'%20fill='black'/%3e%3c/svg%3e"
-                              />
-                            </span>
-                            <span
-                              class="_appIcon_bc5123"
+                              sat - 7:15 pm
+                            </p>
+                          </div>
+                          <div
+                            aria-hidden="true"
+                            class="_historyDivider_bc5123"
+                          />
+                          <div
+                            class="_historyFeatureRow_bc5123"
+                          >
+                            <div
+                              class="_featureBlock_bc5123"
                             >
-                              <img
-                                alt="Reddit"
-                                class="_appIconImage_bc5123"
-                                src="data:image/svg+xml,%3csvg%20width='27'%20height='27'%20viewBox='0%200%2027%2027'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4132_32)'%3e%3cpath%20d='M13.2652%2026.5305C20.5914%2026.5305%2026.5305%2020.5914%2026.5305%2013.2652C26.5305%205.93905%2020.5914%200%2013.2652%200C5.93905%200%200%205.93905%200%2013.2652C0%2020.5914%205.93905%2026.5305%2013.2652%2026.5305Z'%20fill='%23FF4500'/%3e%3cpath%20d='M22.0899%2013.3918C22.0899%2012.3165%2021.2203%2011.4624%2020.1605%2011.4624C19.6599%2011.4618%2019.1784%2011.6544%2018.8164%2012.0002C17.488%2011.0512%2015.6692%2010.4346%2013.645%2010.3555L14.5305%206.21209L17.4087%206.82872C17.4405%207.55623%2018.0413%208.14146%2018.7848%208.14146C19.5438%208.14146%2020.1605%207.52483%2020.1605%206.7654C20.1605%206.00638%2019.5439%205.38965%2018.7848%205.38965C18.2471%205.38965%2017.7725%205.70594%2017.5511%206.16463L14.3409%205.48458C14.246%205.46862%2014.1511%205.48458%2014.0878%205.53204C14.0087%205.57951%2013.9613%205.65848%2013.9457%205.75341L12.9649%2010.3712C10.9091%2010.4346%209.05867%2011.0512%207.71453%2012.016C7.35249%2011.6703%206.87092%2011.4777%206.37028%2011.4784C5.29487%2011.4784%204.44092%2012.348%204.44092%2013.4078C4.44092%2014.1984%204.91525%2014.8625%205.57966%2015.1632C5.54739%2015.3566%205.53151%2015.5523%205.53219%2015.7483C5.53219%2018.7212%208.99566%2021.1411%2013.2655%2021.1411C17.5355%2021.1411%2020.9989%2018.7372%2020.9989%2015.7483C20.999%2015.5523%2020.9831%2015.3567%2020.9515%2015.1632C21.6156%2014.8625%2022.0899%2014.1824%2022.0899%2013.3918ZM8.83731%2014.7676C8.83731%2014.0085%209.45394%2013.3918%2010.2134%2013.3918C10.9724%2013.3918%2011.5891%2014.0084%2011.5891%2014.7676C11.5891%2015.5267%2010.9725%2016.1436%2010.2134%2016.1436C9.45404%2016.1592%208.83731%2015.5267%208.83731%2014.7676ZM16.5391%2018.4208C15.5902%2019.3698%2013.7873%2019.4331%2013.2655%2019.4331C12.7279%2019.4331%2010.925%2019.3538%209.9917%2018.4208C9.84961%2018.2785%209.84961%2018.057%209.9917%2017.9147C10.1341%2017.7726%2010.3555%2017.7726%2010.4978%2017.9147C11.0989%2018.5158%2012.3641%2018.7212%2013.2655%2018.7212C14.1669%2018.7212%2015.4479%2018.5157%2016.033%2017.9147C16.1754%2017.7726%2016.3967%2017.7726%2016.5391%2017.9147C16.6656%2018.057%2016.6656%2018.2785%2016.5391%2018.4208ZM16.2859%2016.1593C15.5268%2016.1593%2014.9102%2015.5426%2014.9102%2014.7835C14.9102%2014.0244%2015.5268%2013.4078%2016.2859%2013.4078C17.0453%2013.4078%2017.6619%2014.0244%2017.6619%2014.7835C17.6619%2015.5266%2017.0453%2016.1593%2016.2859%2016.1593Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4132_32'%3e%3crect%20width='26.5305'%20height='26.5305'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
-                              />
-                            </span>
+                              <p
+                                class="_featureCaption_bc5123"
+                              >
+                                ends in:
+                              </p>
+                              <p
+                                class="_featureValue_bc5123"
+                              >
+                                25 min
+                              </p>
+                            </div>
+                            <div
+                              class="_featureBlock_bc5123"
+                            >
+                              <p
+                                class="_featureCaption_bc5123"
+                              >
+                                apps blocked:
+                              </p>
+                              <div
+                                class="_appIcons_bc5123"
+                              >
+                                <span
+                                  class="_appIcon_bc5123"
+                                >
+                                  <img
+                                    alt="Instagram"
+                                    class="_appIconImage_bc5123"
+                                    src="/src/assets/instagram-icon.svg"
+                                  />
+                                </span>
+                                <span
+                                  class="_appIcon_bc5123"
+                                >
+                                  <img
+                                    alt="TikTok"
+                                    class="_appIconImage_bc5123"
+                                    src="data:image/svg+xml,%3csvg%20width='29'%20height='29'%20viewBox='0%200%2029%2029'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5.96093%201.19189C4.69623%201.19189%203.48334%201.69429%202.58906%202.58857C1.69478%203.48285%201.19238%204.69575%201.19238%205.96044V22.6504C1.19238%2023.9151%201.69478%2025.128%202.58906%2026.0222C3.48334%2026.9165%204.69623%2027.4189%205.96093%2027.4189H22.6509C23.9156%2027.4189%2025.1285%2026.9165%2026.0227%2026.0222C26.917%2025.128%2027.4194%2023.9151%2027.4194%2022.6504V5.96044C27.4194%204.69575%2026.917%203.48285%2026.0227%202.58857C25.1285%201.69429%2023.9156%201.19189%2022.6509%201.19189H5.96093ZM14.7112%205.36438H17.5569C17.5569%207.2718%2019.1686%209.42957%2021.622%209.42957V12.274C19.9328%2012.1572%2018.4891%2011.8806%2017.5569%2011.0544V18.3694C17.5569%2020.402%2015.9499%2023.2464%2012.2745%2023.2464C7.7849%2023.2464%206.99094%2019.1813%206.99094%2017.9629C6.99094%2016.7445%207.70622%2012.6793%2012.6798%2012.6793V15.525C11.3792%2015.2496%209.83538%2016.3368%209.83538%2017.9629C9.83538%2019.9955%2011.0549%2020.402%2012.2745%2020.402C13.4941%2020.402%2014.7124%2019.1824%2014.7124%2017.9629L14.7112%205.36438Z'%20fill='black'/%3e%3c/svg%3e"
+                                  />
+                                </span>
+                                <span
+                                  class="_appIcon_bc5123"
+                                >
+                                  <img
+                                    alt="Reddit"
+                                    class="_appIconImage_bc5123"
+                                    src="data:image/svg+xml,%3csvg%20width='27'%20height='27'%20viewBox='0%200%2027%2027'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4132_32)'%3e%3cpath%20d='M13.2652%2026.5305C20.5914%2026.5305%2026.5305%2020.5914%2026.5305%2013.2652C26.5305%205.93905%2020.5914%200%2013.2652%200C5.93905%200%200%205.93905%200%2013.2652C0%2020.5914%205.93905%2026.5305%2013.2652%2026.5305Z'%20fill='%23FF4500'/%3e%3cpath%20d='M22.0899%2013.3918C22.0899%2012.3165%2021.2203%2011.4624%2020.1605%2011.4624C19.6599%2011.4618%2019.1784%2011.6544%2018.8164%2012.0002C17.488%2011.0512%2015.6692%2010.4346%2013.645%2010.3555L14.5305%206.21209L17.4087%206.82872C17.4405%207.55623%2018.0413%208.14146%2018.7848%208.14146C19.5438%208.14146%2020.1605%207.52483%2020.1605%206.7654C20.1605%206.00638%2019.5439%205.38965%2018.7848%205.38965C18.2471%205.38965%2017.7725%205.70594%2017.5511%206.16463L14.3409%205.48458C14.246%205.46862%2014.1511%205.48458%2014.0878%205.53204C14.0087%205.57951%2013.9613%205.65848%2013.9457%205.75341L12.9649%2010.3712C10.9091%2010.4346%209.05867%2011.0512%207.71453%2012.016C7.35249%2011.6703%206.87092%2011.4777%206.37028%2011.4784C5.29487%2011.4784%204.44092%2012.348%204.44092%2013.4078C4.44092%2014.1984%204.91525%2014.8625%205.57966%2015.1632C5.54739%2015.3566%205.53151%2015.5523%205.53219%2015.7483C5.53219%2018.7212%208.99566%2021.1411%2013.2655%2021.1411C17.5355%2021.1411%2020.9989%2018.7372%2020.9989%2015.7483C20.999%2015.5523%2020.9831%2015.3567%2020.9515%2015.1632C21.6156%2014.8625%2022.0899%2014.1824%2022.0899%2013.3918ZM8.83731%2014.7676C8.83731%2014.0085%209.45394%2013.3918%2010.2134%2013.3918C10.9724%2013.3918%2011.5891%2014.0084%2011.5891%2014.7676C11.5891%2015.5267%2010.9725%2016.1436%2010.2134%2016.1436C9.45404%2016.1592%208.83731%2015.5267%208.83731%2014.7676ZM16.5391%2018.4208C15.5902%2019.3698%2013.7873%2019.4331%2013.2655%2019.4331C12.7279%2019.4331%2010.925%2019.3538%209.9917%2018.4208C9.84961%2018.2785%209.84961%2018.057%209.9917%2017.9147C10.1341%2017.7726%2010.3555%2017.7726%2010.4978%2017.9147C11.0989%2018.5158%2012.3641%2018.7212%2013.2655%2018.7212C14.1669%2018.7212%2015.4479%2018.5157%2016.033%2017.9147C16.1754%2017.7726%2016.3967%2017.7726%2016.5391%2017.9147C16.6656%2018.057%2016.6656%2018.2785%2016.5391%2018.4208ZM16.2859%2016.1593C15.5268%2016.1593%2014.9102%2015.5426%2014.9102%2014.7835C14.9102%2014.0244%2015.5268%2013.4078%2016.2859%2013.4078C17.0453%2013.4078%2017.6619%2014.0244%2017.6619%2014.7835C17.6619%2015.5266%2017.0453%2016.1593%2016.2859%2016.1593Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4132_32'%3e%3crect%20width='26.5305'%20height='26.5305'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                                  />
+                                </span>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </article>
-                  <article
-                    class="_historyItem_bc5123"
-                  >
-                    <span
-                      aria-hidden="true"
-                      class="_historyRail_bc5123"
-                      style="background-color: rgb(199, 241, 240);"
-                    />
-                    <div
-                      class="_historyBody_bc5123"
-                    >
-                      <div
-                        class="_historyTopline_bc5123"
+                      </article>
+                      <article
+                        class="_historyItem_bc5123"
                       >
+                        <span
+                          aria-hidden="true"
+                          class="_historyRail_bc5123"
+                          style="background-color: rgb(199, 241, 240);"
+                        />
                         <div
-                          class="_historyTextBlock_bc5123"
+                          class="_historyBody_bc5123"
                         >
-                          <p
-                            class="_historyTitle_bc5123"
+                          <div
+                            class="_historyTopline_bc5123"
                           >
-                            breathing exercise
-                          </p>
-                          <p
-                            class="_historyDetail_bc5123"
-                          >
-                            7-8-4 second exercise
-                          </p>
+                            <div
+                              class="_historyTextBlock_bc5123"
+                            >
+                              <p
+                                class="_historyTitle_bc5123"
+                              >
+                                breathing exercise
+                              </p>
+                              <p
+                                class="_historyDetail_bc5123"
+                              >
+                                7-8-4 second exercise
+                              </p>
+                            </div>
+                            <p
+                              class="_historyTimestamp_bc5123"
+                            >
+                              sat - 7 pm
+                            </p>
+                          </div>
                         </div>
-                        <p
-                          class="_historyTimestamp_bc5123"
-                        >
-                          sat - 7 pm
-                        </p>
-                      </div>
-                    </div>
-                  </article>
-                  <article
-                    class="_historyItem_bc5123"
-                  >
-                    <span
-                      aria-hidden="true"
-                      class="_historyRail_bc5123"
-                      style="background-color: rgb(245, 216, 199);"
-                    />
-                    <div
-                      class="_historyBody_bc5123"
-                    >
-                      <div
-                        class="_historyTopline_bc5123"
+                      </article>
+                      <article
+                        class="_historyItem_bc5123"
                       >
+                        <span
+                          aria-hidden="true"
+                          class="_historyRail_bc5123"
+                          style="background-color: rgb(245, 216, 199);"
+                        />
                         <div
-                          class="_historyTextBlock_bc5123"
+                          class="_historyBody_bc5123"
                         >
-                          <p
-                            class="_historyTitle_bc5123"
+                          <div
+                            class="_historyTopline_bc5123"
                           >
-                            workout @ 7 pm monday
-                          </p>
-                          <p
-                            class="_historyDetail_bc5123"
-                          >
-                            added workout to your apple calendar
-                          </p>
+                            <div
+                              class="_historyTextBlock_bc5123"
+                            >
+                              <p
+                                class="_historyTitle_bc5123"
+                              >
+                                workout @ 7 pm monday
+                              </p>
+                              <p
+                                class="_historyDetail_bc5123"
+                              >
+                                added workout to your apple calendar
+                              </p>
+                            </div>
+                            <p
+                              class="_historyTimestamp_bc5123"
+                            >
+                              sat - 6:42 pm
+                            </p>
+                          </div>
                         </div>
-                        <p
-                          class="_historyTimestamp_bc5123"
-                        >
-                          sat - 6:42 pm
-                        </p>
-                      </div>
-                    </div>
-                  </article>
-                  <article
-                    class="_historyItem_bc5123"
-                  >
-                    <span
-                      aria-hidden="true"
-                      class="_historyRail_bc5123"
-                      style="background-color: rgb(239, 207, 211);"
-                    />
-                    <div
-                      class="_historyBody_bc5123"
-                    >
-                      <div
-                        class="_historyTopline_bc5123"
+                      </article>
+                      <article
+                        class="_historyItem_bc5123"
                       >
+                        <span
+                          aria-hidden="true"
+                          class="_historyRail_bc5123"
+                          style="background-color: rgb(239, 207, 211);"
+                        />
                         <div
-                          class="_historyTextBlock_bc5123"
+                          class="_historyBody_bc5123"
                         >
-                          <p
-                            class="_historyTitle_bc5123"
+                          <div
+                            class="_historyTopline_bc5123"
                           >
-                            alarm @ 9:30 am sunday
-                          </p>
-                          <p
-                            class="_historyDetail_bc5123"
-                          >
-                            get back into a good sleep rhythm
-                          </p>
+                            <div
+                              class="_historyTextBlock_bc5123"
+                            >
+                              <p
+                                class="_historyTitle_bc5123"
+                              >
+                                alarm @ 9:30 am sunday
+                              </p>
+                              <p
+                                class="_historyDetail_bc5123"
+                              >
+                                get back into a good sleep rhythm
+                              </p>
+                            </div>
+                            <p
+                              class="_historyTimestamp_bc5123"
+                            >
+                              sat - 6:18 pm
+                            </p>
+                          </div>
                         </div>
+                      </article>
+                    </div>
+                  </div>
+                  <div
+                    class="_column_bc5123 _columnStories_bc5123"
+                  >
+                    <p
+                      class="_label_bc5123 _labelStories_bc5123"
+                    >
+                      stories
+                    </p>
+                    <div
+                      class="_metrics_bc5123"
+                    >
+                      <article
+                        class="_metricCard_bc5123 _metricPeach_bc5123"
+                      >
                         <p
-                          class="_historyTimestamp_bc5123"
+                          class="_metricLabel_bc5123"
                         >
-                          sat - 6:18 pm
+                          EARLY SPIRAL
                         </p>
-                      </div>
+                        <p
+                          class="_metricValue_bc5123"
+                        >
+                          2h
+                        </p>
+                        <p
+                          class="_metricDescription_bc5123"
+                        >
+                          before a spiral, your body lets us know
+                        </p>
+                        <div
+                          aria-hidden="true"
+                          class="_metricCircle_bc5123"
+                        />
+                        <div
+                          aria-hidden="true"
+                          class="_metricBadge_bc5123"
+                        >
+                          <span>
+                            3
+                          </span>
+                        </div>
+                      </article>
+                      <article
+                        class="_metricCard_bc5123 _metricGreen_bc5123"
+                      >
+                        <p
+                          class="_metricLabel_bc5123"
+                        >
+                          PROGRESS
+                        </p>
+                        <p
+                          class="_metricValue_bc5123"
+                        >
+                          18%
+                        </p>
+                        <p
+                          class="_metricDescription_bc5123"
+                        >
+                          less destress over the past week
+                        </p>
+                        <div
+                          aria-hidden="true"
+                          class="_metricCircle_bc5123"
+                        />
+                        <div
+                          aria-hidden="true"
+                          class="_metricBadge_bc5123"
+                        >
+                          <span>
+                            4
+                          </span>
+                        </div>
+                      </article>
                     </div>
-                  </article>
-                </div>
-              </div>
-              <div
-                class="_column_bc5123 _columnStories_bc5123"
-              >
-                <p
-                  class="_label_bc5123 _labelStories_bc5123"
-                >
-                  stories
-                </p>
-                <div
-                  class="_metrics_bc5123"
-                >
-                  <article
-                    class="_metricCard_bc5123 _metricPeach_bc5123"
-                  >
-                    <p
-                      class="_metricLabel_bc5123"
-                    >
-                      EARLY SPIRAL
-                    </p>
-                    <p
-                      class="_metricValue_bc5123"
-                    >
-                      2h
-                    </p>
-                    <p
-                      class="_metricDescription_bc5123"
-                    >
-                      before a spiral, your body lets us know
-                    </p>
-                    <div
-                      aria-hidden="true"
-                      class="_metricCircle_bc5123"
-                    />
-                    <div
-                      aria-hidden="true"
-                      class="_metricBadge_bc5123"
-                    >
-                      <span>
-                        3
-                      </span>
-                    </div>
-                  </article>
-                  <article
-                    class="_metricCard_bc5123 _metricGreen_bc5123"
-                  >
-                    <p
-                      class="_metricLabel_bc5123"
-                    >
-                      PROGRESS
-                    </p>
-                    <p
-                      class="_metricValue_bc5123"
-                    >
-                      18%
-                    </p>
-                    <p
-                      class="_metricDescription_bc5123"
-                    >
-                      less destress over the past week
-                    </p>
-                    <div
-                      aria-hidden="true"
-                      class="_metricCircle_bc5123"
-                    />
-                    <div
-                      aria-hidden="true"
-                      class="_metricBadge_bc5123"
-                    >
-                      <span>
-                        4
-                      </span>
-                    </div>
-                  </article>
+                  </div>
                 </div>
               </div>
             </div>
