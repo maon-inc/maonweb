@@ -1,7 +1,7 @@
 .card {
   border: 1px solid #1c1b1b;
   border-radius: 13.485px;
-  background: #fffdfc;
+  background: var(--page-background);
   box-shadow: none;
   overflow: hidden;
   width: 447px;
@@ -18,8 +18,7 @@
 }
 
 .trigger {
-  display: grid;
-  grid-template-columns: 27px minmax(0, 1fr);
+  display: block;
   width: 100%;
   gap: 0;
   padding: 0;
@@ -36,11 +35,11 @@
 }
 
 .rail {
-  align-self: stretch;
-  justify-self: center;
-  margin: auto 0;
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  left: 11px;
   width: 5px;
-  height: 80%;
   border-radius: 999px;
   background: var(--how-we-help-accent, #c6b5f5);
 }

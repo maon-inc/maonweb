@@ -35,6 +35,7 @@ export function HowWeHelpCard({
       data-card-id={id}
       style={{ '--how-we-help-accent': accentColor } as CSSProperties}
     >
+      <span className={styles.rail} aria-hidden="true" />
       <button
         aria-controls={detailsId}
         aria-expanded={isExpanded}
@@ -42,7 +43,6 @@ export function HowWeHelpCard({
         onClick={() => onToggle(id)}
         type="button"
       >
-        <span className={styles.rail} aria-hidden="true" />
         <span className={styles.content}>
           <span className={styles.title}>{title}</span>
           <span className={styles.summary}>{summary}</span>

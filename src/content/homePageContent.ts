@@ -98,10 +98,10 @@ export type HomePageContent = {
 export const homePageContent: HomePageContent = {
   hero: {
     eyebrow: 'MAON',
-    titlePrefix: 'an assistant that uses your',
-    titleEmphasis: 'biometrics',
-    titleSuffix: 'to keep you balanced',
-    supportingText: 'with proactive interventions',
+    titlePrefix: 'what if an AI agent\'s only job was to keep you',
+    titleEmphasis: 'balanced?',
+    titleSuffix: '',
+    supportingText: 'Maon does that with proactive interventions',
     cta: {
       label: 'say hi to maon',
       href: MAON_CTA_HREF,
