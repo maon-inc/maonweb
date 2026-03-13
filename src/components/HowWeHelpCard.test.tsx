@@ -17,6 +17,7 @@ describe('HowWeHelpCard', () => {
         expanded={false}
         id="card"
         onToggle={onToggle}
+        previewImage={{ alt: 'Card title preview', src: '/preview.svg' }}
         summary="summary copy"
         title="card title"
       />,
@@ -27,6 +28,7 @@ describe('HowWeHelpCard', () => {
     expect(button).toHaveAttribute('aria-expanded', 'false');
     expect(button).toHaveAttribute('aria-controls', 'card-details');
     expect(article).toHaveStyle('--how-we-help-accent: #c6b5f5');
+    expect(screen.getByRole('img', { name: /card title preview/i })).toBeInTheDocument();
     expect(screen.queryByRole('list')).not.toBeInTheDocument();
   });
 
@@ -38,6 +40,7 @@ describe('HowWeHelpCard', () => {
         expanded
         id="card"
         onToggle={onToggle}
+        previewImage={{ alt: 'Card title preview', src: '/preview.svg' }}
         summary="summary copy"
         title="card title"
       />,
@@ -45,6 +48,7 @@ describe('HowWeHelpCard', () => {
 
     expect(screen.getByRole('list')).toBeInTheDocument();
     expect(screen.getByText(/detail one/i)).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /card title preview/i })).toBeInTheDocument();
 
     rerender(
       <HowWeHelpCard
@@ -53,6 +57,7 @@ describe('HowWeHelpCard', () => {
         expanded
         id="card"
         onToggle={onToggle}
+        previewImage={{ alt: 'Card title preview', src: '/preview.svg' }}
         summary="summary copy"
         title="card title"
       />,

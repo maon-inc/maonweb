@@ -5,12 +5,13 @@
     "Segoe UI",
     sans-serif;
   color: var(--text-base);
-  background: #fffdfc;
+  background: #F5F0E8;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --page-max-width: 72rem;
+  --page-background: #F5F0E8;
   --surface: rgba(255, 252, 246, 0.86);
   --border: rgba(120, 92, 52, 0.14);
   --text-strong: #1f1a14;
@@ -49,7 +50,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #fffdfc;
+  background: var(--page-background);
 }
 
 body,

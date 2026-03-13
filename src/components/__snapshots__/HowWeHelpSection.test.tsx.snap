@@ -24,6 +24,7 @@ exports[`HowWeHelpSection > matches the stable expanded snapshot 1`] = `
       >
         <article
           class="_card_5a814f _expanded_5a814f"
+          data-card-id="proactive-interventions"
           style="--how-we-help-accent: #c6b5f5;"
         >
           <button
@@ -50,6 +51,15 @@ exports[`HowWeHelpSection > matches the stable expanded snapshot 1`] = `
                 when something starts to drift, maon helps you reset in the moment with small actions
               </span>
               <span
+                class="_previewFrame_5a814f"
+              >
+                <img
+                  alt="Proactive interventions preview"
+                  class="_previewImage_5a814f"
+                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgyIiBoZWlnaHQ9IjEwMSIgdmlld0JveD0iMCAwIDI4MiAxMDEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjI4MiIgaGVpZ2h0PSIxMDEiIHJ4PSIxOS4yMDQiIGZpbGw9IiNFNkU2RTYiLz4KICA8dGV4dCBmaWxsPSIjMTExMTExIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMC4yMTUiIGZvbnQtd2VpZ2h0PSI0MDAiIGxldHRlci1zcGFjaW5nPSIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KICAgIDx0c3BhbiB4PSIxNy4xODMiIHk9IjMzLjIiPndoZW4geW91IHN0YXJ0IHNsaXBwaW5nIGRvIDwvdHNwYW4+CiAgICA8dHNwYW4geD0iMTcuMTgzIiB5PSI2MC4xNiI+eW91IG5vdGljZSBpdD8gb3IgZG9lcyBpdCBoaXQgPC90c3Bhbj4KICAgIDx0c3BhbiB4PSIxNy4xODMiIHk9Ijg3LjEyIj55b3UgbGF0ZXI/PC90c3Bhbj4KICA8L3RleHQ+Cjwvc3ZnPgo="
+                />
+              </span>
+              <span
                 aria-hidden="true"
                 class="_chevron_5a814f"
               >
@@ -62,7 +72,7 @@ exports[`HowWeHelpSection > matches the stable expanded snapshot 1`] = `
             </span>
           </button>
           <div
-            class="_details_5a814f"
+            class="_details_5a814f _detailsExpanded_5a814f"
             id="proactive-interventions-details"
           >
             <ul
@@ -93,6 +103,7 @@ exports[`HowWeHelpSection > matches the stable expanded snapshot 1`] = `
         </article>
         <article
           class="_card_5a814f"
+          data-card-id="personal-patterns"
           style="--how-we-help-accent: #7eaeea;"
         >
           <button
@@ -119,6 +130,15 @@ exports[`HowWeHelpSection > matches the stable expanded snapshot 1`] = `
                 most people do not see what actually affects their energy or mood. maon connects the dots
               </span>
               <span
+                class="_previewFrame_5a814f"
+              >
+                <img
+                  alt="Personal patterns preview"
+                  class="_previewImage_5a814f"
+                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjcxIiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDI3MSAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjEyNy43MTgiIGhlaWdodD0iMTI3LjcxOCIgcng9IjE0LjkyOCIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyKSIvPgogIDxjaXJjbGUgY3g9IjExMS4xMzEiIGN5PSIxNC44ODEiIHI9IjI2LjUzOSIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDx0ZXh0IGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI5Ljk1MiIgZm9udC13ZWlnaHQ9IjUwMCIgbGV0dGVyLXNwYWNpbmc9IjAuMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CiAgICA8dHNwYW4geD0iMTAuNzgxIiB5PSIxOS44NSI+RUFSTFkgU1BJUkFMPC90c3Bhbj4KICA8L3RleHQ+CiAgPHRleHQgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI2LjUzOSIgZm9udC13ZWlnaHQ9IjUwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CiAgICA8dHNwYW4geD0iMTAuNzgxIiB5PSI0OS44NTYiPjJoPC90c3Bhbj4KICA8L3RleHQ+CiAgPHRleHQgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjkuOTUyIiBmb250LXdlaWdodD0iNTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KICAgIDx0c3BhbiB4PSIxMC43ODEiIHk9Ijc4LjIiPmJlZm9yZSBhIHNwaXJhbCwgeW91cjwvdHNwYW4+CiAgICA8dHNwYW4geD0iMTAuNzgxIiB5PSI5MS40NyI+Ym9keSBsZXRzIHVzIGtub3c8L3RzcGFuPgogIDwvdGV4dD4KICA8cmVjdCB4PSIxMC43ODEiIHk9IjEwMi4wMDkiIHdpZHRoPSIxOS4wNzUiIGhlaWdodD0iMTkuMDc1IiByeD0iOS41MzciIGZpbGw9ImJsYWNrIiBmaWxsLW9wYWNpdHk9IjAuMTQiLz4KICA8dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOS45NTIiIGZvbnQtd2VpZ2h0PSI1MDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgogICAgPHRzcGFuIHg9IjE3LjQyIiB5PSIxMTUuNTYiPjM8L3RzcGFuPgogIDwvdGV4dD4KICA8cmVjdCB4PSIxNDMuMjgyIiB3aWR0aD0iMTI3LjcxOCIgaGVpZ2h0PSIxMjcuNzE4IiByeD0iMTQuOTI4IiBmaWxsPSJ1cmwoI3BhaW50MV9saW5lYXIpIi8+CiAgPGNpcmNsZSBjeD0iMjU0LjQxMyIgY3k9IjE0Ljg4MSIgcj0iMjYuNTM5IiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHRleHQgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjkuOTUyIiBmb250LXdlaWdodD0iNTAwIiBsZXR0ZXItc3BhY2luZz0iMC4xIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KICAgIDx0c3BhbiB4PSIxNTQuMDYzIiB5PSIxOS44NSI+UFJPR1JFU1M8L3RzcGFuPgogIDwvdGV4dD4KICA8dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjYuNTM5IiBmb250LXdlaWdodD0iNTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KICAgIDx0c3BhbiB4PSIxNTQuMDYzIiB5PSI0OS44NTYiPjE4JTwvdHNwYW4+CiAgPC90ZXh0PgogIDx0ZXh0IGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI5Ljk1MiIgZm9udC13ZWlnaHQ9IjUwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CiAgICA8dHNwYW4geD0iMTU0LjA2MyIgeT0iNzguMiI+bGVzcyBkZXN0cmVzcyBvdmVyIHRoZTwvdHNwYW4+CiAgICA8dHNwYW4geD0iMTU0LjA2MyIgeT0iOTEuNDciPnBhc3Qgd2VlazwvdHNwYW4+CiAgPC90ZXh0PgogIDxyZWN0IHg9IjE1NC4wNjMiIHk9IjEwMi4wMDkiIHdpZHRoPSIxOS4wNzUiIGhlaWdodD0iMTkuMDc1IiByeD0iOS41MzciIGZpbGw9ImJsYWNrIiBmaWxsLW9wYWNpdHk9IjAuMTQiLz4KICA8dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOS45NTIiIGZvbnQtd2VpZ2h0PSI1MDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgogICAgPHRzcGFuIHg9IjE2MC43MDIiIHk9IjExNS41NiI+NDwvdHNwYW4+CiAgPC90ZXh0PgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyIiB4MT0iNjMuODU5IiB5MT0iMCIgeDI9IjYzLjg1OSIgeTI9IjEyNy43MTgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0VEOTA2RiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGRkMyQUMiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MV9saW5lYXIiIHgxPSIyMDcuMTQxIiB5MT0iMCIgeDI9IjIwNy4xNDEiIHkyPSIxMjcuNzE4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiM4OUQyOUIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOURENzkyIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KPC9zdmc+Cg=="
+                />
+              </span>
+              <span
                 aria-hidden="true"
                 class="_chevron_5a814f"
               >
@@ -130,9 +150,40 @@ exports[`HowWeHelpSection > matches the stable expanded snapshot 1`] = `
               </span>
             </span>
           </button>
+          <div
+            aria-hidden="true"
+            class="_details_5a814f"
+            id="personal-patterns-details"
+          >
+            <ul
+              class="_list_5a814f"
+            >
+              <li
+                class="_listItem_5a814f"
+              >
+                help you understand what keeps you balanced
+              </li>
+              <li
+                class="_listItem_5a814f"
+              >
+                notice when night scrolling affects your next day
+              </li>
+              <li
+                class="_listItem_5a814f"
+              >
+                show when outdoor time improves your mood
+              </li>
+              <li
+                class="_listItem_5a814f"
+              >
+                highlight days where your focus or stress shifts
+              </li>
+            </ul>
+          </div>
         </article>
         <article
           class="_card_5a814f"
+          data-card-id="adaptive-over-time"
           style="--how-we-help-accent: #59c85b;"
         >
           <button
@@ -159,6 +210,15 @@ exports[`HowWeHelpSection > matches the stable expanded snapshot 1`] = `
                 the more you use maon, the more it learns how you work
               </span>
               <span
+                class="_previewFrame_5a814f"
+              >
+                <img
+                  alt="Adaptive over time preview"
+                  class="_previewImage_5a814f _previewImageAdaptive_5a814f"
+                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzc1IiBoZWlnaHQ9Ijc0IiB2aWV3Qm94PSIwIDAgMzc1IDc0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxyZWN0IHg9IjAuNTU4IiB5PSIwLjU1OCIgd2lkdGg9IjM3My44ODQiIGhlaWdodD0iNzIuMDgiIHJ4PSIxNC40ODIiIGZpbGw9IndoaXRlIiBzdHJva2U9IiNBM0EzQTMiIHN0cm9rZS13aWR0aD0iMS4xMTYiLz4KICA8cmVjdCB4PSIxMi43NTkiIHk9IjEzLjAzNCIgd2lkdGg9IjQuMDE3IiBoZWlnaHQ9IjQ4LjEyOCIgcng9IjIuMDA5IiBmaWxsPSIjRjVEOEM3Ii8+CiAgPHRleHQgZmlsbD0iIzExMTExMSIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYuMDQzIiBmb250LXdlaWdodD0iNTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KICAgIDx0c3BhbiB4PSIzNy4wOTkiIHk9IjI4LjMiPndvcmtvdXQgQCA3IHBtIG1vbmRheTwvdHNwYW4+CiAgPC90ZXh0PgogIDx0ZXh0IGZpbGw9IiMxMTExMTEiIGZpbGwtb3BhY2l0eT0iMC43MiIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuMDM1IiBmb250LXdlaWdodD0iMzAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KICAgIDx0c3BhbiB4PSIzNy4wOTkiIHk9IjUyLjIiPmFkZGVkIHdvcmtvdXQgdG8geW91ciBhcHBsZSBjYWxlbmRhcjwvdHNwYW4+CiAgPC90ZXh0PgogIDx0ZXh0IGZpbGw9ImJsYWNrIiBmaWxsLW9wYWNpdHk9IjAuNTIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjAzNSIgZm9udC13ZWlnaHQ9IjMwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CiAgICA8dHNwYW4geD0iMjc4Ljc0MyIgeT0iMjguMyI+c2F0IC0gNjo0MiBwbTwvdHNwYW4+CiAgPC90ZXh0Pgo8L3N2Zz4K"
+                />
+              </span>
+              <span
                 aria-hidden="true"
                 class="_chevron_5a814f"
               >
@@ -170,6 +230,36 @@ exports[`HowWeHelpSection > matches the stable expanded snapshot 1`] = `
               </span>
             </span>
           </button>
+          <div
+            aria-hidden="true"
+            class="_details_5a814f"
+            id="adaptive-over-time-details"
+          >
+            <ul
+              class="_list_5a814f"
+            >
+              <li
+                class="_listItem_5a814f"
+              >
+                learns what interventions work best for you
+              </li>
+              <li
+                class="_listItem_5a814f"
+              >
+                adjusts when to check in and when to stay quiet
+              </li>
+              <li
+                class="_listItem_5a814f"
+              >
+                recognizes your unique stress signals
+              </li>
+              <li
+                class="_listItem_5a814f"
+              >
+                gets better at catching shifts earlier
+              </li>
+            </ul>
+          </div>
         </article>
       </div>
     </div>

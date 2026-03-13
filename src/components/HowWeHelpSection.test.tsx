@@ -14,9 +14,10 @@ describe('HowWeHelpSection', () => {
     expect(articles[0]).toHaveStyle('--how-we-help-accent: #c6b5f5');
     expect(articles[1]).toHaveStyle('--how-we-help-accent: #7eaeea');
     expect(articles[2]).toHaveStyle('--how-we-help-accent: #59c85b');
-    expect(
-      screen.queryByText(/quick check-ins over text/i),
-    ).not.toBeInTheDocument();
+    expect(screen.getByText(/quick check-ins over text/i)).not.toBeVisible();
+    expect(screen.getByRole('img', { name: /proactive interventions preview/i })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /personal patterns preview/i })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /adaptive over time preview/i })).toBeInTheDocument();
     expect(buttons.every((button) => button.getAttribute('aria-expanded') === 'false')).toBe(true);
   });
 
@@ -29,13 +30,12 @@ describe('HowWeHelpSection', () => {
 
     await user.click(firstCard);
     expect(screen.getByText(/quick check-ins over text/i)).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /proactive interventions preview/i })).toBeInTheDocument();
     expect(firstCard).toHaveAttribute('aria-expanded', 'true');
 
     await user.click(secondCard);
     expect(screen.getByText(/help you understand what keeps you balanced/i)).toBeInTheDocument();
-    expect(
-      screen.queryByText(/quick check-ins over text/i),
-    ).not.toBeInTheDocument();
+    expect(screen.getByText(/quick check-ins over text/i)).not.toBeVisible();
     expect(firstCard).toHaveAttribute('aria-expanded', 'false');
     expect(secondCard).toHaveAttribute('aria-expanded', 'true');
   });
@@ -50,9 +50,7 @@ describe('HowWeHelpSection', () => {
     expect(screen.getByText(/learns what interventions work best for you/i)).toBeInTheDocument();
 
     await user.click(card);
-    expect(
-      screen.queryByText(/learns what interventions work best for you/i),
-    ).not.toBeInTheDocument();
+    expect(screen.getByText(/learns what interventions work best for you/i)).not.toBeVisible();
     expect(card).toHaveAttribute('aria-expanded', 'false');
   });
 
@@ -78,9 +76,7 @@ describe('HowWeHelpSection', () => {
       />,
     );
 
-    expect(
-      screen.queryByText(/quick check-ins over text/i),
-    ).not.toBeInTheDocument();
+    expect(screen.getByText(/quick check-ins over text/i)).not.toBeVisible();
     expect(
       screen.getAllByRole('button').every((button) => button.getAttribute('aria-expanded') === 'false'),
     ).toBe(true);
@@ -96,6 +92,10 @@ describe('HowWeHelpSection', () => {
             title: 'empty state',
             summary: 'still renders safely',
             accentColor: '#cccccc',
+            previewImage: {
+              alt: 'Empty state preview',
+              src: '/empty.svg',
+            },
             details: [],
           },
         ]}

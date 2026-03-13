@@ -217,14 +217,34 @@
   min-height: 27.503px;
   padding: 0 10px;
   border-radius: 27.503px;
+}
+
+.typingIndicatorIncoming {
+  justify-self: start;
   background: #e3e3e3;
+}
+
+.typingIndicatorOutgoing {
+  justify-self: end;
+  width: 46px;
+  min-width: 46px;
+  background: #309ffd;
+  box-shadow: inset 0 0 0 0.6px rgba(255, 255, 255, 0.18);
+  justify-content: center;
 }
 
 .typingDot {
   width: 5px;
   height: 5px;
   border-radius: 999px;
+}
+
+.typingDotIncoming {
   background: #a3a3a3;
+}
+
+.typingDotOutgoing {
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .historyCard {
@@ -238,7 +258,7 @@
   position: relative;
   border: 1px solid rgba(255, 253, 252, 0.8);
   border-radius: 13.485px;
-  background: rgba(255, 254, 252, 0.95);
+  background: rgba(255, 254, 253, 0.95);
   min-height: 65.627px;
   padding: 14.384px 14.6px 12.2px 33.263px;
   opacity: 1;
@@ -316,7 +336,7 @@
 
 .historyDetail {
   margin-top: 3.1px;
-  color: rgba(45, 49, 44, 0.68);
+  color: rgba(45, 49, 44, 0.98);
   white-space: nowrap;
 }
 
@@ -368,140 +388,16 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   flex: none;
+  width: 27px;
+  height: 27px;
 }
 
-.appIconInstagram {
-  width: 26.01px;
-  height: 26.01px;
-  border-radius: 7px;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
-}
-
-.appIconInstagramInner {
-  position: relative;
-  width: 15px;
-  height: 15px;
-  border: 1.7px solid #fff;
-  border-radius: 4.5px;
-}
-
-.appIconInstagramLens {
-  position: absolute;
-  left: 4px;
-  top: 4px;
-  width: 5px;
-  height: 5px;
-  border: 1.6px solid #fff;
-  border-radius: 999px;
-}
-
-.appIconInstagramFlash {
-  position: absolute;
-  right: 1.7px;
-  top: 1.7px;
-  width: 2px;
-  height: 2px;
-  border-radius: 999px;
-  background: #fff;
-}
-
-.appIconTiktok {
-  width: 28.611px;
-  height: 28.611px;
-  border-radius: 7px;
-  background: #000;
-}
-
-.appIconTiktokGlyph {
-  position: relative;
-  top: -0.7px;
-  font-family: "Arial Black", var(--font-ui);
-  font-size: 18px;
-  line-height: 1;
-  color: #fff;
-}
-
-.appIconTiktokGlyph::before,
-.appIconTiktokGlyph::after {
-  content: 'd';
-  position: absolute;
-  inset: 0;
-}
-
-.appIconTiktokGlyph::before {
-  color: #25f4ee;
-  transform: translate(-1.8px, 1.2px);
-  z-index: -1;
-}
-
-.appIconTiktokGlyph::after {
-  color: #fe2c55;
-  transform: translate(1.3px, -1px);
-  z-index: -2;
-}
-
-.appIconReddit {
-  width: 26.53px;
-  height: 26.53px;
-  border-radius: 999px;
-  background: #ff5b00;
-}
-
-.appIconRedditInner {
-  position: relative;
-  width: 16px;
-  height: 16px;
-}
-
-.appIconRedditEye {
-  position: absolute;
-  top: 6px;
-  width: 2px;
-  height: 2px;
-  border-radius: 999px;
-  background: #fff;
-}
-
-.appIconRedditEye:first-child {
-  left: 4px;
-}
-
-.appIconRedditEye:nth-child(2) {
-  right: 4px;
-}
-
-.appIconRedditSmile {
-  position: absolute;
-  left: 4px;
-  bottom: 3px;
-  width: 8px;
-  height: 4px;
-  border-bottom: 1.5px solid #fff;
-  border-radius: 0 0 8px 8px;
-}
-
-.appIconRedditAntenna {
-  position: absolute;
-  right: 1px;
-  top: 1px;
-  width: 7px;
-  height: 7px;
-  border-top: 1.4px solid #fff;
-  border-right: 1.4px solid #fff;
-  transform: rotate(18deg);
-}
-
-.appIconRedditAntenna::after {
-  content: '';
-  position: absolute;
-  right: -1.9px;
-  top: -3.4px;
-  width: 3.2px;
-  height: 3.2px;
-  border-radius: 999px;
-  background: #fff;
+.appIconImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .metrics {

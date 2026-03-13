@@ -6,14 +6,16 @@
   overflow: hidden;
   width: 447px;
   position: relative;
-  min-height: 188px;
+  min-height: 304px;
   transition:
+    min-height 220ms ease,
     border-color 180ms ease,
     background-color 180ms ease;
 }
 
 .expanded {
-  min-height: 253px;
+  z-index: 5;
+  min-height: 540px;
 }
 
 .trigger {
@@ -35,10 +37,11 @@
 }
 
 .rail {
-  align-self: start;
-  margin: 20px 0 0 18px;
+  align-self: stretch;
+  justify-self: center;
+  margin: auto 0;
   width: 5px;
-  height: 138px;
+  height: 80%;
   border-radius: 999px;
   background: var(--how-we-help-accent, #c6b5f5);
 }
@@ -46,9 +49,11 @@
 .content {
   position: relative;
   display: grid;
-  gap: 7px;
+  grid-template-rows: auto auto minmax(92px, 1fr);
+  align-content: start;
+  gap: 12px;
   padding: 20px 18px 52px 30px;
-  min-height: 188px;
+  min-height: 302px;
 }
 
 .title {
@@ -66,8 +71,29 @@
   font-size: 17.905px;
   line-height: 1.334;
   color: #24211f;
-  max-width: 345px;
-  padding-right: 34px;
+  max-width: 366px;
+  padding-right: 14px;
+}
+
+.previewFrame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: end;
+  min-height: 92px;
+  padding: 4px 12px 0 0;
+}
+
+.previewImage {
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  height: auto;
+}
+
+.previewImageAdaptive {
+  transform: scale(1.2);
+  transform-origin: center center;
 }
 
 .chevron {
@@ -97,36 +123,74 @@
 }
 
 .details {
-  padding: 0 18px 20px 53px;
+  padding: 0 24px 0 53px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  max-height: 0;
+  transform: translateY(-6px);
+  transition:
+    max-height 240ms ease,
+    opacity 180ms ease,
+    transform 180ms ease,
+    visibility 180ms ease;
+}
+
+.detailsExpanded {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  max-height: 260px;
+  padding: 8px 24px 24px 53px;
 }
 
 .list {
   margin: 0;
   padding-left: 1rem;
   display: grid;
-  gap: 0.18rem;
+  gap: 0.32rem;
 }
 
 .listItem {
   font-family: "SF Pro Rounded", var(--font-ui);
-  font-size: 17.9px;
+  font-size: 17px;
   line-height: 1.334;
   color: var(--home-ink-soft);
 }
 
 @media (max-width: 900px) {
-  .card,
-  .expanded {
+  .card {
     width: 100%;
-    min-height: 0;
+    height: auto;
   }
 
   .content {
+    grid-template-rows: auto auto auto;
     min-height: 0;
   }
 
   .title,
   .summary {
     max-width: none;
+  }
+
+  .previewFrame {
+    min-height: 0;
+    padding: 8px 0 10px;
+  }
+
+  .details {
+    position: static;
+    inset: auto;
+    margin-top: 10px;
+    padding: 0 0 20px 53px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 }

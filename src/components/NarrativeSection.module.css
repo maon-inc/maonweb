@@ -33,6 +33,13 @@
   min-height: 100%;
 }
 
+.stage {
+  position: relative;
+  width: min(100%, 860px);
+  min-height: 430px;
+  margin: 0 auto;
+}
+
 .stack {
   display: grid;
   gap: 65px;
@@ -44,8 +51,18 @@
 .line {
   margin: 0;
   transition:
+    transform 420ms ease,
     color 360ms ease,
-    opacity 360ms ease;
+    opacity 360ms ease,
+    font-size 360ms ease;
+}
+
+.stage .line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(100%, 760px);
+  text-align: center;
 }
 
 .lineActive {
@@ -85,6 +102,33 @@
   line-height: 1.28;
 }
 
+.lineCentered {
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 3;
+}
+
+.linePrevious {
+  transform: translate(-50%, calc(-50% - 122px)) scale(0.84);
+  z-index: 2;
+}
+
+.lineNext {
+  transform: translate(-50%, calc(-50% + 122px)) scale(0.84);
+  z-index: 2;
+}
+
+.lineHiddenAbove {
+  transform: translate(-50%, calc(-50% - 200px)) scale(0.72);
+  opacity: 0;
+  z-index: 1;
+}
+
+.lineHiddenBelow {
+  transform: translate(-50%, calc(-50% + 200px)) scale(0.72);
+  opacity: 0;
+  z-index: 1;
+}
+
 @media (max-width: 700px) {
   .section {
     padding-bottom: 7rem;
@@ -101,5 +145,9 @@
 
   .stack {
     gap: 3rem;
+  }
+
+  .stage {
+    min-height: 0;
   }
 }

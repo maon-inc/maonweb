@@ -1,3 +1,6 @@
+import adaptivePreview from '../assets/how-we-help-adaptive-preview.svg';
+import patternsPreview from '../assets/how-we-help-patterns-preview.svg';
+import proactivePreview from '../assets/how-we-help-proactive-preview.svg';
 import { MAON_CTA_HREF } from './contactLinks';
 
 export type HomeHeroContent = {
@@ -69,6 +72,10 @@ export type HowWeHelpItem = {
   summary: string;
   details: string[];
   accentColor: string;
+  previewImage: {
+    alt: string;
+    src: string;
+  };
 };
 
 export type FinalCtaContent = {
@@ -216,6 +223,10 @@ export const homePageContent: HomePageContent = {
       title: 'proactive interventions',
       summary: 'when something starts to drift, maon helps you reset in the moment with small actions',
       accentColor: '#c6b5f5',
+      previewImage: {
+        alt: 'Proactive interventions preview',
+        src: proactivePreview,
+      },
       details: [
         'quick check-ins over text',
         'short breathing resets when your stress rise',
@@ -228,6 +239,10 @@ export const homePageContent: HomePageContent = {
       title: 'personal patterns',
       summary: 'most people do not see what actually affects their energy or mood. maon connects the dots',
       accentColor: '#7eaeea',
+      previewImage: {
+        alt: 'Personal patterns preview',
+        src: patternsPreview,
+      },
       details: [
         'help you understand what keeps you balanced',
         'notice when night scrolling affects your next day',
@@ -240,6 +255,10 @@ export const homePageContent: HomePageContent = {
       title: 'adaptive over time',
       summary: 'the more you use maon, the more it learns how you work',
       accentColor: '#59c85b',
+      previewImage: {
+        alt: 'Adaptive over time preview',
+        src: adaptivePreview,
+      },
       details: [
         'learns what interventions work best for you',
         'adjusts when to check in and when to stay quiet',

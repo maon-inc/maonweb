@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 
+import instagramIcon from '../assets/instagram-icon.svg';
+import redditIcon from '../assets/reddit-icon.svg';
+import tiktokIcon from '../assets/tiktok-icon.svg';
 import type {
   ShowcaseBlockedApp,
   ShowcaseContent,
@@ -15,6 +18,11 @@ type ShowcaseSectionProps = {
 
 const MESSAGE_TYPING_DELAY_MS = 700;
 const MESSAGE_PAUSE_DELAY_MS = 260;
+const BLOCKED_APP_ICONS: Record<ShowcaseBlockedApp, { src: string; alt: string }> = {
+  instagram: { src: instagramIcon, alt: 'Instagram' },
+  tiktok: { src: tiktokIcon, alt: 'TikTok' },
+  reddit: { src: redditIcon, alt: 'Reddit' },
+};
 
 function renderMessageText(message: ShowcaseMessage) {
   if (!message.italicWord || !message.text.includes(message.italicWord)) {
@@ -46,17 +54,6 @@ function getBubbleVariantClass(variant: ShowcaseMessage['variant']) {
       return styles.bubbleOutgoingMedium;
     case 'outgoing-large':
       return styles.bubbleOutgoingLarge;
-  }
-}
-
-function getBlockedAppClass(app: ShowcaseBlockedApp) {
-  switch (app) {
-    case 'instagram':
-      return styles.appIconInstagram;
-    case 'tiktok':
-      return styles.appIconTiktok;
-    case 'reddit':
-      return styles.appIconReddit;
   }
 }
 
@@ -92,26 +89,16 @@ function renderHistoryCard(item: ShowcaseHistoryItem) {
               </div>
               <div className={styles.featureBlock}>
                 <p className={styles.featureCaption}>apps blocked:</p>
-                <div className={styles.appIcons} aria-hidden="true">
-                  {item.blockedApps?.map((app) => (
-                    <span className={`${styles.appIcon} ${getBlockedAppClass(app)}`} key={app}>
-                      {app === 'instagram' ? (
-                        <span className={styles.appIconInstagramInner}>
-                          <span className={styles.appIconInstagramLens} />
-                          <span className={styles.appIconInstagramFlash} />
-                        </span>
-                      ) : null}
-                      {app === 'tiktok' ? <span className={styles.appIconTiktokGlyph}>d</span> : null}
-                      {app === 'reddit' ? (
-                        <span className={styles.appIconRedditInner}>
-                          <span className={styles.appIconRedditEye} />
-                          <span className={styles.appIconRedditEye} />
-                          <span className={styles.appIconRedditSmile} />
-                          <span className={styles.appIconRedditAntenna} />
-                        </span>
-                      ) : null}
-                    </span>
-                  ))}
+                <div className={styles.appIcons}>
+                  {item.blockedApps?.map((app) => {
+                    const icon = BLOCKED_APP_ICONS[app];
+
+                    return (
+                      <span className={styles.appIcon} key={app}>
+                        <img alt={icon.alt} className={styles.appIconImage} src={icon.src} />
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -198,9 +185,16 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
   }, [content.messages.length, isPhoneInView, messagePhase, visibleMessageCount]);
 
   const visibleMessages = content.messages.slice(0, visibleMessageCount);
+  const pendingMessage = content.messages[visibleMessageCount];
   const showTypingIndicator = isPhoneInView
     && visibleMessageCount < content.messages.length
     && messagePhase === 'typing';
+  const typingIndicatorClassName = pendingMessage?.sender === 'user'
+    ? `${styles.typingIndicator} ${styles.typingIndicatorOutgoing}`
+    : `${styles.typingIndicator} ${styles.typingIndicatorIncoming}`;
+  const typingDotClassName = pendingMessage?.sender === 'user'
+    ? `${styles.typingDot} ${styles.typingDotOutgoing}`
+    : `${styles.typingDot} ${styles.typingDotIncoming}`;
 
   return (
     <section className={styles.section} aria-label="Product preview">
@@ -239,10 +233,14 @@ export function ShowcaseSection({ content }: ShowcaseSectionProps) {
                   </div>
                 ))}
                 {showTypingIndicator ? (
-                  <div className={styles.typingIndicator} aria-hidden="true">
-                    <span className={styles.typingDot} />
-                    <span className={styles.typingDot} />
-                    <span className={styles.typingDot} />
+                  <div
+                    className={typingIndicatorClassName}
+                    data-sender={pendingMessage?.sender}
+                    aria-hidden="true"
+                  >
+                    <span className={typingDotClassName} />
+                    <span className={typingDotClassName} />
+                    <span className={typingDotClassName} />
                   </div>
                 ) : null}
               </div>

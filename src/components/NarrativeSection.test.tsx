@@ -3,6 +3,7 @@ import { act, render, screen } from '@testing-library/react';
 import { homePageContent } from '../content/homePageContent';
 import {
   getNarrativeActiveIndex,
+  getNarrativeLineVisualState,
   getNarrativeScrollOffset,
   NarrativeSection,
   shouldAnimateNarrative,
@@ -138,6 +139,8 @@ describe('NarrativeSection', () => {
     expect(viewport).toBeInTheDocument();
     expect(firstMainLine).toHaveAttribute('data-active', 'true');
     expect(introLine).toHaveAttribute('data-active', 'false');
+    expect(firstMainLine).toHaveAttribute('data-visual-state', 'static');
+    expect(introLine).toHaveAttribute('data-visual-state', 'static');
   });
 
   it('animates on desktop and advances active lines through sticky step bands', async () => {
@@ -171,6 +174,9 @@ describe('NarrativeSection', () => {
     expect(track).toContainElement(viewport);
     expect(viewport.querySelector('.homeContainer')).toBeTruthy();
     expect(introLine).toHaveAttribute('data-active', 'true');
+    expect(introLine).toHaveAttribute('data-visual-state', 'active');
+    expect(firstMainLine).toHaveAttribute('data-visual-state', 'next');
+    expect(secondLine).toHaveAttribute('data-visual-state', 'hidden-below');
 
     trackRect = {
       ...trackRect,
@@ -184,6 +190,10 @@ describe('NarrativeSection', () => {
     });
 
     expect(firstMainLine).toHaveAttribute('data-active', 'true');
+    expect(introLine).toHaveAttribute('data-visual-state', 'previous');
+    expect(firstMainLine).toHaveAttribute('data-visual-state', 'active');
+    expect(secondLine).toHaveAttribute('data-visual-state', 'next');
+    expect(finalLine).toHaveAttribute('data-visual-state', 'hidden-below');
 
     trackRect = {
       ...trackRect,
@@ -197,6 +207,9 @@ describe('NarrativeSection', () => {
     });
 
     expect(secondLine).toHaveAttribute('data-active', 'true');
+    expect(firstMainLine).toHaveAttribute('data-visual-state', 'previous');
+    expect(secondLine).toHaveAttribute('data-visual-state', 'active');
+    expect(finalLine).toHaveAttribute('data-visual-state', 'next');
 
     trackRect = {
       ...trackRect,
@@ -210,6 +223,9 @@ describe('NarrativeSection', () => {
     });
 
     expect(finalLine).toHaveAttribute('data-active', 'true');
+    expect(secondLine).toHaveAttribute('data-visual-state', 'previous');
+    expect(finalLine).toHaveAttribute('data-visual-state', 'active');
+    expect(introLine).toHaveAttribute('data-visual-state', 'hidden-above');
 
     trackRect = {
       ...trackRect,
@@ -223,6 +239,7 @@ describe('NarrativeSection', () => {
     });
 
     expect(finalLine).toHaveAttribute('data-active', 'true');
+    expect(finalLine).toHaveAttribute('data-visual-state', 'active');
   });
 
   it('maps progress and animation eligibility deterministically', () => {
@@ -233,6 +250,10 @@ describe('NarrativeSection', () => {
     expect(getNarrativeActiveIndex(1200, 1000, 4)).toBe(1);
     expect(getNarrativeActiveIndex(2800, 1000, 4)).toBe(2);
     expect(getNarrativeActiveIndex(3999, 1000, 4)).toBe(3);
+    expect(getNarrativeLineVisualState(0, 0)).toBe('active');
+    expect(getNarrativeLineVisualState(1, 0)).toBe('next');
+    expect(getNarrativeLineVisualState(0, 1)).toBe('previous');
+    expect(getNarrativeLineVisualState(3, 1)).toBe('hidden-below');
     expect(shouldAnimateNarrative(1400, false)).toBe(true);
     expect(shouldAnimateNarrative(900, false)).toBe(false);
     expect(shouldAnimateNarrative(1400, true)).toBe(false);

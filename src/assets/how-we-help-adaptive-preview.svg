@@ -1,0 +1,13 @@
+<svg width="375" height="74" viewBox="0 0 375 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0.558" y="0.558" width="373.884" height="72.08" rx="14.482" fill="white" stroke="#A3A3A3" stroke-width="1.116"/>
+  <rect x="12.759" y="13.034" width="4.017" height="48.128" rx="2.009" fill="#F5D8C7"/>
+  <text fill="#111111" font-family="Arial, Helvetica, sans-serif" font-size="16.043" font-weight="500" xml:space="preserve">
+    <tspan x="37.099" y="28.3">workout @ 7 pm monday</tspan>
+  </text>
+  <text fill="#111111" fill-opacity="0.72" font-family="Arial, Helvetica, sans-serif" font-size="13.035" font-weight="300" xml:space="preserve">
+    <tspan x="37.099" y="52.2">added workout to your apple calendar</tspan>
+  </text>
+  <text fill="black" fill-opacity="0.52" font-family="Arial, Helvetica, sans-serif" font-size="13.035" font-weight="300" xml:space="preserve">
+    <tspan x="278.743" y="28.3">sat - 6:42 pm</tspan>
+  </text>
+</svg>

@@ -13,23 +13,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
         class="_topSceneMedia_733e29"
         data-testid="home-top-scene-media"
         style="background-image: url("/src/assets/home-top-scene.svg");"
-      >
-        <video
-          aria-hidden="true"
-          autoplay=""
-          class="_topSceneVideo_733e29"
-          data-testid="home-top-scene-video"
-          loop=""
-          playsinline=""
-          poster="/src/assets/home-top-scene.svg"
-          preload="auto"
-        >
-          <source
-            src="/src/assets/home-top-scene-loop.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
+      />
       <div
         class="_topSceneInner_733e29"
       >
@@ -129,16 +113,17 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                   >
                     <div
                       aria-hidden="true"
-                      class="_typingIndicator_bc5123"
+                      class="_typingIndicator_bc5123 _typingIndicatorIncoming_bc5123"
+                      data-sender="maon"
                     >
                       <span
-                        class="_typingDot_bc5123"
+                        class="_typingDot_bc5123 _typingDotIncoming_bc5123"
                       />
                       <span
-                        class="_typingDot_bc5123"
+                        class="_typingDot_bc5123 _typingDotIncoming_bc5123"
                       />
                       <span
-                        class="_typingDot_bc5123"
+                        class="_typingDot_bc5123 _typingDotIncoming_bc5123"
                       />
                     </div>
                   </div>
@@ -219,51 +204,34 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                             apps blocked:
                           </p>
                           <div
-                            aria-hidden="true"
                             class="_appIcons_bc5123"
                           >
                             <span
-                              class="_appIcon_bc5123 _appIconInstagram_bc5123"
+                              class="_appIcon_bc5123"
                             >
-                              <span
-                                class="_appIconInstagramInner_bc5123"
-                              >
-                                <span
-                                  class="_appIconInstagramLens_bc5123"
-                                />
-                                <span
-                                  class="_appIconInstagramFlash_bc5123"
-                                />
-                              </span>
+                              <img
+                                alt="Instagram"
+                                class="_appIconImage_bc5123"
+                                src="/src/assets/instagram-icon.svg"
+                              />
                             </span>
                             <span
-                              class="_appIcon_bc5123 _appIconTiktok_bc5123"
+                              class="_appIcon_bc5123"
                             >
-                              <span
-                                class="_appIconTiktokGlyph_bc5123"
-                              >
-                                d
-                              </span>
+                              <img
+                                alt="TikTok"
+                                class="_appIconImage_bc5123"
+                                src="data:image/svg+xml,%3csvg%20width='29'%20height='29'%20viewBox='0%200%2029%2029'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M5.96093%201.19189C4.69623%201.19189%203.48334%201.69429%202.58906%202.58857C1.69478%203.48285%201.19238%204.69575%201.19238%205.96044V22.6504C1.19238%2023.9151%201.69478%2025.128%202.58906%2026.0222C3.48334%2026.9165%204.69623%2027.4189%205.96093%2027.4189H22.6509C23.9156%2027.4189%2025.1285%2026.9165%2026.0227%2026.0222C26.917%2025.128%2027.4194%2023.9151%2027.4194%2022.6504V5.96044C27.4194%204.69575%2026.917%203.48285%2026.0227%202.58857C25.1285%201.69429%2023.9156%201.19189%2022.6509%201.19189H5.96093ZM14.7112%205.36438H17.5569C17.5569%207.2718%2019.1686%209.42957%2021.622%209.42957V12.274C19.9328%2012.1572%2018.4891%2011.8806%2017.5569%2011.0544V18.3694C17.5569%2020.402%2015.9499%2023.2464%2012.2745%2023.2464C7.7849%2023.2464%206.99094%2019.1813%206.99094%2017.9629C6.99094%2016.7445%207.70622%2012.6793%2012.6798%2012.6793V15.525C11.3792%2015.2496%209.83538%2016.3368%209.83538%2017.9629C9.83538%2019.9955%2011.0549%2020.402%2012.2745%2020.402C13.4941%2020.402%2014.7124%2019.1824%2014.7124%2017.9629L14.7112%205.36438Z'%20fill='black'/%3e%3c/svg%3e"
+                              />
                             </span>
                             <span
-                              class="_appIcon_bc5123 _appIconReddit_bc5123"
+                              class="_appIcon_bc5123"
                             >
-                              <span
-                                class="_appIconRedditInner_bc5123"
-                              >
-                                <span
-                                  class="_appIconRedditEye_bc5123"
-                                />
-                                <span
-                                  class="_appIconRedditEye_bc5123"
-                                />
-                                <span
-                                  class="_appIconRedditSmile_bc5123"
-                                />
-                                <span
-                                  class="_appIconRedditAntenna_bc5123"
-                                />
-                              </span>
+                              <img
+                                alt="Reddit"
+                                class="_appIconImage_bc5123"
+                                src="data:image/svg+xml,%3csvg%20width='27'%20height='27'%20viewBox='0%200%2027%2027'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4132_32)'%3e%3cpath%20d='M13.2652%2026.5305C20.5914%2026.5305%2026.5305%2020.5914%2026.5305%2013.2652C26.5305%205.93905%2020.5914%200%2013.2652%200C5.93905%200%200%205.93905%200%2013.2652C0%2020.5914%205.93905%2026.5305%2013.2652%2026.5305Z'%20fill='%23FF4500'/%3e%3cpath%20d='M22.0899%2013.3918C22.0899%2012.3165%2021.2203%2011.4624%2020.1605%2011.4624C19.6599%2011.4618%2019.1784%2011.6544%2018.8164%2012.0002C17.488%2011.0512%2015.6692%2010.4346%2013.645%2010.3555L14.5305%206.21209L17.4087%206.82872C17.4405%207.55623%2018.0413%208.14146%2018.7848%208.14146C19.5438%208.14146%2020.1605%207.52483%2020.1605%206.7654C20.1605%206.00638%2019.5439%205.38965%2018.7848%205.38965C18.2471%205.38965%2017.7725%205.70594%2017.5511%206.16463L14.3409%205.48458C14.246%205.46862%2014.1511%205.48458%2014.0878%205.53204C14.0087%205.57951%2013.9613%205.65848%2013.9457%205.75341L12.9649%2010.3712C10.9091%2010.4346%209.05867%2011.0512%207.71453%2012.016C7.35249%2011.6703%206.87092%2011.4777%206.37028%2011.4784C5.29487%2011.4784%204.44092%2012.348%204.44092%2013.4078C4.44092%2014.1984%204.91525%2014.8625%205.57966%2015.1632C5.54739%2015.3566%205.53151%2015.5523%205.53219%2015.7483C5.53219%2018.7212%208.99566%2021.1411%2013.2655%2021.1411C17.5355%2021.1411%2020.9989%2018.7372%2020.9989%2015.7483C20.999%2015.5523%2020.9831%2015.3567%2020.9515%2015.1632C21.6156%2014.8625%2022.0899%2014.1824%2022.0899%2013.3918ZM8.83731%2014.7676C8.83731%2014.0085%209.45394%2013.3918%2010.2134%2013.3918C10.9724%2013.3918%2011.5891%2014.0084%2011.5891%2014.7676C11.5891%2015.5267%2010.9725%2016.1436%2010.2134%2016.1436C9.45404%2016.1592%208.83731%2015.5267%208.83731%2014.7676ZM16.5391%2018.4208C15.5902%2019.3698%2013.7873%2019.4331%2013.2655%2019.4331C12.7279%2019.4331%2010.925%2019.3538%209.9917%2018.4208C9.84961%2018.2785%209.84961%2018.057%209.9917%2017.9147C10.1341%2017.7726%2010.3555%2017.7726%2010.4978%2017.9147C11.0989%2018.5158%2012.3641%2018.7212%2013.2655%2018.7212C14.1669%2018.7212%2015.4479%2018.5157%2016.033%2017.9147C16.1754%2017.7726%2016.3967%2017.7726%2016.5391%2017.9147C16.6656%2018.057%2016.6656%2018.2785%2016.5391%2018.4208ZM16.2859%2016.1593C15.5268%2016.1593%2014.9102%2015.5426%2014.9102%2014.7835C14.9102%2014.0244%2015.5268%2013.4078%2016.2859%2013.4078C17.0453%2013.4078%2017.6619%2014.0244%2017.6619%2014.7835C17.6619%2015.5266%2017.0453%2016.1593%2016.2859%2016.1593Z'%20fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4132_32'%3e%3crect%20width='26.5305'%20height='26.5305'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+                              />
                             </span>
                           </div>
                         </div>
@@ -479,34 +447,38 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
             class="homeContainer _inner_9e478f"
           >
             <div
-              class="_stack_9e478f"
+              class="_stage_9e478f"
             >
               <p
-                class="_line_9e478f _intro_9e478f _lineActive_9e478f"
+                class="_line_9e478f _intro_9e478f _lineActive_9e478f _lineCentered_9e478f"
                 data-active="true"
                 data-line-index="0"
+                data-visual-state="active"
                 id="understand-title"
               >
                 we understand...
               </p>
               <p
-                class="_line_9e478f _statement_9e478f _lineInactive_9e478f"
+                class="_line_9e478f _statement_9e478f _lineInactive_9e478f _lineNext_9e478f"
                 data-active="false"
                 data-line-index="1"
+                data-visual-state="next"
               >
                 small things build up until everything feels like too much
               </p>
               <p
-                class="_line_9e478f _statement_9e478f _lineInactive_9e478f"
+                class="_line_9e478f _statement_9e478f _lineInactive_9e478f _lineHiddenBelow_9e478f"
                 data-active="false"
                 data-line-index="2"
+                data-visual-state="hidden-below"
               >
                 most support only shows up after you're already overwhelmed
               </p>
               <p
-                class="_line_9e478f _statementSerifMuted_9e478f _lineInactive_9e478f"
+                class="_line_9e478f _statementSerifMuted_9e478f _lineInactive_9e478f _lineHiddenBelow_9e478f"
                 data-active="false"
                 data-line-index="3"
+                data-visual-state="hidden-below"
               >
                 but maon notices the shift earlier because your body knows before you do
               </p>
@@ -537,6 +509,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
         >
           <article
             class="_card_5a814f"
+            data-card-id="proactive-interventions"
             style="--how-we-help-accent: #c6b5f5;"
           >
             <button
@@ -563,6 +536,15 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                   when something starts to drift, maon helps you reset in the moment with small actions
                 </span>
                 <span
+                  class="_previewFrame_5a814f"
+                >
+                  <img
+                    alt="Proactive interventions preview"
+                    class="_previewImage_5a814f"
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjgyIiBoZWlnaHQ9IjEwMSIgdmlld0JveD0iMCAwIDI4MiAxMDEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjI4MiIgaGVpZ2h0PSIxMDEiIHJ4PSIxOS4yMDQiIGZpbGw9IiNFNkU2RTYiLz4KICA8dGV4dCBmaWxsPSIjMTExMTExIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyMC4yMTUiIGZvbnQtd2VpZ2h0PSI0MDAiIGxldHRlci1zcGFjaW5nPSIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KICAgIDx0c3BhbiB4PSIxNy4xODMiIHk9IjMzLjIiPndoZW4geW91IHN0YXJ0IHNsaXBwaW5nIGRvIDwvdHNwYW4+CiAgICA8dHNwYW4geD0iMTcuMTgzIiB5PSI2MC4xNiI+eW91IG5vdGljZSBpdD8gb3IgZG9lcyBpdCBoaXQgPC90c3Bhbj4KICAgIDx0c3BhbiB4PSIxNy4xODMiIHk9Ijg3LjEyIj55b3UgbGF0ZXI/PC90c3Bhbj4KICA8L3RleHQ+Cjwvc3ZnPgo="
+                  />
+                </span>
+                <span
                   aria-hidden="true"
                   class="_chevron_5a814f"
                 >
@@ -574,9 +556,40 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 </span>
               </span>
             </button>
+            <div
+              aria-hidden="true"
+              class="_details_5a814f"
+              id="proactive-interventions-details"
+            >
+              <ul
+                class="_list_5a814f"
+              >
+                <li
+                  class="_listItem_5a814f"
+                >
+                  quick check-ins over text
+                </li>
+                <li
+                  class="_listItem_5a814f"
+                >
+                  short breathing resets when your stress rise
+                </li>
+                <li
+                  class="_listItem_5a814f"
+                >
+                  blocking distracting apps using screen time
+                </li>
+                <li
+                  class="_listItem_5a814f"
+                >
+                  suggest and schedule time for a hike
+                </li>
+              </ul>
+            </div>
           </article>
           <article
             class="_card_5a814f"
+            data-card-id="personal-patterns"
             style="--how-we-help-accent: #7eaeea;"
           >
             <button
@@ -603,6 +616,15 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                   most people do not see what actually affects their energy or mood. maon connects the dots
                 </span>
                 <span
+                  class="_previewFrame_5a814f"
+                >
+                  <img
+                    alt="Personal patterns preview"
+                    class="_previewImage_5a814f"
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjcxIiBoZWlnaHQ9IjEyOCIgdmlld0JveD0iMCAwIDI3MSAxMjgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjEyNy43MTgiIGhlaWdodD0iMTI3LjcxOCIgcng9IjE0LjkyOCIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyKSIvPgogIDxjaXJjbGUgY3g9IjExMS4xMzEiIGN5PSIxNC44ODEiIHI9IjI2LjUzOSIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDx0ZXh0IGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI5Ljk1MiIgZm9udC13ZWlnaHQ9IjUwMCIgbGV0dGVyLXNwYWNpbmc9IjAuMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CiAgICA8dHNwYW4geD0iMTAuNzgxIiB5PSIxOS44NSI+RUFSTFkgU1BJUkFMPC90c3Bhbj4KICA8L3RleHQ+CiAgPHRleHQgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI2LjUzOSIgZm9udC13ZWlnaHQ9IjUwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CiAgICA8dHNwYW4geD0iMTAuNzgxIiB5PSI0OS44NTYiPjJoPC90c3Bhbj4KICA8L3RleHQ+CiAgPHRleHQgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjkuOTUyIiBmb250LXdlaWdodD0iNTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KICAgIDx0c3BhbiB4PSIxMC43ODEiIHk9Ijc4LjIiPmJlZm9yZSBhIHNwaXJhbCwgeW91cjwvdHNwYW4+CiAgICA8dHNwYW4geD0iMTAuNzgxIiB5PSI5MS40NyI+Ym9keSBsZXRzIHVzIGtub3c8L3RzcGFuPgogIDwvdGV4dD4KICA8cmVjdCB4PSIxMC43ODEiIHk9IjEwMi4wMDkiIHdpZHRoPSIxOS4wNzUiIGhlaWdodD0iMTkuMDc1IiByeD0iOS41MzciIGZpbGw9ImJsYWNrIiBmaWxsLW9wYWNpdHk9IjAuMTQiLz4KICA8dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOS45NTIiIGZvbnQtd2VpZ2h0PSI1MDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgogICAgPHRzcGFuIHg9IjE3LjQyIiB5PSIxMTUuNTYiPjM8L3RzcGFuPgogIDwvdGV4dD4KICA8cmVjdCB4PSIxNDMuMjgyIiB3aWR0aD0iMTI3LjcxOCIgaGVpZ2h0PSIxMjcuNzE4IiByeD0iMTQuOTI4IiBmaWxsPSJ1cmwoI3BhaW50MV9saW5lYXIpIi8+CiAgPGNpcmNsZSBjeD0iMjU0LjQxMyIgY3k9IjE0Ljg4MSIgcj0iMjYuNTM5IiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHRleHQgZmlsbD0id2hpdGUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjkuOTUyIiBmb250LXdlaWdodD0iNTAwIiBsZXR0ZXItc3BhY2luZz0iMC4xIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KICAgIDx0c3BhbiB4PSIxNTQuMDYzIiB5PSIxOS44NSI+UFJPR1JFU1M8L3RzcGFuPgogIDwvdGV4dD4KICA8dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjYuNTM5IiBmb250LXdlaWdodD0iNTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KICAgIDx0c3BhbiB4PSIxNTQuMDYzIiB5PSI0OS44NTYiPjE4JTwvdHNwYW4+CiAgPC90ZXh0PgogIDx0ZXh0IGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI5Ljk1MiIgZm9udC13ZWlnaHQ9IjUwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CiAgICA8dHNwYW4geD0iMTU0LjA2MyIgeT0iNzguMiI+bGVzcyBkZXN0cmVzcyBvdmVyIHRoZTwvdHNwYW4+CiAgICA8dHNwYW4geD0iMTU0LjA2MyIgeT0iOTEuNDciPnBhc3Qgd2VlazwvdHNwYW4+CiAgPC90ZXh0PgogIDxyZWN0IHg9IjE1NC4wNjMiIHk9IjEwMi4wMDkiIHdpZHRoPSIxOS4wNzUiIGhlaWdodD0iMTkuMDc1IiByeD0iOS41MzciIGZpbGw9ImJsYWNrIiBmaWxsLW9wYWNpdHk9IjAuMTQiLz4KICA8dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOS45NTIiIGZvbnQtd2VpZ2h0PSI1MDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgogICAgPHRzcGFuIHg9IjE2MC43MDIiIHk9IjExNS41NiI+NDwvdHNwYW4+CiAgPC90ZXh0PgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyIiB4MT0iNjMuODU5IiB5MT0iMCIgeDI9IjYzLjg1OSIgeTI9IjEyNy43MTgiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0VEOTA2RiIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGRkMyQUMiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MV9saW5lYXIiIHgxPSIyMDcuMTQxIiB5MT0iMCIgeDI9IjIwNy4xNDEiIHkyPSIxMjcuNzE4IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiM4OUQyOUIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOURENzkyIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KPC9zdmc+Cg=="
+                  />
+                </span>
+                <span
                   aria-hidden="true"
                   class="_chevron_5a814f"
                 >
@@ -614,9 +636,40 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 </span>
               </span>
             </button>
+            <div
+              aria-hidden="true"
+              class="_details_5a814f"
+              id="personal-patterns-details"
+            >
+              <ul
+                class="_list_5a814f"
+              >
+                <li
+                  class="_listItem_5a814f"
+                >
+                  help you understand what keeps you balanced
+                </li>
+                <li
+                  class="_listItem_5a814f"
+                >
+                  notice when night scrolling affects your next day
+                </li>
+                <li
+                  class="_listItem_5a814f"
+                >
+                  show when outdoor time improves your mood
+                </li>
+                <li
+                  class="_listItem_5a814f"
+                >
+                  highlight days where your focus or stress shifts
+                </li>
+              </ul>
+            </div>
           </article>
           <article
             class="_card_5a814f"
+            data-card-id="adaptive-over-time"
             style="--how-we-help-accent: #59c85b;"
           >
             <button
@@ -643,6 +696,15 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                   the more you use maon, the more it learns how you work
                 </span>
                 <span
+                  class="_previewFrame_5a814f"
+                >
+                  <img
+                    alt="Adaptive over time preview"
+                    class="_previewImage_5a814f _previewImageAdaptive_5a814f"
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzc1IiBoZWlnaHQ9Ijc0IiB2aWV3Qm94PSIwIDAgMzc1IDc0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxyZWN0IHg9IjAuNTU4IiB5PSIwLjU1OCIgd2lkdGg9IjM3My44ODQiIGhlaWdodD0iNzIuMDgiIHJ4PSIxNC40ODIiIGZpbGw9IndoaXRlIiBzdHJva2U9IiNBM0EzQTMiIHN0cm9rZS13aWR0aD0iMS4xMTYiLz4KICA8cmVjdCB4PSIxMi43NTkiIHk9IjEzLjAzNCIgd2lkdGg9IjQuMDE3IiBoZWlnaHQ9IjQ4LjEyOCIgcng9IjIuMDA5IiBmaWxsPSIjRjVEOEM3Ii8+CiAgPHRleHQgZmlsbD0iIzExMTExMSIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTYuMDQzIiBmb250LXdlaWdodD0iNTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KICAgIDx0c3BhbiB4PSIzNy4wOTkiIHk9IjI4LjMiPndvcmtvdXQgQCA3IHBtIG1vbmRheTwvdHNwYW4+CiAgPC90ZXh0PgogIDx0ZXh0IGZpbGw9IiMxMTExMTEiIGZpbGwtb3BhY2l0eT0iMC43MiIgZm9udC1mYW1pbHk9IkFyaWFsLCBIZWx2ZXRpY2EsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMuMDM1IiBmb250LXdlaWdodD0iMzAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KICAgIDx0c3BhbiB4PSIzNy4wOTkiIHk9IjUyLjIiPmFkZGVkIHdvcmtvdXQgdG8geW91ciBhcHBsZSBjYWxlbmRhcjwvdHNwYW4+CiAgPC90ZXh0PgogIDx0ZXh0IGZpbGw9ImJsYWNrIiBmaWxsLW9wYWNpdHk9IjAuNTIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzLjAzNSIgZm9udC13ZWlnaHQ9IjMwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CiAgICA8dHNwYW4geD0iMjc4Ljc0MyIgeT0iMjguMyI+c2F0IC0gNjo0MiBwbTwvdHNwYW4+CiAgPC90ZXh0Pgo8L3N2Zz4K"
+                  />
+                </span>
+                <span
                   aria-hidden="true"
                   class="_chevron_5a814f"
                 >
@@ -654,6 +716,36 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 </span>
               </span>
             </button>
+            <div
+              aria-hidden="true"
+              class="_details_5a814f"
+              id="adaptive-over-time-details"
+            >
+              <ul
+                class="_list_5a814f"
+              >
+                <li
+                  class="_listItem_5a814f"
+                >
+                  learns what interventions work best for you
+                </li>
+                <li
+                  class="_listItem_5a814f"
+                >
+                  adjusts when to check in and when to stay quiet
+                </li>
+                <li
+                  class="_listItem_5a814f"
+                >
+                  recognizes your unique stress signals
+                </li>
+                <li
+                  class="_listItem_5a814f"
+                >
+                  gets better at catching shifts earlier
+                </li>
+              </ul>
+            </div>
           </article>
         </div>
       </div>

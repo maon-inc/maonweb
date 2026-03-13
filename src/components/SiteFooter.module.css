@@ -5,8 +5,26 @@
 }
 
 .band {
+  position: relative;
   width: 100%;
   min-height: clamp(10rem, 24vw, 18rem);
+  overflow: clip;
+}
+
+.band::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 1;
+  height: clamp(3.5rem, 9vw, 7rem);
+  background: linear-gradient(
+    180deg,
+    var(--page-background) 0%,
+    rgba(241, 237, 228, 0.86) 28%,
+    rgba(241, 237, 228, 0.42) 58%,
+    rgba(241, 237, 228, 0) 100%
+  );
+  pointer-events: none;
 }
 
 .image {

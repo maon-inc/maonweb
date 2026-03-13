@@ -18,6 +18,8 @@ type NarrativeLine = {
   variant: 'intro' | 'default' | 'muted' | 'serif-muted';
 };
 
+type NarrativeLineVisualState = 'previous' | 'active' | 'next' | 'hidden-above' | 'hidden-below';
+
 export function getNarrativeActiveIndex(
   scrollOffset: number,
   stepHeight: number,
@@ -35,6 +37,45 @@ export function getNarrativeActiveIndex(
 
 export function shouldAnimateNarrative(viewportWidth: number, prefersReducedMotion: boolean) {
   return viewportWidth >= DESKTOP_BREAKPOINT && !prefersReducedMotion;
+}
+
+export function getNarrativeLineVisualState(
+  lineIndex: number,
+  activeIndex: number,
+): NarrativeLineVisualState {
+  const relativeIndex = lineIndex - activeIndex;
+
+  if (relativeIndex === 0) {
+    return 'active';
+  }
+
+  if (relativeIndex === -1) {
+    return 'previous';
+  }
+
+  if (relativeIndex === 1) {
+    return 'next';
+  }
+
+  return relativeIndex < 0 ? 'hidden-above' : 'hidden-below';
+}
+
+function getNarrativeLineVisualStateClass(
+  visualState: NarrativeLineVisualState,
+  classes: Record<string, string>,
+) {
+  switch (visualState) {
+    case 'previous':
+      return classes.linePrevious;
+    case 'active':
+      return classes.lineCentered;
+    case 'next':
+      return classes.lineNext;
+    case 'hidden-above':
+      return classes.lineHiddenAbove;
+    case 'hidden-below':
+      return classes.lineHiddenBelow;
+  }
 }
 
 export function getNarrativeScrollOffset(
@@ -177,26 +218,31 @@ export function NarrativeSection({ content }: NarrativeSectionProps) {
           data-testid="narrative-viewport"
         >
           <div className={`homeContainer ${styles.inner}`}>
-            <div className={styles.stack}>
-              {lines.map((line, index) => (
-                <p
-                  className={
-                    line.variant === 'intro'
-                      ? `${styles.line} ${styles.intro} ${index === activeIndex ? styles.lineActive : styles.lineInactive}`
-                      : line.variant === 'default'
-                        ? `${styles.line} ${styles.statement} ${index === activeIndex ? styles.lineActive : styles.lineInactive}`
-                        : line.variant === 'muted'
-                          ? `${styles.line} ${styles.statement} ${index === activeIndex ? styles.lineActive : styles.lineInactive}`
-                          : `${styles.line} ${styles.statementSerifMuted} ${index === activeIndex ? styles.lineActive : styles.lineInactive}`
-                  }
-                  data-active={index === activeIndex ? 'true' : 'false'}
-                  data-line-index={index}
-                  id={index === 0 ? 'understand-title' : undefined}
-                  key={line.key}
-                >
-                  {line.text}
-                </p>
-              ))}
+            <div className={isAnimatedDesktop ? styles.stage : styles.stack}>
+              {lines.map((line, index) => {
+                const visualState = getNarrativeLineVisualState(index, activeIndex);
+                const variantClassName =
+                  line.variant === 'intro'
+                    ? styles.intro
+                    : line.variant === 'serif-muted'
+                      ? styles.statementSerifMuted
+                      : styles.statement;
+
+                return (
+                  <p
+                    className={`${styles.line} ${variantClassName} ${
+                      index === activeIndex ? styles.lineActive : styles.lineInactive
+                    } ${isAnimatedDesktop ? getNarrativeLineVisualStateClass(visualState, styles) : ''}`}
+                    data-active={index === activeIndex ? 'true' : 'false'}
+                    data-line-index={index}
+                    data-visual-state={isAnimatedDesktop ? visualState : 'static'}
+                    id={index === 0 ? 'understand-title' : undefined}
+                    key={line.key}
+                  >
+                    {line.text}
+                  </p>
+                );
+              })}
             </div>
           </div>
         </div>

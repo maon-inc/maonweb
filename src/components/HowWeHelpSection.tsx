@@ -49,6 +49,7 @@ export function HowWeHelpSection({
               id={item.id}
               key={item.id}
               onToggle={handleToggle}
+              previewImage={item.previewImage}
               summary={item.summary}
               title={item.title}
             />

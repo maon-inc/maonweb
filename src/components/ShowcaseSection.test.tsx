@@ -91,7 +91,10 @@ describe('ShowcaseSection', () => {
       observer.trigger(true);
     });
 
-    expect(container.querySelectorAll('[class*="typingDot"]')).toHaveLength(3);
+    let typingIndicator = container.querySelector('[data-sender]');
+    expect(typingIndicator).toHaveAttribute('data-sender', 'maon');
+    expect(container.querySelectorAll('[class*="typingDotIncoming"]')).toHaveLength(3);
+    expect(container.querySelectorAll('[class*="typingDotOutgoing"]')).toHaveLength(0);
 
     advanceToNextMessage();
 
@@ -102,7 +105,10 @@ describe('ShowcaseSection', () => {
 
     advanceToNextTypingBeat();
 
-    expect(container.querySelectorAll('[class*="typingDot"]')).toHaveLength(3);
+    typingIndicator = container.querySelector('[data-sender]');
+    expect(typingIndicator).toHaveAttribute('data-sender', 'user');
+    expect(container.querySelectorAll('[class*="typingDotIncoming"]')).toHaveLength(0);
+    expect(container.querySelectorAll('[class*="typingDotOutgoing"]')).toHaveLength(3);
 
     for (let index = 1; index < homePageContent.showcase.messages.length; index += 1) {
       advanceToNextMessage();
@@ -130,7 +136,7 @@ describe('ShowcaseSection', () => {
       'i don’t notice it until it gets really bad and then i start spiraling',
     );
     expect(messageElements[5]).toHaveAttribute('data-variant', 'outgoing-large');
-    expect(container.querySelectorAll('[class*="typingDot"]')).toHaveLength(0);
+    expect(container.querySelectorAll('[data-sender]')).toHaveLength(0);
   });
 
   it('resets the phone thread when it leaves view and restarts on re-entry', () => {
@@ -159,7 +165,8 @@ describe('ShowcaseSection', () => {
       observer.trigger(true);
     });
 
-    expect(container.querySelectorAll('[class*="typingDot"]')).toHaveLength(3);
+    const typingIndicator = container.querySelector('[data-sender]');
+    expect(typingIndicator).toHaveAttribute('data-sender', 'maon');
 
     advanceToNextMessage();
 
@@ -184,9 +191,10 @@ describe('ShowcaseSection', () => {
     expect(screen.getByText(/alarm @ 9:30 am sunday/i)).toBeInTheDocument();
     expect(screen.queryByText(/see more/i)).not.toBeInTheDocument();
 
-    expect(container.querySelectorAll('[class*="appIconInstagram"]')).not.toHaveLength(0);
-    expect(container.querySelectorAll('[class*="appIconTiktok"]')).not.toHaveLength(0);
-    expect(container.querySelectorAll('[class*="appIconReddit"]')).not.toHaveLength(0);
+    expect(screen.getByRole('img', { name: 'Instagram' })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'TikTok' })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'Reddit' })).toBeInTheDocument();
+    expect(container.querySelectorAll('.appIcons img, [class*="appIcons"] img')).toHaveLength(3);
   });
 
   it('renders the stories cards with figma metric copy and numbered badges', () => {
