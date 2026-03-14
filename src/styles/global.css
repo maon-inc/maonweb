@@ -5,13 +5,13 @@
     "Segoe UI",
     sans-serif;
   color: var(--text-base);
-  background: #F5F0E8;
+  background: #FFFFFF;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --page-max-width: 72rem;
-  --page-background: #F5F0E8;
+  --page-background: #FFFFFF;
   --surface: rgba(255, 252, 246, 0.86);
   --border: rgba(120, 92, 52, 0.14);
   --text-strong: #1f1a14;
