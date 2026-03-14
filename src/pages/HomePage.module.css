@@ -72,6 +72,12 @@
   .topScene {
     --hero-padding-top: calc(154px + env(safe-area-inset-top));
     --hero-padding-bottom: 72px;
+    --hero-title-shadow:
+      0 4px 14px rgba(10, 12, 12, 0.34),
+      0 14px 36px rgba(10, 12, 12, 0.28);
+    --hero-supporting-shadow:
+      0 3px 10px rgba(10, 12, 12, 0.28),
+      0 10px 24px rgba(10, 12, 12, 0.22);
     padding-bottom: 60px;
   }
 

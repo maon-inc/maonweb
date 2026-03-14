@@ -14,17 +14,21 @@ function renderWithRouter(initialEntries: string[]) {
     <MemoryRouter initialEntries={initialEntries}>
       <Routes>
         <Route element={<SiteLayout />} path="/">
-        <Route element={<HomePage />} index />
-        <Route element={<PrivacyPage />} path="privacy" />
-        <Route element={<TermsPage />} path="tos" />
-        <Route element={<NotFoundPage />} path="*" />
-      </Route>
+          <Route element={<HomePage />} index />
+          <Route element={<PrivacyPage />} path="privacy" />
+          <Route element={<TermsPage />} path="tos" />
+          <Route element={<NotFoundPage />} path="*" />
+        </Route>
       </Routes>
     </MemoryRouter>,
   );
 }
 
 describe('app router', () => {
+  beforeEach(() => {
+    vi.spyOn(window, 'scrollTo').mockImplementation(() => {});
+  });
+
   it('renders the shared layout and redesigned home page', () => {
     renderWithRouter(['/']);
 
@@ -62,6 +66,7 @@ describe('app router', () => {
     expect(await screen.findByRole('heading', { level: 1, name: /terms of service/i }))
       .toBeInTheDocument();
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
+    expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, left: 0, behavior: 'auto' });
   });
 
   it('shows the not found page for unknown routes', () => {

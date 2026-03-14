@@ -1,4 +1,5 @@
 import type { HomeHeroContent } from '../content/homePageContent';
+import { MessageCta } from './MessageCta';
 import styles from './HomeHero.module.css';
 
 type HomeHeroProps = {
@@ -17,9 +18,11 @@ export function HomeHero({ content }: HomeHeroProps) {
             {content.titleSuffix}
           </h1>
           <p className={styles.supportingText}>{content.supportingText}</p>
-          <a className="buttonPrimary buttonPrimaryCompact" href={content.cta.href}>
-            {content.cta.label}
-          </a>
+          <MessageCta
+            className="buttonPrimary buttonPrimaryCompact"
+            href={content.cta.href}
+            label={content.cta.label}
+          />
         </div>
       </div>
     </section>
