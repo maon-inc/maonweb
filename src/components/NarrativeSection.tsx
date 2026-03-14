@@ -45,7 +45,7 @@ export function getNarrativeTrackStepCount(viewportWidth: number, totalLines: nu
   }
 
   return viewportWidth <= MOBILE_BREAKPOINT
-    ? totalLines
+    ? totalLines + 1
     : Math.max(totalLines, DESKTOP_STEP_COUNT) + 1;
 }
 

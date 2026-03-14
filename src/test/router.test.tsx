@@ -4,21 +4,21 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
 import { SiteLayout } from '../app/SiteLayout';
 import { MAON_CTA_HREF } from '../content/contactLinks';
-import { AboutPage } from '../pages/AboutPage';
-import { ContactPage } from '../pages/ContactPage';
 import { HomePage } from '../pages/HomePage';
 import { NotFoundPage } from '../pages/NotFoundPage';
+import { PrivacyPage } from '../pages/PrivacyPage';
+import { TermsPage } from '../pages/TermsPage';
 
 function renderWithRouter(initialEntries: string[]) {
   return render(
     <MemoryRouter initialEntries={initialEntries}>
       <Routes>
         <Route element={<SiteLayout />} path="/">
-          <Route element={<HomePage />} index />
-          <Route element={<AboutPage />} path="about" />
-          <Route element={<ContactPage />} path="contact" />
-          <Route element={<NotFoundPage />} path="*" />
-        </Route>
+        <Route element={<HomePage />} index />
+        <Route element={<PrivacyPage />} path="privacy" />
+        <Route element={<TermsPage />} path="tos" />
+        <Route element={<NotFoundPage />} path="*" />
+      </Route>
       </Routes>
     </MemoryRouter>,
   );
@@ -47,17 +47,19 @@ describe('app router', () => {
         .every((link) => link.getAttribute('href') === MAON_CTA_HREF),
     ).toBe(true);
     expect(screen.getByLabelText(/product preview/i)).toBeInTheDocument();
-    expect(screen.queryByRole('link', { name: 'About' })).not.toBeInTheDocument();
+    expect(screen.getByText(/© 2025 MAON INTELLIGENCE/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Privacy' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Terms of Service' })).toBeInTheDocument();
   });
 
   it('navigates between pages', async () => {
     const user = userEvent.setup();
 
-    renderWithRouter(['/about']);
+    renderWithRouter(['/']);
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
-    await user.click(screen.getByRole('link', { name: 'Contact' }));
+    await user.click(screen.getByRole('link', { name: 'Terms of Service' }));
 
-    expect(await screen.findByRole('heading', { level: 1, name: /contact/i }))
+    expect(await screen.findByRole('heading', { level: 1, name: /terms of service/i }))
       .toBeInTheDocument();
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });

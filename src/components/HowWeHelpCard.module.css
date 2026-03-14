@@ -121,7 +121,7 @@
 }
 
 .details {
-  padding: 0 24px 0 53px;
+  padding: 0 36px 0 53px;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -140,7 +140,7 @@
   pointer-events: auto;
   transform: translateY(0);
   max-height: 420px;
-  padding: 8px 24px 24px 53px;
+  padding: 8px 36px 24px 53px;
 }
 
 .list {
@@ -170,8 +170,10 @@
   }
 
   .content {
+    gap: 10px;
     grid-template-rows: auto auto auto;
     min-height: 0;
+    padding: 18px 16px 46px 28px;
   }
 
   .title,
@@ -179,16 +181,32 @@
     max-width: none;
   }
 
+  .title {
+    font-size: 18px;
+    line-height: 1.22;
+  }
+
+  .summary {
+    font-size: 15px;
+    line-height: 1.22;
+    padding-right: 8px;
+  }
+
   .previewFrame {
     min-height: 0;
     padding: 8px 0 10px;
+  }
+
+  .chevron {
+    left: 28px;
+    bottom: 14px;
   }
 
   .details {
     position: static;
     inset: auto;
     margin-top: 10px;
-    padding: 0 0 0 53px;
+    padding: 0 18px 0 53px;
     border: 0;
     border-radius: 0;
     box-shadow: none;
@@ -196,10 +214,15 @@
   }
 
   .detailsExpanded {
-    padding: 0 0 20px 53px;
+    padding: 0 18px 20px 53px;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
     max-height: 420px;
+  }
+
+  .listItem {
+    font-size: 15px;
+    line-height: 1.24;
   }
 }

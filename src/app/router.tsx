@@ -2,9 +2,9 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import { SiteLayout } from './SiteLayout';
 import { HomePage } from '../pages/HomePage';
-import { AboutPage } from '../pages/AboutPage';
-import { ContactPage } from '../pages/ContactPage';
 import { NotFoundPage } from '../pages/NotFoundPage';
+import { PrivacyPage } from '../pages/PrivacyPage';
+import { TermsPage } from '../pages/TermsPage';
 
 export const appRouter = createBrowserRouter([
   {
@@ -17,12 +17,12 @@ export const appRouter = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: 'about',
-        element: <AboutPage />,
+        path: 'privacy',
+        element: <PrivacyPage />,
       },
       {
-        path: 'contact',
-        element: <ContactPage />,
+        path: 'tos',
+        element: <TermsPage />,
       },
       {
         path: '*',

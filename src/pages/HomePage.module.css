@@ -72,13 +72,13 @@
   }
 
   .topSceneMedia {
-    top: calc(-1 * env(safe-area-inset-top));
+    top: calc(-1 * (env(safe-area-inset-top) + 1.25rem));
     height: 70vh;
-    height: calc(70vh + env(safe-area-inset-top));
+    height: calc(70vh + env(safe-area-inset-top) + 1.25rem);
     min-height: 420px;
-    min-height: calc(420px + env(safe-area-inset-top));
+    min-height: calc(420px + env(safe-area-inset-top) + 1.25rem);
     max-height: 520px;
-    max-height: calc(520px + env(safe-area-inset-top));
+    max-height: calc(520px + env(safe-area-inset-top) + 1.25rem);
     background-position: center 28%;
     background-size: auto 480px;
   }
@@ -94,13 +94,15 @@
   }
 
   .topSceneMedia::after {
-    height: 188px;
+    height: 260px;
     background: linear-gradient(
       180deg,
-      rgba(236, 241, 228, 0) 0%,
-      rgba(236, 241, 228, 0.2) 22%,
-      rgba(236, 241, 228, 0.58) 48%,
-      rgba(236, 241, 228, 0.88) 74%,
+      rgba(245, 240, 232, 0) 0%,
+      rgba(245, 240, 232, 0.08) 16%,
+      rgba(245, 240, 232, 0.26) 34%,
+      rgba(245, 240, 232, 0.62) 54%,
+      rgba(245, 240, 232, 0.9) 72%,
+      var(--page-background) 86%,
       var(--page-background) 100%
     );
   }

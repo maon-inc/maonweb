@@ -172,7 +172,7 @@ describe('NarrativeSection', () => {
     });
 
     expect(section).toHaveAttribute('data-animated', 'true');
-    expect(track).toHaveStyle('--narrative-track-step-count: 4');
+    expect(track).toHaveStyle('--narrative-track-step-count: 5');
     expect(introLine).toHaveAttribute('data-visual-state', 'active');
     expect(firstMainLine).toHaveAttribute('data-visual-state', 'next');
 
@@ -191,6 +191,38 @@ describe('NarrativeSection', () => {
     expect(introLine).toHaveAttribute('data-visual-state', 'previous');
     expect(firstMainLine).toHaveAttribute('data-visual-state', 'active');
     expect(secondLine).toHaveAttribute('data-visual-state', 'next');
+
+    trackRect = {
+      ...trackRect,
+      top: -3300,
+      y: -3300,
+      bottom: 1700,
+    } as DOMRect;
+
+    act(() => {
+      window.dispatchEvent(new Event('scroll'));
+      vi.runOnlyPendingTimers();
+    });
+
+    const finalLine = screen.getByText(
+      /but maon notices the shift earlier because your body knows before you do/i,
+    );
+
+    expect(finalLine).toHaveAttribute('data-visual-state', 'active');
+
+    trackRect = {
+      ...trackRect,
+      top: -4200,
+      y: -4200,
+      bottom: 800,
+    } as DOMRect;
+
+    act(() => {
+      window.dispatchEvent(new Event('scroll'));
+      vi.runOnlyPendingTimers();
+    });
+
+    expect(finalLine).toHaveAttribute('data-visual-state', 'active');
   });
 
   it('animates on desktop and advances active lines through sticky step bands', async () => {
@@ -300,7 +332,7 @@ describe('NarrativeSection', () => {
     expect(getNarrativeActiveIndex(1200, 1000, 4)).toBe(1);
     expect(getNarrativeActiveIndex(2800, 1000, 4)).toBe(2);
     expect(getNarrativeActiveIndex(3999, 1000, 4)).toBe(3);
-    expect(getNarrativeTrackStepCount(390, 4)).toBe(4);
+    expect(getNarrativeTrackStepCount(390, 4)).toBe(5);
     expect(getNarrativeTrackStepCount(1400, 4)).toBe(5);
     expect(getNarrativeLineVisualState(0, 0)).toBe('active');
     expect(getNarrativeLineVisualState(1, 0)).toBe('next');

@@ -45,7 +45,7 @@
   font-family: "SF Pro Rounded", "Avenir Next Rounded", "Avenir Next", var(--font-ui);
   font-size: 20px;
   line-height: 1.334;
-  font-weight: 400;
+  font-weight: 700;
   color: var(--hero-supporting-color, #000);
   text-shadow: var(--hero-supporting-shadow, none);
 }
@@ -73,10 +73,12 @@
     width: 100%;
     font-size: clamp(3rem, 9vw, 4rem);
     line-height: 1.15;
+    transform: translateY(-62px);
   }
 
   .supportingText {
     font-size: 1rem;
     min-height: 0;
+    transform: translateY(-62px);
   }
 }
