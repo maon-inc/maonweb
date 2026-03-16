@@ -10,7 +10,8 @@ export function SiteHeader() {
   const isHomeLike =
     location.pathname === '/' ||
     location.pathname === '/privacy' ||
-    location.pathname === '/tos';
+    location.pathname === '/tos' ||
+    location.pathname === '/ai-transparency';
 
   return (
     <header className={isHomeLike ? `${styles.header} ${styles.headerHome}` : styles.header}>

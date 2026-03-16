@@ -20,7 +20,13 @@ export function PrivacyPage() {
             <p>
               By using MAON, you agree to the collection and use of information in
               accordance with this policy. If you do not agree with our policies and
-              practices, please do not use our Service.
+              practices, please do not use our Service. For details about the AI
+              technology powering MAON and how it handles your data, please see
+              our{' '}
+              <a className={styles.link} href="/ai-transparency">
+                AI Transparency
+              </a>{' '}
+              page.
             </p>
           </section>
 
@@ -172,7 +178,12 @@ export function PrivacyPage() {
                 help us operate our Service (cloud hosting, analytics, customer support,
                 and communications platforms such as Twilio for SMS and voice services).
                 These providers are bound by confidentiality obligations and process your
-                data only on our behalf. Google Calendar data is not shared with any
+                data only on our behalf. AI inference runs entirely within Cloudflare&apos;s
+                network and is not sent to any external AI provider — see our{' '}
+                <a className={styles.link} href="/ai-transparency">
+                  AI Transparency
+                </a>{' '}
+                page for full details. Google Calendar data is not shared with any
                 third-party service providers except as necessary to provide the core
                 functionality described in this policy.
               </li>

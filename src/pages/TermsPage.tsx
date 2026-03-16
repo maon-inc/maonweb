@@ -113,7 +113,12 @@ export function TermsPage() {
               <a className={styles.link} href="/privacy">
                 Privacy Policy
               </a>
-              , which is incorporated into these Terms by reference.
+              , which is incorporated into these Terms by reference. For information
+              about the AI technology we use, please see our{' '}
+              <a className={styles.link} href="/ai-transparency">
+                AI Transparency
+              </a>{' '}
+              page.
             </p>
             <p>By using the Service, you acknowledge that:</p>
             <ul>
@@ -345,9 +350,17 @@ export function TermsPage() {
           <section className={styles.section}>
             <h2>20. Entire Agreement</h2>
             <p>
-              These Terms, together with our Privacy Policy, constitute the entire
-              agreement between you and MAON Intelligence regarding the Service and
-              supersede all prior agreements and understandings.
+              These Terms, together with our{' '}
+              <a className={styles.link} href="/privacy">
+                Privacy Policy
+              </a>{' '}
+              and{' '}
+              <a className={styles.link} href="/ai-transparency">
+                AI Transparency
+              </a>{' '}
+              page, constitute the entire agreement between you and MAON Intelligence
+              regarding the Service and supersede all prior agreements and
+              understandings.
             </p>
           </section>
 

@@ -15,6 +15,9 @@ export function SiteFooter() {
           <Link className={styles.footerLink} to="/tos">
             Terms of Service
           </Link>
+          <Link className={styles.footerLink} to="/ai-transparency">
+            AI Transparency
+          </Link>
         </div>
         <img alt="" aria-hidden="true" className={styles.image} src={footerScene} />
       </div>

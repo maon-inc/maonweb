@@ -5,6 +5,7 @@ import { HomePage } from '../pages/HomePage';
 import { NotFoundPage } from '../pages/NotFoundPage';
 import { PrivacyPage } from '../pages/PrivacyPage';
 import { TermsPage } from '../pages/TermsPage';
+import { AITransparencyPage } from '../pages/AITransparencyPage';
 
 export const appRouter = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export const appRouter = createBrowserRouter([
       {
         path: 'tos',
         element: <TermsPage />,
+      },
+      {
+        path: 'ai-transparency',
+        element: <AITransparencyPage />,
       },
       {
         path: '*',
