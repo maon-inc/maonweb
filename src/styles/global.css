@@ -5,14 +5,14 @@
     "Segoe UI",
     sans-serif;
   color: var(--text-base);
-  background: #EBE8E2;
+  background: #FFFDFC;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --page-max-width: 72rem;
-  --page-background: #EBE8E2;
-  --surface: rgba(255, 252, 246, 0.86);
+  --page-background: #FFFDFC;
+  --surface: rgba(2, 2, 1, 0.86);
   --border: rgba(120, 92, 52, 0.14);
   --text-strong: #1f1a14;
   --text-base: #352b20;

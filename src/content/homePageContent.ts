@@ -98,8 +98,8 @@ export type HomePageContent = {
 export const homePageContent: HomePageContent = {
   hero: {
     eyebrow: 'MAON',
-    titlePrefix: 'what if an AI agent\'s only job was to keep you',
-    titleEmphasis: 'balanced?',
+    titlePrefix: 'what if an AI agent\'s only job was to keep your',
+    titleEmphasis: 'mindset right?',
     titleSuffix: '',
     supportingText: 'Maon does that with proactive interventions',
     cta: {
@@ -204,15 +204,15 @@ export const homePageContent: HomePageContent = {
     intro: 'we understand...',
     statements: [
       {
-        text: 'small things build up until everything feels like too much',
+        text: 'small things pile up and quietly change how you see everything',
         tone: 'default',
       },
       {
-        text: "most support only shows up after you're already overwhelmed",
+        text: 'most tools only step in after your mindset has already shifted',
         tone: 'muted',
       },
       {
-        text: 'but maon notices the shift earlier because your body knows before you do',
+        text: 'but maon catches the drift early — before it changes how you show up',
         tone: 'serif-muted',
       },
     ],
@@ -221,15 +221,15 @@ export const homePageContent: HomePageContent = {
     {
       id: 'proactive-interventions',
       title: 'proactive interventions',
-      summary: 'when something starts to drift, maon helps you reset in the moment with small actions',
+      summary: 'when something starts to drift, maon helps you course-correct before your mindset shifts',
       accentColor: '#c6b5f5',
       previewImage: {
         alt: 'Proactive interventions preview',
         src: proactivePreview,
       },
       details: [
-        'quick check-ins over text',
-        'short breathing resets when your stress rise',
+        'quick check-ins over text to refocus',
+        'short breathing exercises to recenter when tension builds',
         'blocking distracting apps using screen time',
         'suggest and schedule time for a hike',
       ],
@@ -237,23 +237,23 @@ export const homePageContent: HomePageContent = {
     {
       id: 'personal-patterns',
       title: 'personal patterns',
-      summary: 'most people do not see what actually affects their energy or mood. maon connects the dots',
+      summary: 'most people do not see what actually shapes how they think and show up. maon connects the dots',
       accentColor: '#7eaeea',
       previewImage: {
         alt: 'Personal patterns preview',
         src: patternsPreview,
       },
       details: [
-        'help you understand what keeps you balanced',
-        'notice when night scrolling affects your next day',
-        'show when outdoor time improves your mood',
-        'highlight days where your focus or stress shifts',
+        'help you understand what keeps your thinking clear',
+        'notice when night scrolling clouds your next day',
+        'show when outdoor time sharpens your focus',
+        'highlight days where your mindset or clarity shifts',
       ],
     },
     {
       id: 'adaptive-over-time',
       title: 'adaptive over time',
-      summary: 'the more you use maon, the more it learns how you work',
+      summary: 'the more you use maon, the more it learns what keeps your mindset where it needs to be',
       accentColor: '#59c85b',
       previewImage: {
         alt: 'Adaptive over time preview',
@@ -262,14 +262,14 @@ export const homePageContent: HomePageContent = {
       details: [
         'learns what interventions work best for you',
         'adjusts when to check in and when to stay quiet',
-        'recognizes your unique stress signals',
-        'gets better at catching shifts earlier',
+        'recognizes the early signs your mindset is drifting',
+        'gets better at catching shifts before they take hold',
       ],
     },
   ],
   finalCta: {
-    title: "balance doesn't happen by accident",
-    subtitle: 'maon helps you find it',
+    title: "the right mindset doesn't build itself",
+    subtitle: 'maon helps you maintain it',
     cta: {
       label: 'say hi to maon',
       href: MAON_CTA_HREF,
