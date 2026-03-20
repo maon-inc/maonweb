@@ -212,7 +212,7 @@ export const homePageContent: HomePageContent = {
         tone: 'muted',
       },
       {
-        text: 'but maon catches the drift early — before it changes how you show up',
+        text: 'but maon catches the drift early before it changes how you show up',
         tone: 'serif-muted',
       },
     ],
