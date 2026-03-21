@@ -1,5 +1,7 @@
+"$schema" = "./node_modules/wrangler/config-schema.json"
 name = "maonweb"
 pages_build_output_dir = "dist"
+workers_dev = false
 
 [vars]
-VITE_POSTHOG_KEY=phc_HVQT2MqNTX0U4CpQe0sEL8RcEy5nnywNdMyaAGpGLas
+VITE_POSTHOG_KEY = phc_HVQT2MqNTX0U4CpQe0sEL8RcEy5nnywNdMyaAGpGLas
