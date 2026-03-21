@@ -1,2 +1,5 @@
 name = "maonweb"
 pages_build_output_dir = "dist"
+
+[vars]
+VITE_POSTHOG_KEY=phc_HVQT2MqNTX0U4CpQe0sEL8RcEy5nnywNdMyaAGpGLas
