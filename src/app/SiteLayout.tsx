@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
+import { PostHogPageviewTracker } from '../analytics/posthog';
 import { SiteFooter } from '../components/SiteFooter';
 import { SiteHeader } from '../components/SiteHeader';
 import { RouteScrollReset } from './RouteScrollReset';
@@ -9,6 +10,7 @@ export function SiteLayout() {
   return (
     <div className={styles.shell}>
       <RouteScrollReset />
+      <PostHogPageviewTracker />
       <SiteHeader />
       <main className={styles.main}>
         <Outlet />
