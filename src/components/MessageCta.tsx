@@ -2,6 +2,7 @@ import { useEffect, useId, useRef, useState } from 'react';
 
 import { QRCodeSVG } from 'qrcode.react';
 
+import { trackCtaClick, trackQrCodeOpen } from '../analytics/posthog';
 import styles from './MessageCta.module.css';
 
 const DESKTOP_POINTER_MEDIA_QUERY = '(hover: hover) and (pointer: fine)';
@@ -57,10 +58,13 @@ export function MessageCta({ href, label, className }: MessageCtaProps) {
   }
 
   function handleClick() {
+    trackCtaClick(label, href);
+
     if (!shouldShowDesktopQr()) {
       return;
     }
 
+    trackQrCodeOpen(label, href);
     setIsDialogOpen(true);
   }
 
