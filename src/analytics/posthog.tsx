@@ -4,17 +4,20 @@ import { useLocation } from 'react-router-dom';
 
 const POSTHOG_KEY = import.meta.env.VITE_POSTHOG_KEY as string | undefined;
 const POSTHOG_HOST =
-  (import.meta.env.VITE_POSTHOG_HOST as string | undefined) ||
-  'https://us.i.posthog.com';
+  (import.meta.env.VITE_POSTHOG_HOST as string | undefined) || '/ingest';
 
 export function initPostHog() {
   if (!POSTHOG_KEY) return;
 
   posthog.init(POSTHOG_KEY, {
     api_host: POSTHOG_HOST,
+    ui_host: 'https://us.posthog.com',
     capture_pageview: false, // We handle this manually for SPA routing
     capture_pageleave: true,
     autocapture: true,
+    capture_performance: {
+      web_vitals: true,
+    },
     session_recording: {
       maskAllInputs: true,
       maskTextSelector: '*',
