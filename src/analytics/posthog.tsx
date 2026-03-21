@@ -4,7 +4,8 @@ import { useLocation } from 'react-router-dom';
 
 const POSTHOG_KEY = import.meta.env.VITE_POSTHOG_KEY as string | undefined;
 const POSTHOG_HOST =
-  (import.meta.env.VITE_POSTHOG_HOST as string | undefined) || '/ingest';
+  (import.meta.env.VITE_POSTHOG_HOST as string | undefined) ||
+  'https://t.maonhealth.com';
 
 export function initPostHog() {
   if (!POSTHOG_KEY) return;
