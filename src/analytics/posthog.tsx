@@ -21,7 +21,6 @@ export function initPostHog() {
     },
     session_recording: {
       maskAllInputs: true,
-      maskTextSelector: '*',
     },
   });
 }
