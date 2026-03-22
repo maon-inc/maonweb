@@ -23,7 +23,7 @@ describe('HowWeHelpSection', () => {
     expect(articles[0]).toHaveStyle('--how-we-help-accent: #c6b5f5');
     expect(articles[1]).toHaveStyle('--how-we-help-accent: #7eaeea');
     expect(articles[2]).toHaveStyle('--how-we-help-accent: #59c85b');
-    expect(screen.getByText(/quick check-ins over text/i)).not.toBeVisible();
+    expect(screen.getByText(/quick check-ins when focus slips/i)).not.toBeVisible();
     expect(screen.getByRole('img', { name: /proactive interventions preview/i })).toBeInTheDocument();
     expect(screen.getByRole('img', { name: /personal patterns preview/i })).toBeInTheDocument();
     expect(screen.getByRole('img', { name: /adaptive over time preview/i })).toBeInTheDocument();
@@ -38,7 +38,7 @@ describe('HowWeHelpSection', () => {
     render(<HowWeHelpSection items={homePageContent.howWeHelp} />);
 
     const card = screen.getByRole('button', { name: /adaptive over time/i });
-    const detail = screen.getByText(/learns what interventions work best for you/i);
+    const detail = screen.getByText(/learns which nudges help/i);
 
     expect(detail).not.toBeVisible();
     expect(card).toHaveAttribute('aria-expanded', 'false');
@@ -62,13 +62,15 @@ describe('HowWeHelpSection', () => {
     const secondCard = screen.getByRole('button', { name: /personal patterns/i });
 
     await user.click(firstCard);
-    expect(screen.getByText(/quick check-ins over text/i)).toBeInTheDocument();
+    expect(screen.getByText(/quick check-ins when focus slips/i)).toBeInTheDocument();
     expect(screen.getByRole('img', { name: /proactive interventions preview/i })).toBeInTheDocument();
     expect(firstCard).toHaveAttribute('aria-expanded', 'true');
 
     await user.click(secondCard);
-    expect(screen.getByText(/help you understand what keeps you balanced/i)).toBeInTheDocument();
-    expect(screen.getByText(/quick check-ins over text/i)).not.toBeVisible();
+    expect(
+      screen.getByText(/show what keeps you clear and steady/i),
+    ).toBeInTheDocument();
+    expect(screen.getByText(/quick check-ins when focus slips/i)).not.toBeVisible();
     expect(firstCard).toHaveAttribute('aria-expanded', 'false');
     expect(secondCard).toHaveAttribute('aria-expanded', 'true');
   });
@@ -80,10 +82,10 @@ describe('HowWeHelpSection', () => {
     const card = screen.getByRole('button', { name: /adaptive over time/i });
 
     await user.click(card);
-    expect(screen.getByText(/learns what interventions work best for you/i)).toBeInTheDocument();
+    expect(screen.getByText(/learns which nudges help/i)).toBeInTheDocument();
 
     await user.click(card);
-    expect(screen.getByText(/learns what interventions work best for you/i)).not.toBeVisible();
+    expect(screen.getByText(/learns which nudges help/i)).not.toBeVisible();
     expect(card).toHaveAttribute('aria-expanded', 'false');
   });
 
@@ -109,7 +111,7 @@ describe('HowWeHelpSection', () => {
       />,
     );
 
-    expect(screen.getByText(/quick check-ins over text/i)).not.toBeVisible();
+    expect(screen.getByText(/quick check-ins when focus slips/i)).not.toBeVisible();
     expect(
       screen.getAllByRole('button').every((button) => button.getAttribute('aria-expanded') === 'false'),
     ).toBe(true);

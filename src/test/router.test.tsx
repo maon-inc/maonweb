@@ -37,7 +37,7 @@ describe('app router', () => {
     expect(
       screen.getByRole('heading', {
         level: 1,
-        name: /what if an ai agent's only job was to keep you balanced\?/i,
+        name: /it's easy to picture the life you want\. living it is the hard part\./i,
       }),
     ).toBeInTheDocument();
     expect(screen.getByText(/we understand/i)).toBeInTheDocument();

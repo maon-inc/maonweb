@@ -20,8 +20,11 @@ describe('TermsPage', () => {
       .toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2, name: /21\. contact us/i }))
       .toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /privacy policy/i }))
-      .toHaveAttribute('href', '/privacy');
+    expect(
+      screen
+        .getAllByRole('link', { name: /privacy policy/i })
+        .every((link) => link.getAttribute('href') === '/privacy'),
+    ).toBe(true);
     expect(
       screen
         .getAllByRole('link', { name: /lks@maonhealth.com/i })

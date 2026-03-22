@@ -34,18 +34,18 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
               <h1
                 class="_title_4a3a7e"
               >
-                what if an AI agent's only job was to keep you 
+                it's easy to picture the life you want. 
                 <span
                   class="_emphasis_4a3a7e"
                 >
-                  balanced?
+                  living
                 </span>
-                 
+                 it is the hard part.
               </h1>
               <p
                 class="_supportingText_4a3a7e"
               >
-                Maon does that with proactive interventions
+                Maon helps you catch the drift earlier.
               </p>
               <a
                 class="buttonPrimary buttonPrimaryCompact"
@@ -144,7 +144,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                     <p
                       class="_label_bc5123 _labelHistory_bc5123"
                     >
-                      interventions history
+                      recent support
                     </p>
                     <div
                       class="_historyCard_bc5123"
@@ -169,12 +169,12 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                               <p
                                 class="_historyTitle_bc5123"
                               >
-                                screen time
+                                screen time reset
                               </p>
                               <p
                                 class="_historyDetail_bc5123"
                               >
-                                30 min limit on social media
+                                30 min social app limit to break the scroll loop
                               </p>
                             </div>
                             <p
@@ -267,7 +267,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                               <p
                                 class="_historyTitle_bc5123"
                               >
-                                breathing exercise
+                                breathing reset
                               </p>
                               <p
                                 class="_historyDetail_bc5123"
@@ -303,12 +303,12 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                               <p
                                 class="_historyTitle_bc5123"
                               >
-                                workout @ 7 pm monday
+                                walk @ 7 pm monday
                               </p>
                               <p
                                 class="_historyDetail_bc5123"
                               >
-                                added workout to your apple calendar
+                                added a walk to your apple calendar
                               </p>
                             </div>
                             <p
@@ -344,7 +344,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                               <p
                                 class="_historyDetail_bc5123"
                               >
-                                get back into a good sleep rhythm
+                                ease back into a steadier sleep rhythm
                               </p>
                             </div>
                             <p
@@ -363,7 +363,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                     <p
                       class="_label_bc5123 _labelStories_bc5123"
                     >
-                      stories
+                      patterns
                     </p>
                     <div
                       class="_metrics_bc5123"
@@ -374,7 +374,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                         <p
                           class="_metricLabel_bc5123"
                         >
-                          EARLY SPIRAL
+                          EARLY SHIFT
                         </p>
                         <p
                           class="_metricValue_bc5123"
@@ -384,7 +384,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                         <p
                           class="_metricDescription_bc5123"
                         >
-                          before a spiral, your body lets us know
+                          your signals often start changing before the spiral feels obvious
                         </p>
                         <div
                           aria-hidden="true"
@@ -415,7 +415,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                         <p
                           class="_metricDescription_bc5123"
                         >
-                          less destress over the past week
+                          less stress this week when late-night scrolling dropped
                         </p>
                         <div
                           aria-hidden="true"
@@ -475,7 +475,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 data-line-index="1"
                 data-visual-state="next"
               >
-                small things build up until everything feels like too much
+                you can usually see the version of yourself you want
               </p>
               <p
                 class="_line_9e478f _statement_9e478f _lineInactive_9e478f _lineHiddenBelow_9e478f"
@@ -483,7 +483,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 data-line-index="2"
                 data-visual-state="hidden-below"
               >
-                most support only shows up after you're already overwhelmed
+                holding onto it gets harder when stress and distractions pile up
               </p>
               <p
                 class="_line_9e478f _statementSerifMuted_9e478f _lineInactive_9e478f _lineHiddenBelow_9e478f"
@@ -491,7 +491,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 data-line-index="3"
                 data-visual-state="hidden-below"
               >
-                but maon notices the shift earlier because your body knows before you do
+                maon helps catch the drift before it takes over
               </p>
             </div>
           </div>
@@ -544,7 +544,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 <span
                   class="_summary_5a814f"
                 >
-                  when something starts to drift, maon helps you reset in the moment with small actions
+                  when something starts to drift, maon nudges you back before it turns into a bigger mindset shift
                 </span>
                 <span
                   class="_previewFrame_5a814f"
@@ -578,22 +578,22 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 <li
                   class="_listItem_5a814f"
                 >
-                  quick check-ins over text
+                  quick check-ins when focus slips
                 </li>
                 <li
                   class="_listItem_5a814f"
                 >
-                  short breathing resets when your stress rise
+                  short breathing resets
                 </li>
                 <li
                   class="_listItem_5a814f"
                 >
-                  blocking distracting apps using screen time
+                  temporary app limits
                 </li>
                 <li
                   class="_listItem_5a814f"
                 >
-                  suggest and schedule time for a hike
+                  prompts to move, go outside, or reset
                 </li>
               </ul>
             </div>
@@ -624,7 +624,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 <span
                   class="_summary_5a814f"
                 >
-                  most people do not see what actually affects their energy or mood. maon connects the dots
+                  with the context you choose to share, maon connects the dots across your signals, habits, and routines
                 </span>
                 <span
                   class="_previewFrame_5a814f"
@@ -658,22 +658,22 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 <li
                   class="_listItem_5a814f"
                 >
-                  help you understand what keeps you balanced
+                  show what keeps you clear and steady
                 </li>
                 <li
                   class="_listItem_5a814f"
                 >
-                  notice when night scrolling affects your next day
+                  shared health, location, screen time, and calendar add context
                 </li>
                 <li
                   class="_listItem_5a814f"
                 >
-                  show when outdoor time improves your mood
+                  spot when scrolling, packed days, or low recovery cloud the next day
                 </li>
                 <li
                   class="_listItem_5a814f"
                 >
-                  highlight days where your focus or stress shifts
+                  highlight what tends to come before a shift
                 </li>
               </ul>
             </div>
@@ -704,7 +704,7 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 <span
                   class="_summary_5a814f"
                 >
-                  the more you use maon, the more it learns how you work
+                  the more you use maon, the better it learns which signals matter and what helps you stay steady
                 </span>
                 <span
                   class="_previewFrame_5a814f"
@@ -738,22 +738,22 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
                 <li
                   class="_listItem_5a814f"
                 >
-                  learns what interventions work best for you
+                  learns which nudges help
                 </li>
                 <li
                   class="_listItem_5a814f"
                 >
-                  adjusts when to check in and when to stay quiet
+                  learns when to check in and when to stay quiet
                 </li>
                 <li
                   class="_listItem_5a814f"
                 >
-                  recognizes your unique stress signals
+                  gets better at catching drift early
                 </li>
                 <li
                   class="_listItem_5a814f"
                 >
-                  gets better at catching shifts earlier
+                  suggests places, activities, and routines that seem to help
                 </li>
               </ul>
             </div>
@@ -773,12 +773,12 @@ exports[`HomePage > matches the stable home page snapshot 1`] = `
           <h2
             class="_title_f1b934"
           >
-            balance doesn't happen by accident
+            staying steady takes support
           </h2>
           <p
             class="_subtitle_f1b934"
           >
-            maon helps you find it
+            maon helps you stay steady longer
           </p>
           <a
             class="buttonPrimary buttonPrimaryCompact"

@@ -125,17 +125,17 @@ describe('ShowcaseSection', () => {
     expect(messageElements[1]).toHaveTextContent('hey im user.');
     expect(messageElements[1]).toHaveAttribute('data-variant', 'outgoing-short');
     expect(messageElements[2]).toHaveTextContent(
-      'hi user, want to hear about me, or should we start with you?',
+      'hi user, should we start with what keeps you steady or what tends to throw you off?',
     );
     expect(messageElements[2]).toHaveAttribute('data-variant', 'incoming-tall');
-    expect(messageElements[3]).toHaveTextContent('ik you step in right away');
+    expect(messageElements[3]).toHaveTextContent(/uhhhh i (do not|don't) catch it fast/i);
     expect(messageElements[3]).toHaveAttribute('data-variant', 'outgoing-medium');
     expect(messageElements[4]).toHaveTextContent(
-      'when you start slipping do you notice it? or does it hit you later?',
+      'what usually pulls you off track first: stress, your phone, or something else?',
     );
     expect(messageElements[4]).toHaveAttribute('data-variant', 'incoming-question');
     expect(messageElements[5]).toHaveTextContent(
-      'i don’t notice it until it gets really bad and then i start spiraling',
+      'late scrolling and bad sleep usually do it. by the time i notice, everything feels harder',
     );
     expect(messageElements[5]).toHaveAttribute('data-variant', 'outgoing-large');
     expect(container.querySelectorAll('[data-sender]')).toHaveLength(0);
@@ -180,16 +180,16 @@ describe('ShowcaseSection', () => {
   it('renders the history stack with featured metadata and compact trailing cards', () => {
     const { container } = render(<ShowcaseSection content={homePageContent.showcase} />);
 
-    expect(screen.getByText(/interventions history/i)).toBeInTheDocument();
-    expect(screen.getByText(/^screen time$/i)).toBeInTheDocument();
-    expect(screen.getByText(/30 min limit on social media/i)).toBeInTheDocument();
+    expect(screen.getByText(/recent support/i)).toBeInTheDocument();
+    expect(screen.getByText(/^screen time reset$/i)).toBeInTheDocument();
+    expect(screen.getByText(/30 min social app limit to break the scroll loop/i)).toBeInTheDocument();
     expect(screen.getByText(/sat - 7:15 pm/i)).toBeInTheDocument();
     expect(screen.getByText(/ends in:/i)).toBeInTheDocument();
     expect(screen.getByText(/25 min/i)).toBeInTheDocument();
     expect(screen.getByText(/apps blocked:/i)).toBeInTheDocument();
 
-    expect(screen.getByText(/breathing exercise/i)).toBeInTheDocument();
-    expect(screen.getByText(/workout @ 7 pm monday/i)).toBeInTheDocument();
+    expect(screen.getByText(/breathing reset/i)).toBeInTheDocument();
+    expect(screen.getByText(/walk @ 7 pm monday/i)).toBeInTheDocument();
     expect(screen.getByText(/alarm @ 9:30 am sunday/i)).toBeInTheDocument();
     expect(screen.queryByText(/see more/i)).not.toBeInTheDocument();
 
@@ -202,13 +202,15 @@ describe('ShowcaseSection', () => {
   it('renders the stories cards with figma metric copy and numbered badges', () => {
     const { container } = render(<ShowcaseSection content={homePageContent.showcase} />);
 
-    expect(screen.getByText(/^stories$/i)).toBeInTheDocument();
-    expect(screen.getByText(/^EARLY SPIRAL$/)).toBeInTheDocument();
+    expect(screen.getByText(/^patterns$/i)).toBeInTheDocument();
+    expect(screen.getByText(/^EARLY SHIFT$/)).toBeInTheDocument();
     expect(screen.getByText(/^2h$/)).toBeInTheDocument();
-    expect(screen.getByText(/before a spiral, your body lets us know/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(/your signals often start changing before the spiral feels obvious/i),
+    ).toBeInTheDocument();
     expect(screen.getByText(/^PROGRESS$/)).toBeInTheDocument();
     expect(screen.getByText(/^18%$/)).toBeInTheDocument();
-    expect(screen.getByText(/less destress over the past week/i)).toBeInTheDocument();
+    expect(screen.getByText(/less stress this week when late-night scrolling dropped/i)).toBeInTheDocument();
 
     const badges = container.querySelectorAll('[class*="metricBadge"] span');
     expect(badges).toHaveLength(2);

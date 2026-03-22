@@ -107,13 +107,13 @@ describe('NarrativeSection', () => {
 
     expect(screen.getByText(/we understand/i)).toBeInTheDocument();
     expect(
-      screen.getByText(/small things build up until everything feels like too much/i),
+      screen.getByText(/you can usually see the version of yourself you want/i),
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/most support only shows up after you're already overwhelmed/i),
+      screen.getByText(/holding onto it gets harder when stress and distractions pile up/i),
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/but maon notices the shift earlier because your body knows before you do/i),
+      screen.getByText(/maon helps catch the drift before it takes over/i),
     ).toBeInTheDocument();
   });
 
@@ -135,7 +135,7 @@ describe('NarrativeSection', () => {
     const track = screen.getByTestId('narrative-track');
     const viewport = screen.getByTestId('narrative-viewport');
     const firstMainLine = screen.getByText(
-      /small things build up until everything feels like too much/i,
+      /you can usually see the version of yourself you want/i,
     );
     const introLine = screen.getByText(/we understand/i);
 
@@ -161,10 +161,10 @@ describe('NarrativeSection', () => {
     const track = screen.getByTestId('narrative-track');
     const introLine = screen.getByText(/we understand/i);
     const firstMainLine = screen.getByText(
-      /small things build up until everything feels like too much/i,
+      /you can usually see the version of yourself you want/i,
     );
     const secondLine = screen.getByText(
-      /most support only shows up after you're already overwhelmed/i,
+      /holding onto it gets harder when stress and distractions pile up/i,
     );
 
     act(() => {
@@ -205,7 +205,7 @@ describe('NarrativeSection', () => {
     });
 
     const finalLine = screen.getByText(
-      /but maon notices the shift earlier because your body knows before you do/i,
+      /maon helps catch the drift before it takes over/i,
     );
 
     expect(finalLine).toHaveAttribute('data-visual-state', 'active');
@@ -239,13 +239,13 @@ describe('NarrativeSection', () => {
     const viewport = screen.getByTestId('narrative-viewport');
     const introLine = screen.getByText(/we understand/i);
     const firstMainLine = screen.getByText(
-      /small things build up until everything feels like too much/i,
+      /you can usually see the version of yourself you want/i,
     );
     const secondLine = screen.getByText(
-      /most support only shows up after you're already overwhelmed/i,
+      /holding onto it gets harder when stress and distractions pile up/i,
     );
     const finalLine = screen.getByText(
-      /but maon notices the shift earlier because your body knows before you do/i,
+      /maon helps catch the drift before it takes over/i,
     );
 
     act(() => {

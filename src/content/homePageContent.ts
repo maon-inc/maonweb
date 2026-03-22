@@ -98,10 +98,10 @@ export type HomePageContent = {
 export const homePageContent: HomePageContent = {
   hero: {
     eyebrow: 'MAON',
-    titlePrefix: 'what if an AI agent\'s only job was to keep your',
-    titleEmphasis: 'mindset right?',
-    titleSuffix: '',
-    supportingText: 'Maon does that with proactive interventions',
+    titlePrefix: "it's easy to picture the life you want.",
+    titleEmphasis: 'living',
+    titleSuffix: 'it is the hard part.',
+    supportingText: 'Maon helps you catch the drift earlier.',
     cta: {
       label: 'say hi to maon',
       href: MAON_CTA_HREF,
@@ -109,8 +109,8 @@ export const homePageContent: HomePageContent = {
   },
   showcase: {
     messagesLabel: 'in your messages',
-    historyLabel: 'interventions history',
-    storiesLabel: 'stories',
+    historyLabel: 'recent support',
+    storiesLabel: 'patterns',
     messages: [
       {
         id: 'prompt-name',
@@ -127,34 +127,34 @@ export const homePageContent: HomePageContent = {
       },
       {
         id: 'prompt-intro',
-        text: 'hi user, want to hear about me, or should we start with you?',
+        text: 'hi user, should we start with what keeps you steady or what tends to throw you off?',
         sender: 'maon',
         variant: 'incoming-tall',
         italicWord: 'user',
       },
       {
         id: 'reply-awareness',
-        text: 'ik you step in right away',
+        text: "uhhhh i don't catch it fast",
         sender: 'user',
         variant: 'outgoing-medium',
       },
       {
         id: 'prompt-awareness',
-        text: 'when you start slipping do you notice it? or does it hit you later?',
+        text: 'what usually pulls you off track first: stress, your phone, or something else?',
         sender: 'maon',
         variant: 'incoming-question',
       },
       {
         id: 'reply-spiral',
-        text: 'i don’t notice it until it gets really bad and then i start spiraling',
+        text: 'late scrolling and bad sleep usually do it. by the time i notice, everything feels harder',
         sender: 'user',
         variant: 'outgoing-large',
       },
     ],
     historyItems: [
       {
-        title: 'screen time',
-        detail: '30 min limit on social media',
+        title: 'screen time reset',
+        detail: '30 min social app limit to break the scroll loop',
         timestamp: 'sat - 7:15 pm',
         railColor: '#c8b5ff',
         variant: 'featured',
@@ -162,22 +162,22 @@ export const homePageContent: HomePageContent = {
         blockedApps: ['instagram', 'tiktok', 'reddit'],
       },
       {
-        title: 'breathing exercise',
+        title: 'breathing reset',
         detail: '7-8-4 second exercise',
         timestamp: 'sat - 7 pm',
         railColor: '#c7f1f0',
         variant: 'compact',
       },
       {
-        title: 'workout @ 7 pm monday',
-        detail: 'added workout to your apple calendar',
+        title: 'walk @ 7 pm monday',
+        detail: 'added a walk to your apple calendar',
         timestamp: 'sat - 6:42 pm',
         railColor: '#f5d8c7',
         variant: 'compact',
       },
       {
         title: 'alarm @ 9:30 am sunday',
-        detail: 'get back into a good sleep rhythm',
+        detail: 'ease back into a steadier sleep rhythm',
         timestamp: 'sat - 6:18 pm',
         railColor: '#efcfd3',
         variant: 'compact',
@@ -185,16 +185,16 @@ export const homePageContent: HomePageContent = {
     ],
     metrics: [
       {
-        label: 'EARLY SPIRAL',
+        label: 'EARLY SHIFT',
         value: '2h',
-        description: 'before a spiral, your body lets us know',
+        description: 'your signals often start changing before the spiral feels obvious',
         tone: 'peach',
         badge: '3',
       },
       {
         label: 'PROGRESS',
         value: '18%',
-        description: 'less destress over the past week',
+        description: 'less stress this week when late-night scrolling dropped',
         tone: 'green',
         badge: '4',
       },
@@ -204,15 +204,15 @@ export const homePageContent: HomePageContent = {
     intro: 'we understand...',
     statements: [
       {
-        text: 'small things pile up and quietly change how you see everything',
+        text: 'you can usually see the version of yourself you want',
         tone: 'default',
       },
       {
-        text: 'most tools only step in after your mindset has already shifted',
+        text: 'holding onto it gets harder when stress and distractions pile up',
         tone: 'muted',
       },
       {
-        text: 'but maon catches the drift early before it changes how you show up',
+        text: 'maon helps catch the drift before it takes over',
         tone: 'serif-muted',
       },
     ],
@@ -221,55 +221,58 @@ export const homePageContent: HomePageContent = {
     {
       id: 'proactive-interventions',
       title: 'proactive interventions',
-      summary: 'when something starts to drift, maon helps you course-correct before your mindset shifts',
+      summary:
+        'when something starts to drift, maon nudges you back before it turns into a bigger mindset shift',
       accentColor: '#c6b5f5',
       previewImage: {
         alt: 'Proactive interventions preview',
         src: proactivePreview,
       },
       details: [
-        'quick check-ins over text to refocus',
-        'short breathing exercises to recenter when tension builds',
-        'blocking distracting apps using screen time',
-        'suggest and schedule time for a hike',
+        'quick check-ins when focus slips',
+        'short breathing resets',
+        'temporary app limits',
+        'prompts to move, go outside, or reset',
       ],
     },
     {
       id: 'personal-patterns',
       title: 'personal patterns',
-      summary: 'most people do not see what actually shapes how they think and show up. maon connects the dots',
+      summary:
+        'with the context you choose to share, maon connects the dots across your signals, habits, and routines',
       accentColor: '#7eaeea',
       previewImage: {
         alt: 'Personal patterns preview',
         src: patternsPreview,
       },
       details: [
-        'help you understand what keeps your thinking clear',
-        'notice when night scrolling clouds your next day',
-        'show when outdoor time sharpens your focus',
-        'highlight days where your mindset or clarity shifts',
+        'show what keeps you clear and steady',
+        'shared health, location, screen time, and calendar add context',
+        'spot when scrolling, packed days, or low recovery cloud the next day',
+        'highlight what tends to come before a shift',
       ],
     },
     {
       id: 'adaptive-over-time',
       title: 'adaptive over time',
-      summary: 'the more you use maon, the more it learns what keeps your mindset where it needs to be',
+      summary:
+        'the more you use maon, the better it learns which signals matter and what helps you stay steady',
       accentColor: '#59c85b',
       previewImage: {
         alt: 'Adaptive over time preview',
         src: adaptivePreview,
       },
       details: [
-        'learns what interventions work best for you',
-        'adjusts when to check in and when to stay quiet',
-        'recognizes the early signs your mindset is drifting',
-        'gets better at catching shifts before they take hold',
+        'learns which nudges help',
+        'learns when to check in and when to stay quiet',
+        'gets better at catching drift early',
+        'suggests places, activities, and routines that seem to help',
       ],
     },
   ],
   finalCta: {
-    title: "the right mindset doesn't build itself",
-    subtitle: 'maon helps you maintain it',
+    title: 'staying steady takes support',
+    subtitle: 'maon helps you stay steady longer',
     cta: {
       label: 'say hi to maon',
       href: MAON_CTA_HREF,
