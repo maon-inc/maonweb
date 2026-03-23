@@ -13,7 +13,7 @@ describe('TermsPage', () => {
 
     expect(screen.getByRole('heading', { level: 1, name: /terms of service/i }))
       .toBeInTheDocument();
-    expect(screen.getByText(/last updated: march 2, 2025/i)).toBeInTheDocument();
+    expect(screen.getByText(/last updated: march 23, 2026/i)).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2, name: /1\. agreement to terms/i }))
       .toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2, name: /3\. medical disclaimer/i }))

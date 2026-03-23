@@ -5,7 +5,7 @@ export function AITransparencyPage() {
     <section className={styles.page}>
       <div className={styles.container}>
         <h1 className={styles.title}>AI Transparency</h1>
-        <p className={styles.updated}>Last Updated: March 16, 2026</p>
+        <p className={styles.updated}>Last Updated: March 23, 2026</p>
 
         <div className={styles.content}>
           <section className={styles.section}>
@@ -33,8 +33,8 @@ export function AITransparencyPage() {
             </p>
             <ul>
               <li>
-                <strong>Model:</strong> @cf/openai/gpt-oss-120b (Mistral GPT-OSS
-                120B) — an open-weight large language model developed by Mistral,
+                <strong>Model:</strong> @cf/moonshotai/kimi-k2.5 (Moonshot Kimi
+                K2.5) — a large language model developed by Moonshot AI,
                 hosted and served by Cloudflare Workers AI
               </li>
               <li>

@@ -5,7 +5,7 @@ export function PrivacyPage() {
     <section className={styles.page}>
       <div className={styles.container}>
         <h1 className={styles.title}>Privacy Policy</h1>
-        <p className={styles.updated}>Last Updated: March 13, 2026</p>
+        <p className={styles.updated}>Last Updated: March 23, 2026</p>
 
         <div className={styles.content}>
           <section className={styles.section}>
@@ -14,7 +14,7 @@ export function PrivacyPage() {
               MAON Intelligence (&quot;MAON,&quot; &quot;we,&quot; &quot;us,&quot; or
               &quot;our&quot;) is committed to protecting your privacy. This Privacy
               Policy explains how we collect, use, disclose, and safeguard your
-              information when you use our AI Therapist application and related services
+              information when you use our mindset and wellness companion application and related services
               (collectively, the &quot;Service&quot;).
             </p>
             <p>
@@ -34,19 +34,20 @@ export function PrivacyPage() {
             <h2>Information We Collect</h2>
             <h3>1. Biometric and Biosignal Data</h3>
             <p>
-              When you connect a wearable device to MAON, we may collect the following
-              types of biometric data:
+              When you connect Apple Health to MAON, we may collect the following
+              types of biometric and wellness data via Apple HealthKit:
             </p>
             <ul>
-              <li>Heart rate and heart rate variability (HRV)</li>
+              <li>Heart rate, heart rate variability (HRV), and resting heart rate</li>
               <li>Sleep patterns and sleep stages</li>
-              <li>Activity and movement data</li>
-              <li>Stress indicators and physiological signals</li>
-              <li>Body temperature variations</li>
-              <li>Respiratory rate</li>
+              <li>Activity, steps, and movement data</li>
+              <li>Body measurements (weight, height, body fat)</li>
+              <li>Nutrition intake (caffeine, water, macronutrients)</li>
+              <li>Respiratory rate and oxygen saturation</li>
+              <li>Gait and balance metrics (walking speed, steadiness)</li>
+              <li>Wellness symptoms (mood, fatigue, headache)</li>
               <li>
-                Other sensor data from supported devices (Apple Watch, Galaxy Watch,
-                Fitbit, Bangle.js 2)
+                Other sensor data from Apple Watch and HealthKit-compatible devices
               </li>
             </ul>
 
@@ -73,14 +74,33 @@ export function PrivacyPage() {
             </ul>
 
             <h3>4. Phone Number and Communications Data</h3>
-            <p>If you opt in to receive SMS or voice communications from MAON, we collect:</p>
+            <p>
+              MAON&apos;s primary interaction happens through iMessage and SMS. When you
+              opt in to communicate with MAON via text, we collect:
+            </p>
             <ul>
               <li>Your phone number</li>
-              <li>SMS and voice communication logs (timestamps, delivery status)</li>
+              <li>Message content exchanged with MAON (used to provide personalized wellness support)</li>
+              <li>Communication logs (timestamps, delivery status)</li>
               <li>Your communication preferences and opt-in/opt-out status</li>
             </ul>
 
-            <h3>5. Automatically Collected Information</h3>
+            <h3>5. Location Data</h3>
+            <p>
+              With your explicit permission, we collect location data to provide
+              context-aware wellness insights:
+            </p>
+            <ul>
+              <li>Significant location changes (visit and region transition events via iOS)</li>
+              <li>Coarse location context (neighborhood-level, not continuous GPS tracking)</li>
+            </ul>
+            <p>
+              Location data is used to understand how your environment relates to your
+              wellbeing — for example, recommending nearby places for a walk or detecting
+              changes in routine. You can revoke location access at any time in iOS Settings.
+            </p>
+
+            <h3>6. Automatically Collected Information</h3>
             <ul>
               <li>Device type, operating system, and version</li>
               <li>IP address and general location (country/region)</li>
@@ -88,7 +108,7 @@ export function PrivacyPage() {
               <li>Usage analytics (features used, session duration)</li>
             </ul>
 
-            <h3>6. Google Calendar Data</h3>
+            <h3>7. Google Calendar Data</h3>
             <p>
               If you choose to connect your Google Calendar account to MAON, we access
               and may modify your calendar data through the Google Calendar API. The

@@ -5,7 +5,7 @@ export function TermsPage() {
     <section className={styles.page}>
       <div className={styles.container}>
         <h1 className={styles.title}>Terms of Service</h1>
-        <p className={styles.updated}>Last Updated: March 2, 2025</p>
+        <p className={styles.updated}>Last Updated: March 23, 2026</p>
 
         <div className={styles.content}>
           <section className={styles.section}>
@@ -25,14 +25,13 @@ export function TermsPage() {
           <section className={styles.section}>
             <h2>2. Description of Service</h2>
             <p>
-              MAON is an AI-powered mental health assistant that analyzes biometric data
-              from wearable devices and app usage patterns to provide insights and
+              MAON is an AI-powered mindset and wellness companion that analyzes biometric data
+              from Apple HealthKit and app usage patterns to provide insights and
               supportive interventions. The Service includes:
             </p>
             <ul>
               <li>
-                Integration with wearable devices (Apple Watch, Galaxy Watch, Fitbit,
-                Bangle.js 2, and others)
+                Integration with Apple Watch and Apple HealthKit
               </li>
               <li>
                 Analysis of biometric signals including heart rate, sleep patterns, and
@@ -184,7 +183,7 @@ export function TermsPage() {
             <h2>10. Third-Party Integrations</h2>
             <p>
               The Service integrates with third-party devices, platforms, and service
-              providers (such as Apple HealthKit, Samsung Health, Fitbit, and Twilio for
+              providers (such as Apple HealthKit, Google Calendar, and Twilio for
               communications). Your use of these third-party services is subject to their
               respective terms and privacy policies.
             </p>

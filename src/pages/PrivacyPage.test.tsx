@@ -13,7 +13,7 @@ describe('PrivacyPage', () => {
 
     expect(screen.getByRole('heading', { level: 1, name: /privacy policy/i }))
       .toBeInTheDocument();
-    expect(screen.getByText(/last updated: march 13, 2026/i)).toBeInTheDocument();
+    expect(screen.getByText(/last updated: march 23, 2026/i)).toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2, name: /information we collect/i }))
       .toBeInTheDocument();
     expect(screen.getByRole('heading', { level: 2, name: /how we use your information/i }))
