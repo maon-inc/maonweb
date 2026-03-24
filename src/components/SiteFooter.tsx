@@ -18,6 +18,9 @@ export function SiteFooter() {
           <Link className={styles.footerLink} to="/ai-transparency">
             AI Transparency
           </Link>
+          <Link className={styles.footerLink} to="/support">
+            Support
+          </Link>
         </div>
         <img alt="" aria-hidden="true" className={styles.image} src={footerScene} />
       </div>
