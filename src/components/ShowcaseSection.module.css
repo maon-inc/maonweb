@@ -323,7 +323,7 @@
   display: flex;
   align-items: start;
   justify-content: space-between;
-  gap: 0.8rem;
+  gap: 0.1rem;
 }
 
 .historyTextBlock {
@@ -372,7 +372,7 @@
   align-items: start;
   gap: 1rem;
   padding-left: 23.37px;
-  padding-right: 14px;
+  padding-right: 45px;
 }
 
 .featureBlock {
@@ -429,7 +429,7 @@
 
 .metricCard {
   position: relative;
-  padding: 19.213px 15.61px 16px;
+  padding: 19.213px 15.61px 28px;
   border-radius: 21.614px;
   overflow: hidden;
   color: white;

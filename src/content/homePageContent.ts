@@ -154,7 +154,7 @@ export const homePageContent: HomePageContent = {
     historyItems: [
       {
         title: 'screen time reset',
-        detail: '30 min social app limit to break the scroll loop',
+        detail: '30 min app limit to stop the scroll loop',
         timestamp: 'sat - 7:15 pm',
         railColor: '#c8b5ff',
         variant: 'featured',
@@ -187,14 +187,14 @@ export const homePageContent: HomePageContent = {
       {
         label: 'EARLY SHIFT',
         value: '2h',
-        description: 'your signals often start changing before the spiral feels obvious',
+        description: 'your signals change before you even know',
         tone: 'peach',
         badge: '3',
       },
       {
         label: 'PROGRESS',
         value: '18%',
-        description: 'less stress this week when late-night scrolling dropped',
+        description: 'less stress when scrolling dropped',
         tone: 'green',
         badge: '4',
       },
