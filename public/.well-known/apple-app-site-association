@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["R8ZRDU733W.com.maon.app"],
+        "components": [
+          { "/": "/", "exclude": true, "comment": "Web homepage" },
+          { "/": "/privacy", "exclude": true, "comment": "Web privacy page" },
+          { "/": "/tos", "exclude": true, "comment": "Web terms page" },
+          { "/": "/support", "exclude": true, "comment": "Web support page" },
+          { "/": "/ai-transparency", "exclude": true, "comment": "Web AI transparency page" },
+          { "/": "/*", "comment": "All other paths open in app" }
+        ]
+      }
+    ]
+  }
+}
