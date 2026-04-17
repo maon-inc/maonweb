@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { MemoryRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import { SiteLayout } from '../app/SiteLayout';
 import { MAON_CTA_HREF } from '../content/contactLinks';
@@ -16,7 +16,8 @@ function renderWithRouter(initialEntries: string[]) {
         <Route element={<SiteLayout />} path="/">
           <Route element={<HomePage />} index />
           <Route element={<PrivacyPage />} path="privacy" />
-          <Route element={<TermsPage />} path="tos" />
+          <Route element={<TermsPage />} path="terms" />
+          <Route element={<Navigate replace to="/terms" />} path="tos" />
           <Route element={<NotFoundPage />} path="*" />
         </Route>
       </Routes>

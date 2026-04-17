@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 
 import { SiteLayout } from './SiteLayout';
 import { HomePage } from '../pages/HomePage';
@@ -23,8 +23,12 @@ export const appRouter = createBrowserRouter([
         element: <PrivacyPage />,
       },
       {
-        path: 'tos',
+        path: 'terms',
         element: <TermsPage />,
+      },
+      {
+        path: 'tos',
+        element: <Navigate replace to="/terms" />,
       },
       {
         path: 'ai-transparency',
