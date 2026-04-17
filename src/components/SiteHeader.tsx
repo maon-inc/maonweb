@@ -10,7 +10,7 @@ export function SiteHeader() {
   const isHomeLike =
     location.pathname === '/' ||
     location.pathname === '/privacy' ||
-    location.pathname === '/tos' ||
+    location.pathname === '/terms' ||
     location.pathname === '/ai-transparency' ||
     location.pathname === '/support';
 

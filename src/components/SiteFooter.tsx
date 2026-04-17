@@ -12,7 +12,7 @@ export function SiteFooter() {
           <Link className={styles.footerLink} to="/privacy">
             Privacy
           </Link>
-          <Link className={styles.footerLink} to="/tos">
+          <Link className={styles.footerLink} to="/terms">
             Terms of Service
           </Link>
           <Link className={styles.footerLink} to="/ai-transparency">
